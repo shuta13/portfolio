@@ -74,7 +74,7 @@ export default {
       this.composer.addPass(this.renderPass)
 
       this.effectGlitch = new GlitchPass(10)
-      this.effectGlitch.goWild = true
+      // this.effectGlitch.goWild = true
       this.effectGlitch.renderToScreen = true
       this.composer.addPass(this.effectGlitch)
     },
