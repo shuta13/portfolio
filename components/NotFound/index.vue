@@ -74,6 +74,7 @@ export default {
       this.composer.addPass(this.renderPass)
 
       this.effectGlitch = new GlitchPass(10)
+      this.effectGlitch.goWild = true
       this.effectGlitch.renderToScreen = true
       this.composer.addPass(this.effectGlitch)
     },
@@ -90,7 +91,6 @@ export default {
 
     renderScene() {
       window.RAF = requestAnimationFrame(this.renderScene)
-      // this.volume = this.audio.volume
       this.object.rotation.y += 0.01
       this.object.rotation.z += 0.01
       this.composer.render()
