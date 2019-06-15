@@ -2,7 +2,7 @@
   .container(ref="canvas")#canvas
     div.main
       span.letters 404
-      span.subletters01 This page maybe broken
+      span.subletters01 This page maybe broken.
 </template>
 
 <script>
