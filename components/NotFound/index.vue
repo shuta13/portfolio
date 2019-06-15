@@ -116,7 +116,7 @@ export default {
   position: relative;
 
   .main {
-    // background-color: #fff;
+    background-color: #fff;
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -125,7 +125,7 @@ export default {
   }
 
   .letters {
-    // background-color: #888;
+    background-color: #888;
     color: #fff;
     font-family: 'Josefin Sans';
     font-size: 8vw;
@@ -134,13 +134,13 @@ export default {
   }
 
   .subletters01 {
-    // background-color: #ccc;
+    background-color: #ccc;
     text-align: left;
     color: #fff;
     font-family: 'Source Code Pro';
     font-size: 2vw;
     margin-top: 10vh;
-    margin-left: 2vw;
+    margin-left: 1.8vw;
   }
 }
 </style>
