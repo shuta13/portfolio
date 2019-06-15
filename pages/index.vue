@@ -1,9 +1,6 @@
-<template>
-  <div class="container">
-    <div>
-      <not-found />
-    </div>
-  </div>
+<template lang="pug">
+  .container
+      not-found
 </template>
 
 <script>
