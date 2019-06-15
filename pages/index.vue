@@ -1,6 +1,6 @@
 <template lang="pug">
   .container
-      not-found
+    not-found
 </template>
 
 <script>
@@ -9,13 +9,6 @@ import NotFound from '~/components/NotFound'
 export default {
   components: {
     NotFound
-  },
-  mounted() {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-
-      setTimeout(() => this.$nuxt.$loading.finish(), 500)
-    })
   }
 }
 </script>
