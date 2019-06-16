@@ -52,10 +52,14 @@ a {
 
 .title {
   // background-color: aquamarine;
+  @media screen and (max-width: 767px) {
+    font-size: 2rem;
+  }
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
   color: #fff;
   font-family: 'CutiveMono';
   font-size: 4vw;
@@ -73,6 +77,12 @@ a {
 
   .item {
     // background-color: #000;
+    @media screen and (max-width: 767px) {
+      margin-left: $item-margin;
+      margin-right: $item-margin;
+      width: 2rem;
+      height: 2rem;
+    }
     margin-left: $item-margin;
     margin-right: $item-margin;
     width: 4vw;
@@ -87,6 +97,9 @@ a {
 
   .link {
     // background-color: red;
+    @media screen and (max-width: 767px) {
+      font-size: 1.2rem;
+    }
     margin-left: $item-margin;
     margin-right: $item-margin;
     font-family: 'CutiveMono';
