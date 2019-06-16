@@ -1,19 +1,19 @@
 <template lang="pug">
   .container
-    h1 top
+    not-found
 </template>
 
 <script>
-// import NotFound from '~/components/NotFound'
+import NotFound from '~/components/NotFound'
 
-// export default {
-//   components: {
-//     NotFound
-//   }
-// }
-// </script>
+export default {
+  components: {
+    NotFound
+  }
+}
+</script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;
