@@ -14,10 +14,9 @@ export default {
       { hid: 'og:type', property: 'og:type', content: 'website' },
       { hid: 'og:url', property: 'og:url', content: 'https://did0es.me' },
       { hid: 'og:title', property: 'og:title', content: 'did0es portfolio' },
-      { hid: 'og:image', property: 'og:image', content: 'https://did0es.me/thumbnail-404.png' }
+      { hid: 'og:image', property: 'og:image', content: 'https://did0es.me/thumbnail.png' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
