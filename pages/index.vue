@@ -96,7 +96,7 @@ a {
 }
 
 @keyframes vertical {
-  0% { transform:translateY(-6px); }
+  0% { transform:translateY(-4px); }
   100% { transform:translateY(  0px); }
 }
 
@@ -116,7 +116,7 @@ a:nth-child(3) {
   animation-duration: 1.4s
 }
 
-.link {
+a::nth-child(4) {
   animation-duration: 1.1s
 }
 </style>
