@@ -55,11 +55,12 @@ a {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
   color: #fff;
   font-family: 'CutiveMono';
   font-size: 4vw;
   height: 8vh;
-  width: 56vw;
+  width: 42vw;
   margin-bottom: 2vh;
 }
 
@@ -94,4 +95,28 @@ a {
   }
 }
 
+@keyframes vertical {
+  0% { transform:translateY(-6px); }
+  100% { transform:translateY(  0px); }
+}
+
+a {
+  animation: vertical 1.2s ease-in-out infinite alternate;
+}
+
+a:nth-child(1) {
+  animation-duration: 1.3s
+}
+
+a:nth-child(2) {
+  animation-duration: 1.2s
+}
+
+a:nth-child(3) {
+  animation-duration: 1.4s
+}
+
+.link {
+  animation-duration: 1.1s
+}
 </style>
