@@ -4,14 +4,10 @@
 </template>
 
 <script>
-// import NotFound from '~/components/NotFound'
+export default {
 
-// export default {
-//   components: {
-//     NotFound
-//   }
-// }
-// </script>
+}
+</script>
 
 <style>
 .container {
