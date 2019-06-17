@@ -38,8 +38,9 @@ a {
   text-align: center;
   background: url('~assets/images/bg.png') no-repeat 50% 50%;
   @media screen and (max-width: 767px) {
-    width: auto;
-    height: 100vh;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
   }
 }
 
