@@ -22,8 +22,7 @@ export default {
 <style lang="scss">
 .container {
   font-size: 62.5%;
-  width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 a {

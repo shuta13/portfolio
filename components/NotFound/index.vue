@@ -117,7 +117,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   background-color: #000;
-  position: relative;
+  // position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
