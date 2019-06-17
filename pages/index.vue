@@ -39,10 +39,10 @@ a {
   background: url('~assets/images/bg.png') no-repeat 50% 50%;
   overflow: hidden;
   @media screen and (max-width: 767px) {
-    width: auto;
-    height: auto;
+    width: 100vw;
+    height: 100vh;
     object-fit: cover;
-    // overflow: hidden;
+    overflow: hidden;
   }
 }
 
