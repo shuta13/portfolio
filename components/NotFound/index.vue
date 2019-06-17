@@ -2,7 +2,10 @@
   .container(ref="canvas")#canvas
     div.main
       span.letters 404
-      span.subletters01 This page maybe broken.
+      span.subletters01
+        | This page
+        br
+        | maybe broken.
 </template>
 
 <script>
@@ -114,14 +117,14 @@ export default {
 <style lang="scss" scoped>
 .container {
   position: relative;
-
+  
   .main {
-    // background-color: #fff;
+    // background-color: #000;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: row;
     position: absolute;
-    height: 24vh;
-    width: 32vw;
   }
 
   .letters {
@@ -129,8 +132,13 @@ export default {
     color: #fff;
     font-family: 'Josefin Sans';
     font-size: 8vw;
-    margin-top: 7vh;
-    margin-left: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2vw;
+    @media screen and (max-width: 767px) {
+      font-size: 4rem;
+    }
   }
 
   .subletters01 {
@@ -139,8 +147,14 @@ export default {
     color: #fff;
     font-family: 'Source Code Pro';
     font-size: 2vw;
-    margin-top: 10vh;
-    margin-left: 1.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2vw;
+    @media screen and (max-width: 767px) {
+      font-size: 1rem;
+      margin-left: 4vw;
+    }
   }
 }
 </style>
