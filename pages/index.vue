@@ -24,6 +24,13 @@ export default {
   font-size: 62.5%;
 }
 
+html {
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
 a {
   text-decoration: none;
 }
@@ -38,7 +45,7 @@ a {
   text-align: center;
   background: url('~assets/images/bg.png') no-repeat 50% 50%;
   overflow: hidden;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     width: 100vw;
     height: 100vh;
     object-fit: cover;
@@ -59,8 +66,8 @@ a {
 
 .title {
   // background-color: aquamarine;
-  @media screen and (max-width: 767px) {
-    font-size: 2rem;
+  @media screen and (max-width: 768px) {
+    font-size: 2.2rem;
   }
   display: flex;
   flex-direction: row;
@@ -84,7 +91,7 @@ a {
 
   .item {
     // background-color: #000;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       margin-left: $item-margin;
       margin-right: $item-margin;
       width: 2rem;
@@ -104,7 +111,7 @@ a {
 
   .link {
     // background-color: red;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       font-size: 1.2rem;
     }
     margin-left: $item-margin;

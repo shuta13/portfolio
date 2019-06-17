@@ -117,10 +117,6 @@ export default {
 <style lang="scss" scoped>
 .container {
   position: relative;
-  @media screen and (max-width: 767px) {
-    width: 100vw;
-    height: 100vh;
-  }
   .main {
     // background-color: #000;
     display: flex;
@@ -139,8 +135,8 @@ export default {
     justify-content: center;
     align-items: center;
     margin-left: 2vw;
-    @media screen and (max-width: 767px) {
-      font-size: 4rem;
+    @media screen and (max-width: 768px) {
+      font-size: 6rem;
     }
   }
 
@@ -154,7 +150,7 @@ export default {
     justify-content: center;
     align-items: center;
     margin-left: 2vw;
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 768px) {
       font-size: 1rem;
       margin-left: 4vw;
     }
