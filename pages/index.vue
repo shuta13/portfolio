@@ -22,6 +22,9 @@ export default {
 <style lang="scss">
 .container {
   font-size: 62.5%;
+  min-height: 100vh;
+  width: 100vw;
+  height: auto;
 }
 
 a {
@@ -33,9 +36,6 @@ a {
 .container {
   background-color: #000;
   margin: 0 auto;
-  width: 100vw;
-  height: 100vh;
-  min-height: 100vh;
   display: flex;
   align-items: center;
   text-align: center;

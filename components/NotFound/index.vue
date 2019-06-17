@@ -116,51 +116,47 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  // background-color: #000;
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  margin: 0 auto;
+}
+
+.main {
+  // background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+}
+
+.letters {
+  // background-color: #888;
+  color: #fff;
+  font-family: 'Josefin Sans';
+  font-size: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2vw;
   @media screen and (max-width: 768px) {
-    width: 100vw;
-    height: 100vh;
-    background-color: #000;
+    font-size: 4rem;
   }
-  .main {
-    // background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    position: absolute;
-  }
+}
 
-  .letters {
-    // background-color: #888;
-    color: #fff;
-    font-family: 'Josefin Sans';
-    font-size: 8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2vw;
-    @media screen and (max-width: 768px) {
-      font-size: 4rem;
-    }
-  }
-
-  .subletters01 {
-    // background-color: #ccc;
-    text-align: left;
-    color: #fff;
-    font-family: 'Source Code Pro';
-    font-size: 2vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 2vw;
-    @media screen and (max-width: 768px) {
-      font-size: 1rem;
-      margin-left: 4vw;
-    }
+.subletters01 {
+  // background-color: #ccc;
+  text-align: left;
+  color: #fff;
+  font-family: 'Source Code Pro';
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2vw;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    margin-left: 4vw;
   }
 }
 </style>
