@@ -37,10 +37,11 @@ a {
   align-items: center;
   text-align: center;
   background: url('~assets/images/bg.png') no-repeat 50% 50%;
+  overflow: hidden;
   @media screen and (max-width: 767px) {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
+    // width: auto;
+    // height: auto;
+    // overflow: hidden;
   }
 }
 
