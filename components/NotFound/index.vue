@@ -117,7 +117,10 @@ export default {
 <style lang="scss" scoped>
 .container {
   position: relative;
-  
+  @media screen and (max-width: 767px) {
+    width: 100vw;
+    height: 100vh;
+  }
   .main {
     // background-color: #000;
     display: flex;
