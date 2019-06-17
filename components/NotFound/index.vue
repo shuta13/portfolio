@@ -115,6 +115,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+* {
+  margin: 0px;
+  padding: 0px;
+}
 .container {
   background-color: #000;
   // position: relative;
@@ -141,6 +145,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  white-space: nowrap;
   margin-left: 2vw;
   @media screen and (max-width: 768px) {
     font-size: 4rem;

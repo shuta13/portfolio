@@ -20,6 +20,11 @@ export default {
 </script>
 
 <style lang="scss">
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 .container {
   font-size: 62.5%;
   min-height: 100vh;
