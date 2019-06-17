@@ -21,6 +21,11 @@ export default {
 
 <style lang="scss">
 .container {
+  position: relative;
+  @media screen and (max-width: 767px) {
+    width: 100vw;
+    height: 100vh;
+  }
   font-size: 62.5%;
 }
 
@@ -37,10 +42,6 @@ a {
   align-items: center;
   text-align: center;
   background: url('~assets/images/bg.png') no-repeat 50% 50%;
-  @media screen and (max-width: 767px) {
-    width: 100vw;
-    height: 100vh;
-  }
 }
 
 .main {
