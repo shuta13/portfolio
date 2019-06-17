@@ -38,7 +38,7 @@ a {
   text-align: center;
   background: url('~assets/images/bg.png') no-repeat 50% 50%;
   @media screen and (max-width: 767px) {
-    width: 100vw;
+    width: 100%;
     height: auto;
     overflow: hidden;
   }
