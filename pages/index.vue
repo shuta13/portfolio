@@ -24,11 +24,6 @@ export default {
   font-size: 62.5%;
 }
 
-html {
-  width: 100vw;
-  height: 100vh;
-}
-
 a {
   text-decoration: none;
 }
@@ -36,6 +31,7 @@ a {
 
 <style lang="scss" scoped>
 .container {
+  background-color: #000;
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
