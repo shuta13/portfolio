@@ -25,10 +25,8 @@ export default {
 }
 
 html {
-  @media screen and (max-width: 768px) {
-    width: 100vw;
-    height: 100vh;
-  }
+  width: 100vw;
+  height: 100vh;
 }
 
 a {
@@ -39,6 +37,8 @@ a {
 <style lang="scss" scoped>
 .container {
   margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -46,10 +46,7 @@ a {
   background: url('~assets/images/bg.png') no-repeat 50% 50%;
   overflow: hidden;
   @media screen and (max-width: 768px) {
-    width: 100vw;
-    height: 100vh;
     object-fit: cover;
-    overflow: hidden;
   }
 }
 
