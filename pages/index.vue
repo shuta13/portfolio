@@ -22,9 +22,8 @@ export default {
 <style lang="scss">
 .container {
   font-size: 62.5%;
-  min-height: 100vh;
   width: 100vw;
-  height: auto;
+  height: 100vh;
 }
 
 a {
@@ -38,6 +37,7 @@ a {
   margin: 0 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-align: center;
   background: url('~assets/images/bg.png') no-repeat 50% 50%;
   overflow: hidden;

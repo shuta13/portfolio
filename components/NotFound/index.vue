@@ -118,14 +118,14 @@ export default {
 .container {
   // background-color: #000;
   position: relative;
-  margin: 0 0;
 }
 
 .main {
   // background-color: #000;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   flex-direction: row;
   position: absolute;
 }
