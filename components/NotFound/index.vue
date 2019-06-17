@@ -118,7 +118,7 @@ export default {
 .container {
   // background-color: #000;
   position: relative;
-  margin: 0 auto;
+  margin: 0 0;
 }
 
 .main {
