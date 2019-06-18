@@ -20,6 +20,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  position: fixed; // sticky menuの実装
   // margin: 0 auto;
   // min-height: 100vh; こいつonにするとページ全体に範囲が及ぶ
   font-size: 62.5%;
@@ -32,27 +33,27 @@ ul {
   padding: 0;
 }
 
-.main {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .title {
   background-color: red;
   position: absolute;
-  color: #fff;
-  font-family: 'CutiveMono';
-  font-size: 4vw;
+  width: 100vw;
+  height: 64px;
 }
 
 .menu-wrap {
-  position: absolute;
-  .page-items {
-    background-color: aqua;
-    color: #fff;
+  .toggle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 </style>

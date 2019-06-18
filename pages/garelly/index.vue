@@ -1,8 +1,14 @@
 <template lang="pug">
   .container
     toggle-menu
-    .whole-wrap
+    .content
       .image-wrap
+        .image(:style="{ 'background-image': 'url(/top/work01.png)' }")
+        .image(:style="{ 'background-image': 'url(/top/work02.png)' }")
+        .image(:style="{ 'background-image': 'url(/top/work03.png)' }")
+        .image(:style="{ 'background-image': 'url(/top/work03.png)' }")
+        .image(:style="{ 'background-image': 'url(/top/work01.png)' }")
+        .image(:style="{ 'background-image': 'url(/top/work02.png)' }")
         .image(:style="{ 'background-image': 'url(/top/work01.png)' }")
         .image(:style="{ 'background-image': 'url(/top/work02.png)' }")
         .image(:style="{ 'background-image': 'url(/top/work03.png)' }")
@@ -26,14 +32,17 @@ export default {
   margin: 0 auto;
 }
 
-.whole-wrap {
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .image-wrap {
-  margin-top: 8vh;
+  @media screen and (max-width: 768px) {
+    margin-top: 2vw;
+  }
+  margin-top: 1.8vw;
   width: 96vw;
   // height: 96vh;
   display: flex;
