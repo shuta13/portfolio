@@ -62,6 +62,10 @@ export default {
   // min-height: 240px;
   width: 32vw;
   height: 24vw;
+  @media screen and (max-width: 1300px) {
+    width: 48vw;
+    height: 36vw;
+  }
   @media screen and (max-width: 768px) {
     width: 96vw;
     height: 72vw;
