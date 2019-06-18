@@ -11,7 +11,7 @@
         .image(:style="{ 'background-image': 'url(/top/work06.png)' }")
         .image(:style="{ 'background-image': 'url(/top/work07.png)' }")
         .image(:style="{ 'background-image': 'url(/top/work08.png)' }")
-        .image(:style="{ 'background-image': 'url(/top/work09.png)' }")
+        nuxt-link(to="/404").image(:style="{ 'background-image': 'url(/top/work09.png)' }")
         .image(:style="{ 'background-image': 'url(/top/work10.jpg)' }")
         .image(:style="{ 'background-image': 'url(/top/work11.png)' }")
         .image(:style="{ 'background-image': 'url(/top/work12.jpg)' }")
