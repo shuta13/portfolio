@@ -21,7 +21,7 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-  // margin: 0 auto;
+  margin: 0 auto;
   // min-height: 100vh; こいつonにするとページ全体に範囲が及ぶ
   font-size: 62.5%;
   // background-color: #000;

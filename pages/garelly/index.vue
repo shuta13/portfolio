@@ -49,7 +49,7 @@ export default {
   justify-content: center;
   // align-items: center; // 消すと一番上から始まる
   flex-wrap: wrap;
-  background-color: blue;
+  // background-color: blue;
   // widthを調整(@mediaで)
   // 見切れた部分はロールして見れるように
   // flex-wrapでよさそう

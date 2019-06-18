@@ -9,7 +9,7 @@
           img.item(src="~/assets/images/github-square-brands.svg")
         a(href="https://www.facebook.com/profile.php?id=100028982675881")
           img.item(src="~/assets/images/facebook-square-brands.svg")
-        nuxt-link.link-wrap(to="/")
+        nuxt-link.link-wrap(to="/garelly")
           span.link GARELLY
 </template>
 
@@ -27,7 +27,6 @@ export default {
 
 .container {
   font-size: 62.5%;
-  min-height: 100vh;
 }
 
 a {
@@ -38,6 +37,7 @@ a {
 <style lang="scss" scoped>
 .container {
   background-color: #000;
+  min-height: 100vh;
   margin: 0 auto;
   display: flex;
   align-items: center;
