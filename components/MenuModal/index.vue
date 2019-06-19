@@ -43,6 +43,9 @@ ul {
   // background-color: red;
   li {
     font-family: 'CutiveMono';
+    @media screen and (max-width: 768px) {
+      font-size: 1.8rem;
+    }
     font-size: 3vw;
     line-height: 8vh;
     cursor: pointer;
