@@ -67,7 +67,7 @@ a {
   color: rgb(0, 0, 0);
   font-family: 'CutiveMono';
   @media screen and (max-width: 768px) {
-    color: rgb(255, 255, 255);
+    color: rgb(150, 120, 100);
   }
   font-size: 1.2rem;
 }
