@@ -3,18 +3,18 @@
     toggle-menu
     .content
       .image-wrap
-        .image(:style="{ 'background-image': 'url(/top/work01.png)' }")
-        .image(:style="{ 'background-image': 'url(/top/work02.png)' }")
-        .image(:style="{ 'background-image': 'url(/top/work03.png)' }")
-        .image(:style="{ 'background-image': 'url(/top/work04.png)' }")
-        .image(:style="{ 'background-image': 'url(/top/work05.png)' }")
-        .image(:style="{ 'background-image': 'url(/top/work06.png)' }")
-        .image(:style="{ 'background-image': 'url(/top/work07.png)' }")
-        .image(:style="{ 'background-image': 'url(/top/work08.png)' }")
-        nuxt-link(to="/404").image(:style="{ 'background-image': 'url(/top/work09.png)' }")
-        .image(:style="{ 'background-image': 'url(/top/work10.jpg)' }")
-        .image(:style="{ 'background-image': 'url(/top/work11.png)' }")
-        .image(:style="{ 'background-image': 'url(/top/work12.jpg)' }")
+        nuxt-link(to="/garelly/work01").image(:style="{ 'background-image': 'url(/top/work01.png)' }")
+        nuxt-link(to="/garelly/work02").image(:style="{ 'background-image': 'url(/top/work02.png)' }")
+        nuxt-link(to="/garelly/work03").image(:style="{ 'background-image': 'url(/top/work03.png)' }")
+        nuxt-link(to="/garelly/work04").image(:style="{ 'background-image': 'url(/top/work04.png)' }")
+        nuxt-link(to="/garelly/work05").image(:style="{ 'background-image': 'url(/top/work05.png)' }")
+        nuxt-link(to="/garelly/work06").image(:style="{ 'background-image': 'url(/top/work06.png)' }")
+        nuxt-link(to="/garelly/work07").image(:style="{ 'background-image': 'url(/top/work07.png)' }")
+        nuxt-link(to="/garelly/work08").image(:style="{ 'background-image': 'url(/top/work08.png)' }")
+        nuxt-link(to="/garelly/work09").image(:style="{ 'background-image': 'url(/top/work09.png)' }")
+        nuxt-link(to="/garelly/work10").image(:style="{ 'background-image': 'url(/top/work10.jpg)' }")
+        nuxt-link(to="/garelly/work11").image(:style="{ 'background-image': 'url(/top/work11-thumnail.png)' }")
+        nuxt-link(to="/garelly/work12").image(:style="{ 'background-image': 'url(/top/work12.jpg)' }")
 </template>
 
 <script>
@@ -63,14 +63,17 @@ export default {
   width: 32vw;
   height: 24vw;
   @media screen and (max-width: 1300px) {
+    background-position: center center;
     width: 48vw;
     height: 36vw;
   }
   @media screen and (max-width: 768px) {
+    background-position: center center;
     width: 96vw;
     height: 72vw;
   }
   object-fit: cover;
   overflow: hidden;
+  background: no-repeat;
 }
 </style>
