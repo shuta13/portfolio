@@ -2,20 +2,35 @@
   .container
     .menu-wrap
       //- input.toggle(type="checkbox")
-      .hamburger
+      .hamburger(@click="clicked")
         .line
+      menu-modal.modal(v-if="appear")
       .menu
-        ul.page-items
-          li top
-          li graphics
-          li generative
-          li other
-          li about
+        //- ul.page-items
+        //-   li top
+        //-   li graphics
+        //-   li generative
+        //-   li other
+        //-   li about
 </template>
 
 <script>
-export default {
+import MenuModal from '~/components/MenuModal'
 
+export default {
+  components: {
+    MenuModal
+  },
+  data() {
+    return {
+      appear: false
+    }
+  },
+  methods: {
+    clicked() {
+      this.appear = !this.appear
+    }
+  }
 }
 </script>
 
@@ -25,12 +40,6 @@ export default {
   // min-height: 100vh; こいつonにするとページ全体に範囲が及ぶ
   font-size: 62.5%;
   // background-color: #000;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .title {
