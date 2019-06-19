@@ -66,6 +66,9 @@ a {
 
 .back {
   color: rgb(0, 0, 0);
+  @media screen and (max-width: 768px) {
+    color: rgb(255, 255, 255);
+  }
   font-family: 'CutiveMono';
   font-size: 1.2rem;
 }

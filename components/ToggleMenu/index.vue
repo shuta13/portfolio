@@ -50,22 +50,13 @@ export default {
 
 .menu-wrap {
   position: fixed; // sticky menuの実装
-  z-index: 1;
-  .toggle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    opacity: 0;
-  }
+  // z-index: 1;
   .hamburger {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 1;
+    cursor: pointer;
     width: 60px;
     height: 60px;
     padding: 1rem;
@@ -86,7 +77,7 @@ export default {
     .line:after {
       content: '';
       position: absolute;
-      z-index: 1;
+      // z-index: 1;
       top: -10px;
       width: 100%;
       height: 2px;
