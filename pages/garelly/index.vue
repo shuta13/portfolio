@@ -15,6 +15,7 @@
         nuxt-link(to="/garelly/work10").image(:style="{ 'background-image': 'url(/top/work10.jpg)' }").centering
         nuxt-link(to="/garelly/work11").image(:style="{ 'background-image': 'url(/top/work11-thumnail.png)' }")
         nuxt-link(to="/garelly/work12").image(:style="{ 'background-image': 'url(/top/work12.jpg)' }").centering
+        nuxt-link(to="/garelly/work12").image(:style="{ 'background-image': 'url(/top/work12.jpg)' }").centering
 </template>
 
 <script>
@@ -46,7 +47,7 @@ export default {
   width: 96vw;
   // height: 96vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   // align-items: center; // 消すと一番上から始まる
   flex-wrap: wrap;
   // background-color: blue;
