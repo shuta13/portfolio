@@ -11,12 +11,12 @@
         nuxt-link(to="/garelly/work06").image(:style="{ 'background-image': 'url(/top/work06.png)' }").centering
         nuxt-link(to="/garelly/work07").image(:style="{ 'background-image': 'url(/top/work07.png)' }").centering
         nuxt-link(to="/garelly/work08").image(:style="{ 'background-image': 'url(/top/work08.png)' }").centering
-        nuxt-link(to="/garelly/work09").image(:style="{ 'background-image': 'url(/top/work09.gif)' }").centering
+        nuxt-link(to="/garelly/work09").image(:style="{ 'background-image': 'url(/top/work09.png)' }").centering
         nuxt-link(to="/garelly/work10").image(:style="{ 'background-image': 'url(/top/work10.jpg)' }").centering
         nuxt-link(to="/garelly/work11").image(:style="{ 'background-image': 'url(/top/work11-thumnail.png)' }")
         nuxt-link(to="/garelly/work12").image(:style="{ 'background-image': 'url(/top/work12.jpg)' }").centering
-        nuxt-link(to="/garelly/work13").image(:style="{ 'background-image': 'url(/top/work13.gif)' }").centering
-        nuxt-link(to="/garelly/work14").image(:style="{ 'background-image': 'url(/top/work14.gif)' }").centering
+        nuxt-link(to="/garelly/work13").image(:style="{ 'background-image': 'url(/top/work13.png)' }").centering
+        nuxt-link(to="/garelly/work14").image(:style="{ 'background-image': 'url(/top/work14.png)' }").centering
 </template>
 
 <script>
@@ -77,6 +77,7 @@ export default {
 }
 
 .image-wrap:after {
+  // 疑似要素生成
   content:"";
   display: block;
   width:32vw;
