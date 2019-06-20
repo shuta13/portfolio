@@ -16,7 +16,7 @@
         nuxt-link(to="/garelly/work11").image(:style="{ 'background-image': 'url(/top/work11-thumnail.png)' }")
         nuxt-link(to="/garelly/work12").image(:style="{ 'background-image': 'url(/top/work12.jpg)' }").centering
         nuxt-link(to="/garelly/work13").image(:style="{ 'background-image': 'url(/top/work13.gif)' }").centering
-        //- nuxt-link(to="/garelly/work14").image(:style="{ 'background-image': 'url(/top/work14.gif)' }").centering
+        nuxt-link(to="/garelly/work14").image(:style="{ 'background-image': 'url(/top/work14.gif)' }").centering
 </template>
 
 <script>
@@ -74,6 +74,12 @@ export default {
   object-fit: cover;
   overflow: hidden;
   background: no-repeat;
+}
+
+.image-wrap:after {
+  content:"";
+  display: block;
+  width:32vw;
 }
 
 .centering {
