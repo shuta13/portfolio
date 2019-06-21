@@ -4,7 +4,7 @@
       .content
         deep-sea
         .bottom-wrap
-          nuxt-link(to="/garelly/webmotion").back back
+          nuxt-link(to="/garelly/webmotions").back back
 </template>
 
 <script>

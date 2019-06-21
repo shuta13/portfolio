@@ -51,8 +51,10 @@ export default {
 .image-wrap {
   @media screen and (max-width: 768px) {
     margin-top: 2vw;
+    margin-bottom: 2vw;
   }
   margin-top: 1.8vw;
+  margin-bottom: 1.8vw;
   width: 96vw;
   // height: 96vh;
   display: flex;

@@ -2,17 +2,17 @@
   .container
     .image-wrap
       .content
-        glitch-cubes
+        not-found
         .bottom-wrap
-          nuxt-link(to="/garelly/webmotion").back back
+          nuxt-link(to="/garelly/webmotions").back back
 </template>
 
 <script>
-import GlitchCubes from '~/components/GlitchCubes'
+import NotFound from '~/components/NotFound'
 
 export default {
   components: {
-    GlitchCubes
+    NotFound
   }
 }
 </script>
