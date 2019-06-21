@@ -14,7 +14,7 @@
         nuxt-link(to="/garelly/work08").image(:style="{ 'background-image': 'url(/top/work08.png)' }").centering
         nuxt-link(to="/garelly/work09").image(:style="{ 'background-image': 'url(/top/work09.png)' }").centering
         nuxt-link(to="/garelly/work10").image(:style="{ 'background-image': 'url(/top/work10.jpg)' }").centering
-        nuxt-link(to="/garelly/work11").image(:style="{ 'background-image': 'url(/top/work11-thumnail.png)' }")
+        nuxt-link(to="/garelly/work11").image(:style="{ 'background-image': 'url(/top/work11-thumbnail.png)' }")
         nuxt-link(to="/garelly/work12").image(:style="{ 'background-image': 'url(/top/work12.jpg)' }").centering
         nuxt-link(to="/garelly/work13").image(:style="{ 'background-image': 'url(/top/work13.png)' }").centering
         nuxt-link(to="/garelly/work14").image(:style="{ 'background-image': 'url(/top/work14.png)' }").centering
