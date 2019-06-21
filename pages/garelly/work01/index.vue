@@ -4,7 +4,7 @@
       .content
         .image(:style="{ 'background-image': 'url(/top/work01.png)' }")
         .bottom-wrap
-          nuxt-link(to="/garelly").back top
+          nuxt-link(to="/garelly").back back
 </template>
 
 <script>

@@ -1,5 +1,6 @@
 <template lang="pug">
   .container
+    blind-modal.blind
     toggle-menu
     .content
       .image-wrap
@@ -20,10 +21,13 @@
 </template>
 
 <script>
+/* eslint-diable */
+import BlindModal from '~/components/BlindModal'
 import ToggleMenu from '~/components/ToggleMenu'
 
 export default {
   components: {
+    BlindModal,
     ToggleMenu
   }
 }
@@ -32,6 +36,10 @@ export default {
 <style lang="scss" scoped>
 .container {
   margin: 0 auto;
+}
+
+.blind {
+  z-index: 999;
 }
 
 .content {

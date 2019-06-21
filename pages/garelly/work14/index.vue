@@ -4,7 +4,7 @@
       .content
         glitch-cubes
         .bottom-wrap
-          nuxt-link(to="/garelly").back top
+          nuxt-link(to="/garelly").back back
 </template>
 
 <script>

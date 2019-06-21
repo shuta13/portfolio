@@ -1,10 +1,12 @@
 <template lang="pug">
   .container
     .menu-wrap
-      //- input.toggle(type="checkbox")
       .hamburger(@click="clicked")
         .line
-      menu-modal.modal(v-if="appear")
+          transition(name="bars")
+            .neighbors(v-if="!appear")
+      transition(name="blind")
+        menu-modal.modal(v-if="appear")
       .menu
         //- ul.page-items
         //-   li top
@@ -15,6 +17,7 @@
 </template>
 
 <script>
+// import { TweenMax } from 'gsap'
 import MenuModal from '~/components/MenuModal'
 
 export default {
@@ -73,8 +76,17 @@ export default {
       justify-content: center;
       align-items: center;
     }
-    .line:before,
-    .line:after {
+    .neighbors {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: rgb(0, 0, 0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .neighbors:before,
+    .neighbors:after {
       content: '';
       position: absolute;
       // z-index: 1;
@@ -83,9 +95,38 @@ export default {
       height: 2px;
       background-color: inherit
     }
-    .line:after {
+    .neighbors:after {
       top: 10px;
     }
+    // .line:before,
+    // .line:after {
+    //   content: '';
+    //   position: absolute;
+    //   // z-index: 1;
+    //   top: -10px;
+    //   width: 100%;
+    //   height: 2px;
+    //   background-color: inherit
+    // }
+    // .line:after {
+    //   top: 10px;
+    // }
   }
 }
+
+// transitionタグに適用
+.bars-enter-active, .bars-leave-active {
+  transition: opacity .3s;
+}
+.bars-enter, .bars-leave-to {
+  opacity: 0;
+}
+
+.blind-enter-active, .blind-leave-active {
+  transition: opacity .4s;
+}
+.blind-enter, .blind-leave-to {
+  opacity: 0;
+}
+
 </style>

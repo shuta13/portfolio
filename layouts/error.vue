@@ -23,4 +23,22 @@ export default {
   text-align: center;
   font-size: 62.5%;
 }
+
+.bottom-wrap {
+  z-index: 2;
+  bottom: 0;
+  position: fixed;
+  // background-color: red;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  color: rgb(255, 255, 255);
+  font-family: 'CutiveMono';
+  font-size: 1.2rem;
+}
 </style>
