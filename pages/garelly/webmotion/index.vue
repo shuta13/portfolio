@@ -4,9 +4,9 @@
     toggle-menu
     .content
       .image-wrap
-        nuxt-link(to="/garelly/webmotion/work01").image(:style="{ 'background-image': 'url(/webmotion/work01.gif)' }").centering
-        nuxt-link(to="/garelly/webmotion/work02").image(:style="{ 'background-image': 'url(/webmotion/work02.gif)' }").centering
-        nuxt-link(to="/garelly/webmotion/work03").image(:style="{ 'background-image': 'url(/webmotion/work03.gif)' }").centering
+        nuxt-link(to="/garelly/webmotion/work01").image(:style="{ 'background-image': 'url(/webmotion/work01.png)' }").centering
+        nuxt-link(to="/garelly/webmotion/work02").image(:style="{ 'background-image': 'url(/webmotion/work02.png)' }").centering
+        nuxt-link(to="/garelly/webmotion/work03").image(:style="{ 'background-image': 'url(/webmotion/work03.png)' }").centering
 </template>
 
 <script>
