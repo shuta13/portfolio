@@ -53,6 +53,9 @@ export default {
   align-items: center;
   font-family: 'Josefin Sans';
   font-size: 7vw;
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
   // 文字の透過
   // color: #fff;
   color: transparent;
