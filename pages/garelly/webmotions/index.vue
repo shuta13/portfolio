@@ -28,17 +28,18 @@ export default {
     }
   },
   mounted() {
+    if (this.$store.state.webmotionsCount === 0) {
+      this.appear = true
+      this.$store.commit('incrementPageCount', 1)
+    } else {
+      this.appear = false
+    }
     setTimeout(() => {
       TweenMax.to('.animation-modal', 1, {
         ease: Power4.easeOut,
         left: '100vw'
       })
-    }, 4200)
-  },
-  methods: {
-    toDisappear() {
-      this.appear = !this.appear
-    }
+    }, 6000)
   }
 }
 </script>

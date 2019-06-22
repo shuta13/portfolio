@@ -9,7 +9,7 @@
           img.item(src="~/assets/images/github-square-brands.svg")
         a(href="https://www.facebook.com/profile.php?id=100028982675881")
           img.item(src="~/assets/images/facebook-square-brands.svg")
-        nuxt-link.link-wrap(to="/garelly")
+        .link-wrap(@click="updateRouteStore")
           span.link GARELLY
       transition(name="animation")
         animation-modal.animation-modal(v-if="appear")
@@ -25,7 +25,8 @@ export default {
   },
   data() {
     return {
-      appear: true
+      appear: true,
+      in: false
     }
   },
   mounted() {
@@ -43,6 +44,11 @@ export default {
   methods: {
     toDisappear() {
       this.appear = !this.appear
+    },
+    updateRouteStore() {
+      const route = '/'
+      this.$store.commit('setCurrentRoute', route)
+      this.$router.push('/garelly')
     }
   }
 }
@@ -145,6 +151,7 @@ a {
     font-family: 'CutiveMono';
     color: #fff;
     font-size: 2vw;
+    cursor: pointer;
   }
 }
 
@@ -153,7 +160,7 @@ a {
   100% { transform:translateY(  0px); }
 }
 
-a {
+a, .link-wrap {
   animation: vertical 1.2s ease-in-out infinite alternate;
 }
 
@@ -169,11 +176,12 @@ a:nth-child(3) {
   animation-duration: 1.4s
 }
 
-a::nth-child(4) {
+.link-wrap::nth-child(4) {
   animation-duration: 1.1s
 }
 
 .animation-modal {
+  position: fixed;
   z-index: 999;
 }
 

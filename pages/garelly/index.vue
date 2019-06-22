@@ -1,6 +1,6 @@
 <template lang="pug">
   .container
-    animation-modal.animation-modal(v-if="appear")
+    after-moving-blind.moving-blind(v-if="routeFlag")
     blind-modal.blind
     toggle-menu
     .content
@@ -22,33 +22,38 @@
 </template>
 
 <script>
+/* eslint-disable */
 import { TweenMax, Power4 } from 'gsap'
-import AnimationModal from '~/components/AnimationModal'
+import AfterMovingBlind from '~/components/AfterMovingBlind'
 import BlindModal from '~/components/BlindModal'
 import ToggleMenu from '~/components/ToggleMenu'
 
 export default {
+  data() {
+    return {
+      routeFlag: true
+    }
+  },
   components: {
-    AnimationModal,
+    AfterMovingBlind,
     BlindModal,
     ToggleMenu
   },
-  data() {
-    return {
-      appear: true
+  mounted() {
+    this.moveBlind()
+    if (this.$store.state.currentRoute == '/') {
+      this.routeFlag = true
+    } else {
+      this.routeFlag = false
     }
   },
-  mounted() {
-    setTimeout(() => {
-      TweenMax.to('.animation-modal', 1, {
-        ease: Power4.easeOut,
-        left: '100vw'
-      })
-    }, 4000)
-  },
   methods: {
-    toDisappear() {
-      this.appear = !this.appear
+    moveBlind() {
+      TweenMax.to('.moving-blind', 2, {
+        delay: 2.8,
+        bottom: '100vh',
+        ease: Power4.easeOut
+      })
     }
   }
 }
@@ -118,7 +123,8 @@ export default {
   background-position: center;
 }
 
-.animation-modal {
+.moving-blind {
+  position: fixed;
   z-index: 999;
 }
 </style>
