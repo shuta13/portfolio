@@ -10,16 +10,9 @@
           transition(name="blind")
             menu-modal.modal(v-if="appear")
       .menu
-        //- ul.page-items
-        //-   li top
-        //-   li graphics
-        //-   li generative
-        //-   li other
-        //-   li about
 </template>
 
 <script>
-// import { TweenMax } from 'gsap'
 import MenuModal from '~/components/MenuModal'
 
 export default {

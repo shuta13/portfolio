@@ -4,7 +4,7 @@
     toggle-menu
     .content
       .image-wrap
-        nuxt-link(to="/garelly/work01").image(:style="{ 'background-image': 'url(/top/work01.png)' }").centering
+        nuxt-link(to="/garelly/work01")(name="link").image(:style="{ 'background-image': 'url(/top/work01.png)' }").centering
         nuxt-link(to="/garelly/work02").image(:style="{ 'background-image': 'url(/top/work02.png)' }").centering
         nuxt-link(to="/garelly/work03").image(:style="{ 'background-image': 'url(/top/work03.png)' }").centering
         nuxt-link(to="/garelly/work04").image(:style="{ 'background-image': 'url(/top/work04.png)' }").centering

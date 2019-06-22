@@ -1,11 +1,14 @@
 <template lang="pug">
   .container
-    .canvas-wrap
+    .content-wrap
       #canvas(ref="canvas")
 </template>
 
 <script>
+// import * as THREE from 'three'
+
 export default {
+
 }
 </script>
 
@@ -16,14 +19,12 @@ export default {
   height: 100vh;
 }
 
-.canvas-wrap {
+.content-wrap {
+  background-color: #000;
   width: 100vw;
   height: 100vh;
-}
-
-#canvas {
-  background-color: rgb(255, 120, 120);
-  width: 100vw;
-  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>

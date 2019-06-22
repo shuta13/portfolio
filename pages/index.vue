@@ -11,7 +11,7 @@
           img.item(src="~/assets/images/facebook-square-brands.svg")
         nuxt-link.link-wrap(to="/garelly")
           span.link GARELLY
-      animation-modal.animation-modal
+      //- animation-modal.animation-modal
 </template>
 
 <script>
