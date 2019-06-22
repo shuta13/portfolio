@@ -57,7 +57,7 @@ export default {
     font-size: 3rem;
   }
   // 文字の透過
-  color: rgba(255, 255, 255, 0);
+  color: rgb(255, 255, 255);
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
