@@ -49,7 +49,7 @@ export default {
   },
   methods: {
     moveBlind() {
-      TweenMax.to('.moving-blind', 2, {
+      TweenMax.to('.moving-blind', 1.6, {
         delay: 2.8,
         bottom: '100vh',
         ease: Power4.easeOut

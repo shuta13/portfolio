@@ -3,13 +3,10 @@
     .moving-modal-wrap
       .moving-modal
         .text-wrap
-          //- .curtain1
           .text Welcome
         .text-wrap
-          //- .curtain2
           .text to
         .text-wrap
-          //- .curtain3
           .text Garelly
 </template>
 

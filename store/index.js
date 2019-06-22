@@ -11,9 +11,3 @@ export const mutations = {
     state.webmotionsCount = count
   }
 }
-
-// export const actions = {
-//   updateRoute(context, route) {
-//     context.commit('setCurrentRoute', route)
-//   }
-// }
