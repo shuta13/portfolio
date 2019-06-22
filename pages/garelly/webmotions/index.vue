@@ -33,7 +33,7 @@ export default {
         ease: Power4.easeOut,
         left: '100vw'
       })
-    }, 2000)
+    }, 4000)
   },
   methods: {
     toDisappear() {
