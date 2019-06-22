@@ -11,11 +11,16 @@
           img.item(src="~/assets/images/facebook-square-brands.svg")
         nuxt-link.link-wrap(to="/garelly")
           span.link GARELLY
+      animation-modal.animation-modal
 </template>
 
 <script>
-export default {
+import AnimationModal from '~/components/AnimationModal'
 
+export default {
+  components: {
+    AnimationModal
+  }
 }
 </script>
 
@@ -142,5 +147,9 @@ a:nth-child(3) {
 
 a::nth-child(4) {
   animation-duration: 1.1s
+}
+
+.animation-modal {
+  z-index: 999;
 }
 </style>

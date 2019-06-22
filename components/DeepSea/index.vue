@@ -1,10 +1,6 @@
-<template>
-  <section class="section">
-    <div
-      id="canvas"
-      ref="canvas"
-    />
-  </section>
+<template lang="pug">
+  .container
+    #canvas(ref="canvas")
 </template>
 
 <script>
