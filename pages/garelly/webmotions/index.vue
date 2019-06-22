@@ -1,5 +1,6 @@
 <template lang="pug">
   .container
+    animation-modal.animation-modal(v-if="appear")
     blind-modal.blind
     toggle-menu
     .content
@@ -10,14 +11,34 @@
 </template>
 
 <script>
-/* eslint-diable */
+import { TweenMax, Power4 } from 'gsap'
+import AnimationModal from '~/components/AnimationModal'
 import BlindModal from '~/components/BlindModal'
 import ToggleMenu from '~/components/ToggleMenu'
 
 export default {
   components: {
+    AnimationModal,
     BlindModal,
     ToggleMenu
+  },
+  data() {
+    return {
+      appear: true
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      TweenMax.to('.animation-modal', 1, {
+        ease: Power4.easeOut,
+        left: '100vw'
+      })
+    }, 2000)
+  },
+  methods: {
+    toDisappear() {
+      this.appear = !this.appear
+    }
   }
 }
 </script>
@@ -82,5 +103,9 @@ export default {
 
 .centering {
   background-position: center;
+}
+
+.animation-modal {
+  z-index: 999;
 }
 </style>

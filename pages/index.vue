@@ -11,15 +11,35 @@
           img.item(src="~/assets/images/facebook-square-brands.svg")
         nuxt-link.link-wrap(to="/garelly")
           span.link GARELLY
-      //- animation-modal.animation-modal
+      transition(name="animation")
+        animation-modal.animation-modal(v-if="appear")
 </template>
 
 <script>
+import { TweenMax, Power4 } from 'gsap'
 import AnimationModal from '~/components/AnimationModal'
 
 export default {
   components: {
     AnimationModal
+  },
+  data() {
+    return {
+      appear: true
+    }
+  },
+  mounted() {
+    setTimeout(() => {
+      TweenMax.to('.animation-modal', 1, {
+        ease: Power4.easeOut,
+        bottom: '100vh'
+      })
+    }, 2000)
+  },
+  methods: {
+    toDisappear() {
+      this.appear = !this.appear
+    }
   }
 }
 </script>
@@ -151,5 +171,9 @@ a::nth-child(4) {
 
 .animation-modal {
   z-index: 999;
+}
+
+.animation-enter, .blind-leave-to {
+  opacity: .4;
 }
 </style>
