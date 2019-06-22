@@ -29,12 +29,16 @@ export default {
     }
   },
   mounted() {
-    setTimeout(() => {
-      TweenMax.to('.animation-modal', 1, {
-        ease: Power4.easeOut,
-        bottom: '100vh'
-      })
-    }, 4000)
+    this.$nextTick(() => {
+      this.$nuxt.$loading.start()
+      setTimeout(() => {
+        TweenMax.to('.animation-modal', 1, {
+          ease: Power4.easeOut,
+          bottom: '100vh'
+        })
+        this.$nuxt.$loading.finish()
+      }, 4000)
+    })
   },
   methods: {
     toDisappear() {
