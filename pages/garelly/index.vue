@@ -44,7 +44,7 @@ export default {
         ease: Power4.easeOut,
         left: '100vw'
       })
-    }, 6000)
+    }, 4000)
   },
   methods: {
     toDisappear() {

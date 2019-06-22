@@ -37,7 +37,7 @@ export default {
           bottom: '100vh'
         })
         this.$nuxt.$loading.finish()
-      }, 4000)
+      }, 6000)
     })
   },
   methods: {
