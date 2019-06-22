@@ -1,7 +1,7 @@
 <template lang="pug">
   .container
     .canvas-wrap
-      .canvas
+      #canvas(ref="canvas")
 </template>
 
 <script>
@@ -21,7 +21,7 @@ export default {
   height: 100vh;
 }
 
-.canvas {
+#canvas {
   background-color: rgb(255, 120, 120);
   width: 100vw;
   height: 100vh;

@@ -6,7 +6,9 @@
           transition(name="bars")
             .neighbors(v-if="!appear")
       transition(name="blind")
-        menu-modal.modal(v-if="appear")
+        .modal-wrap(@click="clicked")
+          transition(name="blind")
+            menu-modal.modal(v-if="appear")
       .menu
         //- ul.page-items
         //-   li top
