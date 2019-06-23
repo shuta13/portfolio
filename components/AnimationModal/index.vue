@@ -70,4 +70,13 @@ export default {
     color: rgb(0, 0, 0);
   }
 }
+
+@keyframes loadingVertical {
+  0% { transform:translateY(-8px); }
+  100% { transform:translateY(  8px); }
+}
+
+.text {
+  animation: loadingVertical 1.4s ease-in-out infinite alternate;
+}
 </style>

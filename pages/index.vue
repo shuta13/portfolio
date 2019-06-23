@@ -16,7 +16,7 @@
         .animation-modal(v-if="appear")
           .content
             .text-wrap
-              .text.bg-image(:style="{ 'background-image': 'url(http://localhost:3000/loading/work05-loading.jpg);' }") LOADING...
+              .bg-image(:style="{ 'background-image': 'url(http://localhost:3000/loading/work05-loading.jpg);' }").text LOADING...
 </template>
 
 <script>
@@ -200,7 +200,7 @@ a {
   @media screen and (max-width: 768px) {
     font-size: 3rem;
   }
-  // 文字の透過
+  // 文字の透過できない場合
   @media screen and (max-width: 768px) {
     color: rgb(255, 255, 255);
   }
@@ -222,8 +222,17 @@ a {
   100% { transform:translateY(  0px); }
 }
 
+@keyframes loadingVertical {
+  0% { transform:translateY(-8px); }
+  100% { transform:translateY(  8px); }
+}
+
 a, .link-wrap {
   animation: vertical 1.2s ease-in-out infinite alternate;
+}
+
+.text {
+  animation: loadingVertical 1.4s ease-in-out infinite alternate;
 }
 
 a:nth-child(1) {
