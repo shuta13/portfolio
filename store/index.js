@@ -1,7 +1,8 @@
 export const state = () => ({
   currentRoute: '',
   garellyTopCount: 0,
-  webmotionsCount: 0
+  webmotionsCount: 0,
+  MajorMonoDisplayLoaded: false
 })
 
 export const mutations = {
@@ -13,5 +14,8 @@ export const mutations = {
   },
   incrementPageCount(state, count) {
     state.webmotionsCount = count
+  },
+  updateMajorMonoDisplayLoadedState(state, loaded) {
+    state.MajorMonoDisplayLoaded = loaded
   }
 }

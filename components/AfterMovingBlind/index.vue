@@ -2,16 +2,31 @@
   .container
     .moving-modal-wrap
       .moving-modal
-        .text-wrap
-          .welcome-text(:style="{ 'font-family': 'MajorMonoDisplay' }") Welcome
-        .text-wrap
-          .welcome-text(:style="{ 'font-family': 'MajorMonoDisplay' }") to
-        .text-wrap
-          .welcome-text(:style="{ 'font-family': 'MajorMonoDisplay' }") Garelly
+          .text-wrap
+            .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") Welcome
+          .text-wrap
+            .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") to
+          .text-wrap
+            .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") Garelly
 </template>
 
 <script>
 export default {
+  mounted() {
+    this.$nextTick(() => {
+      this.loadFont()
+    })
+  },
+  methods: {
+    loadFont() {
+      const font = new FontFace('MajorMonoDisplay', 'url(http://localhost:3000/fonts/MajorMonoDisplay-Regular.woff)')
+      font.load().then(function () {
+        document.fonts.add(font)
+        document.body.style.fontFamily = 'MajorMonoDisplay'
+      })
+      this.$store.commit('updateMajorMonoDisplayLoadedState', true)
+    }
+  }
 }
 </script>
 
