@@ -1,5 +1,0 @@
-<ifmodule mod_headers.c="">
-  <filesmatch "¥.(ttf|otf|eot|woff)$"="">
-    Header set Access-Control-Allow-Origin "*"
-  </filesmatch>
-</ifmodule>
