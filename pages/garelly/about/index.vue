@@ -24,7 +24,7 @@
             .items-activity 創造的活動#{s}#{s}>#{s}#{s}
               a(href="https://www.pixiv.net/member.php?id=19834475").link-pixiv Pixiv(絵を書きます),#{s}#{s}
               a(href="https://soundcloud.com/user-858183512").link-soundcloud Soundcloud(曲を作ります),#{s}#{s}
-              a(href="https://did0es.me/garelly").link-garelly Garelly(CreativeなCoding、見て...)
+              a(href="https://did0es.me/garelly").link-garelly Garelly(CreativeなCodingしてます)
             .items-archive その他#{s}#{s}>#{s}#{s}
               .archive-wrap
                 span.archive CyberAgent#{s}Architecture#{s}Challenge#{s}2019
@@ -67,7 +67,9 @@ export default {
 
 .menu {
   position: fixed;
-  z-index: 999;
+  height: 2vw;
+  width: 2vw;
+  z-index: 9;
 }
 
 a {
