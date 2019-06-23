@@ -4,12 +4,18 @@
       .content
         .image(:style="{ 'background-image': 'url(/top/work07.png)' }")
         .bottom-wrap
-          nuxt-link(to="/garelly").back back
+          .back(@click="updateRouteStore") back
 </template>
 
 <script>
 export default {
-
+  methods: {
+    updateRouteStore() {
+      const route = '/work*'
+      this.$store.commit('setCurrentRoute', route)
+      this.$router.push('/garelly')
+    }
+  }
 }
 </script>
 
@@ -65,6 +71,7 @@ a {
 }
 
 .back {
+  cursor: pointer;
   color: rgb(0, 0, 0);
   @media screen and (max-width: 768px) {
     color: rgb(255, 255, 255);

@@ -24,7 +24,7 @@ export default {
   */
   loading: {
     color: '#fff',
-    height: '4px'
+    height: '1px'
   },
   /*
   ** Global CSS

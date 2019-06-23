@@ -4,7 +4,7 @@
       .content
         deep-sea
         .bottom-wrap
-          nuxt-link(to="/garelly").back back
+          .back(@click="updateRouteStore") back
 </template>
 
 <script>
@@ -13,6 +13,13 @@ import DeepSea from '~/components/DeepSea'
 export default {
   components: {
     DeepSea
+  },
+  methods: {
+    updateRouteStore() {
+      const route = '/work*'
+      this.$store.commit('setCurrentRoute', route)
+      this.$router.push('/garelly')
+    }
   }
 }
 </script>
@@ -69,6 +76,7 @@ a {
 }
 
 .back {
+  cursor: pointer;
   color: rgb(255, 255, 255);
   font-family: 'CutiveMono';
   font-size: 1.2rem;
