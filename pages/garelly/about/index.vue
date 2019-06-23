@@ -18,7 +18,7 @@
               .text3 #{s}#{s}>#{s}JavaScript,#{s}Vue.js/Nuxt.js,#{s}C/C++,#{s}Ruby
             .text2 ・つかう
             .text3-wrap
-              .text3 #{s}#{s}>#{s}Docker,#{s}Git,#{s}PHP(Laravel),#{s}Rails,#{s}Three.js,#{s}Processing
+              .text3 #{s}#{s}>#{s}Docker,#{s}Git,#{s}PHP(Laravel),#{s}Rails,#{s}Three.js
         .other-wrap
           .other
             .items-activity 創造的活動#{s}#{s}>#{s}#{s}
