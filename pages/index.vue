@@ -36,9 +36,9 @@ export default {
   mounted() {
     this.bgMotion()
     setTimeout(() => {
-      TweenMax.to('.animation-modal', 1, {
+      TweenMax.to('.animation-modal', 1.4, {
         ease: Power4.easeOut,
-        left: '100vw',
+        bottom: '100vh',
         opacity: 0
       })
     }, 6000)
@@ -53,7 +53,7 @@ export default {
       this.$router.push('/garelly')
     },
     bgMotion() {
-      TweenMax.to('.bg-image', 0.5, {
+      TweenMax.to('.bg-image', 0.4, {
         backgroundPosition: '-100vw 0vw',
         ease: Linear.easeNone,
         repeat: -1

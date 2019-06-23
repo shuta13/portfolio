@@ -16,7 +16,7 @@ export default {
   methods: {
     bgMotion() {
       TweenMax.to('.bg-image', .5, { 
-        backgroundPosition: "-2247px 0px",
+        backgroundPosition: "-100vw 0vw",
         ease: Linear.easeNone,
         repeat: -1
       })
@@ -66,5 +66,8 @@ export default {
   width: 100vw;
   height: 100vh;
   background-image: url(http://localhost:3000/top/work05.png);
+  @media screen and (max-width: 768px) {
+    color: rgb(0, 0, 0);
+  }
 }
 </style>
