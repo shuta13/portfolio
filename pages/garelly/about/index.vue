@@ -13,10 +13,10 @@
               .text1 1999年生まれ．クリエイティブ成分を好みます
               .text1 現在、学生をしつつ大阪のWeb系企業でインターンをしています
             .title Skill
-            .text2 ・できる(はず)
+            .text2 ・よく書く
             .text3-wrap
               .text3 #{s}#{s}>#{s}#{s}JavaScript,#{s}#{s}Vue.js/Nuxt.js,#{s}#{s}C/C++,#{s}#{s}Ruby
-            .text2 ・つかえる(はず)
+            .text2 ・つかう
             .text3-wrap
               .text3 #{s}#{s}>#{s}#{s}Docker,#{s}#{s}Git,#{s}#{s}PHP(Laravel),#{s}#{s}Rails,#{s}#{s}Three.js
         .other-wrap
