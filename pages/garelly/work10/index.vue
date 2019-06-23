@@ -51,7 +51,7 @@ a {
   position: absolute;
   z-index: 1;
   width: 100vw;
-  height: 140vh;
+  height: 100vh;
   object-fit: cover;
   overflow: hidden;
   background: no-repeat;

@@ -34,16 +34,17 @@ export default {
     } else {
       this.appear = false
     }
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-      setTimeout(() => {
-        TweenMax.to('.animation-modal', 1, {
-          ease: Power4.easeOut,
-          left: '100vw'
-        })
-        this.$nuxt.$loading.finish()
-      }, 6000)
-    })
+    setTimeout(() => {
+      TweenMax.to('.animation-modal', 1, {
+        ease: Power4.easeOut,
+        left: '100vw'
+      })
+    }, 6000)
+    setTimeout(() => {
+      TweenMax.to('.animation-modal', 1, {
+        bottom: '100vh'
+      })
+    }, 6400)
   }
 }
 </script>
@@ -111,6 +112,7 @@ export default {
 }
 
 .animation-modal {
+  overflow: hidden;
   z-index: 999;
 }
 </style>

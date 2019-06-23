@@ -2,7 +2,8 @@
   .container
     .image-wrap
       .content
-        .image(:style="{ 'background-image': 'url(/top/work11.png)' }")
+        .image-wrap
+          .image(:style="{ 'background-image': 'url(/top/work11.png)' }")
         .bottom-wrap
           .back(@click="updateRouteStore") back
 </template>
@@ -28,6 +29,17 @@ a {
   text-decoration: none;
 }
 
+.content {
+  position: relative;
+  // background-color: red;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 .image-wrap {
   width: 100vw;
   height: 100vh;
@@ -36,22 +48,11 @@ a {
   align-items: center;
 }
 
-.content {
-  position: relative;
-  // background-color: red;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  // align-items: center;
-  flex-wrap: wrap;
-}
-
 .image {
   position: absolute;
   z-index: 1;
-  min-width: 100vw;
-  height: 250vh;
+  width: 100vw;
+  height: 100vh;
   @media screen and (max-width: 768px) {
     height: vh;
   }

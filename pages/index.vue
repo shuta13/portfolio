@@ -35,16 +35,12 @@ export default {
   },
   mounted() {
     this.bgMotion()
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start()
-      setTimeout(() => {
-        TweenMax.to('.animation-modal', 1, {
-          ease: Power4.easeOut,
-          bottom: '100vh'
-        })
-        this.$nuxt.$loading.finish()
-      }, 6000)
-    })
+    setTimeout(() => {
+      TweenMax.to('.animation-modal', 1, {
+        ease: Power4.easeOut,
+        bottom: '100vh'
+      })
+    }, 6000)
   },
   methods: {
     toDisappear() {
