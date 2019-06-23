@@ -18,8 +18,7 @@
     "gsap": "^2.1.3",
     "nuxt": "^2.0.0",
     "three": "^0.105.2",
-    "three-full": "^17.1.0",
-    "vue-lazyload": "^1.2.6"
+    "three-full": "^17.1.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^0.0.1",
