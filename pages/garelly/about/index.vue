@@ -98,7 +98,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'ChogokubosoGothic';
+  font-family: 'ChogokubosoGothic', 'monospace';
   font-weight: 900;
 }
 
