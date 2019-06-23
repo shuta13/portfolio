@@ -212,7 +212,7 @@ a {
 .bg-image {
   width: 100vw;
   height: 100vh;
-  background-image: url(http://localhost:3000/top/work05.png);
+  background-image: url(http://localhost:3000/loading/work05-loading.png);
 }
 
 // keyframes拳
