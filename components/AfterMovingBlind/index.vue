@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     loadFont() {
-      const font = new FontFace('MajorMonoDisplay', 'url(../fonts/MajorMonoDisplay-Regular.woff)')
+      const font = new FontFace('MajorMonoDisplay', 'url(/assets/fonts/MajorMonoDisplay-Regular.woff)')
       font.load().then(function () {
         document.fonts.add(font)
         document.body.style.fontFamily = 'MajorMonoDisplay'
