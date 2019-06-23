@@ -1,6 +1,7 @@
 <template lang="pug">
 - var s = '\0'
   .container
+    toggle-menu.menu
     .content-wrap
       .content
         .image-wrap
@@ -32,14 +33,18 @@
 
 <script>
 import TweenMax from 'gsap'
+import ToggleMenu from '~/components/ToggleMenu'
 
 export default {
+  components: {
+    ToggleMenu
+  },
   mounted() {
     this.fadeInContent()
   },
   methods: {
     fadeInContent() {
-      TweenMax.to('.container', 1.4, {
+      TweenMax.to('.content-wrap', 1.4, {
         opacity: 1,
         top: '0vh'
       })
@@ -55,8 +60,11 @@ export default {
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
-  top: 14vh;
-  opacity: 0;
+}
+
+.menu {
+  position: fixed;
+  z-index: 999;
 }
 
 a {
@@ -67,6 +75,8 @@ a {
   position: absolute;
   width: 100vw;
   height: 100vh;
+  top: 14vh;
+  opacity: 0;
   display: flex;
   justify-content: center;
   @media screen and (min-width: 769px) {
