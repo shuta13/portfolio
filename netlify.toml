@@ -1,4 +1,0 @@
-[[headers]]
-for = "http://localhost:3000/fonts/MajorMonoDisplay-Regular.woff"
-[headers.values]
-  Access-Control-Allow-Origin = "*"
