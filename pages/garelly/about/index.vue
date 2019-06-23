@@ -100,10 +100,10 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  @media screen and (max-width: 768px) {
-    font-family: '源ノ角ゴシック';
-    font-weight: 100;
-  }
+  // @media screen and (max-width: 768px) {
+  //   font-family: '源ノ角ゴシック';
+  //   font-weight: 100;
+  // }
   font-family: 'ChogokubosoGothic', 'monospace';
   font-weight: 900;
 }
@@ -206,7 +206,7 @@ a {
 
 .other {
   @media screen and (max-width: 768px) {
-    margin-top: 6vh;
+    margin-top: 4vh;
   }
 }
 
