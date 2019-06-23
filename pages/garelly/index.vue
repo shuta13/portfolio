@@ -5,20 +5,19 @@
     toggle-menu
     .content
       .image-wrap
-        nuxt-link(to="/garelly/work14").image(:style="{ 'background-image': 'url(/top/work14.png)' }").centering
-        nuxt-link(to="/garelly/work01").image(:style="{ 'background-image': 'url(/top/work01.png)' }").centering
-        nuxt-link(to="/garelly/work02").image(:style="{ 'background-image': 'url(/top/work02.png)' }").centering
-        nuxt-link(to="/garelly/work03").image(:style="{ 'background-image': 'url(/top/work03.png)' }").centering
-        nuxt-link(to="/garelly/work04").image(:style="{ 'background-image': 'url(/top/work04.png)' }").centering
-        nuxt-link(to="/garelly/work05").image(:style="{ 'background-image': 'url(/top/work05.png)' }").centering
-        nuxt-link(to="/garelly/work06").image(:style="{ 'background-image': 'url(/top/work06.png)' }").centering
-        nuxt-link(to="/garelly/work07").image(:style="{ 'background-image': 'url(/top/work07.png)' }").centering
-        nuxt-link(to="/garelly/work08").image(:style="{ 'background-image': 'url(/top/work08.png)' }").centering
-        nuxt-link(to="/garelly/work09").image(:style="{ 'background-image': 'url(/top/work09.png)' }").centering
-        nuxt-link(to="/garelly/work10").image(:style="{ 'background-image': 'url(/top/work10.jpg)' }").centering
-        nuxt-link(to="/garelly/work11").image(:style="{ 'background-image': 'url(/top/work11-thumbnail.png)' }")
-        nuxt-link(to="/garelly/work12").image(:style="{ 'background-image': 'url(/top/work12.jpg)' }").centering
-        nuxt-link(to="/garelly/work13").image(:style="{ 'background-image': 'url(/top/work13.png)' }").centering
+        nuxt-link(to="/garelly/work13").image(:style="{ 'background-image': 'url(/top/thumnails/work13.jpg)' }").centering
+        nuxt-link(to="/garelly/work01").image(:style="{ 'background-image': 'url(/top/thumnails/work01.jpg)' }").centering
+        nuxt-link(to="/garelly/work02").image(:style="{ 'background-image': 'url(/top/thumnails/work02.jpg)' }").centering
+        nuxt-link(to="/garelly/work03").image(:style="{ 'background-image': 'url(/top/thumnails/work03.jpg)' }").centering
+        nuxt-link(to="/garelly/work04").image(:style="{ 'background-image': 'url(/top/thumnails/work04.jpg)' }").centering
+        nuxt-link(to="/garelly/work05").image(:style="{ 'background-image': 'url(/top/thumnails/work05.jpg)' }").centering
+        nuxt-link(to="/garelly/work06").image(:style="{ 'background-image': 'url(/top/thumnails/work06.jpg)' }").centering
+        nuxt-link(to="/garelly/work07").image(:style="{ 'background-image': 'url(/top/thumnails/work07.jpg)' }").centering
+        nuxt-link(to="/garelly/work08").image(:style="{ 'background-image': 'url(/top/thumnails/work08.jpg)' }").centering
+        nuxt-link(to="/garelly/work09").image(:style="{ 'background-image': 'url(/top/thumnails/work09.jpg)' }").centering
+        nuxt-link(to="/garelly/work10").image(:style="{ 'background-image': 'url(/top/thumnails/work10.jpg)' }").centering
+        nuxt-link(to="/garelly/work11").image(:style="{ 'background-image': 'url(/top/thumnails/work11-thumbnail.jpg)' }")
+        nuxt-link(to="/garelly/work12").image(:style="{ 'background-image': 'url(/top/thumnails/work12.jpg)' }").centering
 </template>
 
 <script>

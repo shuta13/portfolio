@@ -2,17 +2,17 @@
   .container
     .image-wrap
       .content
-        deep-sea
+        glitch-cubes
         .bottom-wrap
           .back(@click="updateRouteStore") back
 </template>
 
 <script>
-import DeepSea from '~/components/DeepSea'
+import GlitchCubes from '~/components/GlitchCubes'
 
 export default {
   components: {
-    DeepSea
+    GlitchCubes
   },
   methods: {
     updateRouteStore() {

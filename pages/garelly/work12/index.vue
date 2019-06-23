@@ -2,13 +2,18 @@
   .container
     .image-wrap
       .content
-        .image(:style="{ 'background-image': 'url(/top/work12.jpg)' }")
+        deep-sea
         .bottom-wrap
           .back(@click="updateRouteStore") back
 </template>
 
 <script>
+import DeepSea from '~/components/DeepSea'
+
 export default {
+  components: {
+    DeepSea
+  },
   methods: {
     updateRouteStore() {
       const route = '/work*'
@@ -72,7 +77,7 @@ a {
 
 .back {
   cursor: pointer;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-family: 'CutiveMono';
   font-size: 1.2rem;
 }

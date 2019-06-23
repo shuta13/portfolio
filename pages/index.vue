@@ -16,7 +16,7 @@
         .animation-modal(v-if="appear")
           .content
             .text-wrap
-              .text.bg-image LOADING...
+              .text.bg-image(:style="{ 'background-image': 'url(http://localhost:3000/loading/work05-loading.jpg);' }") LOADING...
 </template>
 
 <script>
@@ -212,7 +212,7 @@ a {
 .bg-image {
   width: 100vw;
   height: 100vh;
-  background-image: url(http://localhost:3000/loading/work05-loading.png);
+  // background-image: url(http://localhost:3000/loading/work05-loading.png);
 }
 
 // keyframes拳
