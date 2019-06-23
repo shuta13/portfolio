@@ -20,7 +20,7 @@ export default {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  bottom: 0vh;
+  left: 0vw;
 }
 
 .moving-modal-wrap {

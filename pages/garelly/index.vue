@@ -41,8 +41,9 @@ export default {
   },
   mounted() {
     this.moveBlind()
-    if (this.$store.state.currentRoute == '/') {
+    if (this.$store.state.currentRoute == '/' || this.$store.state.garellyTopCount === 0) {
       this.routeFlag = true
+      this.$store.commit('incrementTopPageCount', 1)
     } else {
       this.routeFlag = false
     }
@@ -51,7 +52,7 @@ export default {
     moveBlind() {
       TweenMax.to('.moving-blind', 1.6, {
         delay: 2.8,
-        bottom: '100vh',
+        left: '100vw',
         ease: Power4.easeOut
       })
     }
