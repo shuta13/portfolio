@@ -38,7 +38,7 @@ export default {
     setTimeout(() => {
       TweenMax.to('.animation-modal', 1, {
         ease: Power4.easeOut,
-        bottom: '100vh'
+        left: '100vw'
       })
     }, 6000)
   },
@@ -53,7 +53,7 @@ export default {
     },
     bgMotion() {
       TweenMax.to('.bg-image', 0.5, {
-        backgroundPosition: '-2247px 0px',
+        backgroundPosition: '-100vw 0vw',
         ease: Linear.easeNone,
         repeat: -1
       })
