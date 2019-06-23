@@ -1,6 +1,6 @@
 <template lang="pug">
   .container
-    #canvas(ref="canvas")
+    .content
       .text-wrap
         .text.bg-image LOADING...
 </template>
@@ -17,7 +17,6 @@ export default {
     bgMotion() {
       TweenMax.to('.bg-image', .5, { 
         backgroundPosition: "-2247px 0px",
-        //autoRound:false,
         ease: Linear.easeNone,
         repeat: -1
       })
@@ -33,7 +32,7 @@ export default {
   height: 100vh;
 }
 
-#canvas {
+.content {
   display: flex;
   justify-content: center;
   align-items: center;

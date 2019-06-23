@@ -12,16 +12,20 @@
         .link-wrap(@click="updateRouteStore")
           span.link GARELLY
       transition(name="animation")
-        animation-modal.animation-modal(v-if="appear")
+        //- animation-modal.animation-modal(v-if="appear")
+        .animation-modal(v-if="appear")
+          .content
+            .text-wrap
+              .text.bg-image LOADING...
 </template>
 
 <script>
-import { TweenMax, Power4 } from 'gsap'
-import AnimationModal from '~/components/AnimationModal'
+import { TweenMax, Linear, Power4 } from 'gsap'
+// import AnimationModal from '~/components/AnimationModal'
 
 export default {
   components: {
-    AnimationModal
+    // AnimationModal
   },
   data() {
     return {
@@ -29,7 +33,8 @@ export default {
       in: false
     }
   },
-  created() {
+  mounted() {
+    this.bgMotion()
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
       setTimeout(() => {
@@ -49,6 +54,13 @@ export default {
       const route = '/'
       this.$store.commit('setCurrentRoute', route)
       this.$router.push('/garelly')
+    },
+    bgMotion() {
+      TweenMax.to('.bg-image', 0.5, {
+        backgroundPosition: '-2247px 0px',
+        ease: Linear.easeNone,
+        repeat: -1
+      })
     }
   }
 }
@@ -155,6 +167,56 @@ a {
   }
 }
 
+// loading時のbg等
+.animation-modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+
+.animation-enter, .blind-leave-to {
+  opacity: .4;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-wrap {
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+}
+
+.text {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Josefin Sans';
+  font-size: 7vw;
+  @media screen and (max-width: 768px) {
+    font-size: 3rem;
+  }
+  // 文字の透過
+  color: rgb(255, 255, 255);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.bg-image {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(http://localhost:3000/top/work05.png);
+}
+
+// keyframes拳
+
 @keyframes vertical {
   0% { transform:translateY(-4px); }
   100% { transform:translateY(  0px); }
@@ -178,14 +240,5 @@ a:nth-child(3) {
 
 .link-wrap::nth-child(4) {
   animation-duration: 1.1s
-}
-
-.animation-modal {
-  position: fixed;
-  z-index: 999;
-}
-
-.animation-enter, .blind-leave-to {
-  opacity: .4;
 }
 </style>
