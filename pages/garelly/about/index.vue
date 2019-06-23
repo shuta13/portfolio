@@ -100,6 +100,10 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  @media screen and (max-width: 768px) {
+    font-family: '源ノ角ゴシック';
+    font-weight: 100;
+  }
   font-family: 'ChogokubosoGothic', 'monospace';
   font-weight: 900;
 }
@@ -157,6 +161,21 @@ a {
   margin-bottom: 1.4vh;
 }
 
+.text2 {
+  // background-color: rgb(120, 255, 120);
+  margin-bottom: 0.5vh;
+  @media screen and (min-width: 768px) {
+    font-size: 1.4vw;
+  }
+  @media screen and (max-width: 768px) {
+    width: 60vw;
+    font-size: 1rem;
+  }
+  width: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .text3-wrap {
   // background-color: rgb(120, 120, 255);
   @media screen and (max-width: 768px) {
@@ -166,20 +185,6 @@ a {
   height: 3vh;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.text2 {
-  // background-color: rgb(120, 255, 120);
-  margin-bottom: 0.5vh;
-  @media screen and (min-width: 768px) {
-    font-size: 1.4vw;
-  }
-  @media screen and (max-width: 768px) {
-    width: 60vw;
-  }
-  width: 40vw;
-  display: flex;
   flex-wrap: wrap;
 }
 
@@ -199,6 +204,12 @@ a {
   justify-content: center;
 }
 
+.other {
+  @media screen and (max-width: 768px) {
+    margin-top: 6vh;
+  }
+}
+
 .link-pixiv {
   color: rgb(2, 80, 250);
 }
@@ -213,7 +224,7 @@ a {
 
 .items-activity {
   @media screen and (max-width: 768px) {
-    width: 70vw;
+    width: 74vw;
   }
   width: 70vw;
   @media screen and (max-width: 768px) {
@@ -224,7 +235,8 @@ a {
 
 .items-archive {
   @media screen and (max-width: 768px) {
-    width: 70vw;
+    // 小さくしすぎるとその他のアレが折れる
+    width: 74vw;
   }
   width: 70vw;
   @media screen and (max-width: 768px) {
@@ -238,7 +250,7 @@ a {
 
 .archive-wrap {
   @media screen and (max-width: 769px) {
-    width: 55vw;
+    width: 56vw;
   }
   width: 60vw;
 }
@@ -250,6 +262,7 @@ a {
   width: 80vw;
   @media screen and (max-width: 768px) {
     font-size: 0.7rem;
+    width: 0vw;
   }
   font-size: 1vw;
 }
