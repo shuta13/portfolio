@@ -1,5 +1,5 @@
 <template lang="pug">
-  .container
+  .container(crossorigin="anonymous")
     .moving-modal-wrap
       .moving-modal
           .text-wrap
