@@ -39,7 +39,7 @@ export default {
 }
 
 .text-wrap {
-  background-color: #000;
+  background-color: #fff;
   width: 100vw;
   height: 100vh;
 }

@@ -3,11 +3,11 @@
     .moving-modal-wrap
       .moving-modal
         .text-wrap
-          .text Welcome
+          .welcome-text Welcome
         .text-wrap
-          .text to
+          .welcome-text to
         .text-wrap
-          .text Garelly
+          .welcome-text Garelly
 </template>
 
 <script>
@@ -58,7 +58,7 @@ export default {
   flex-wrap: wrap;
 }
 
-.text {
+.welcome-text {
   position: absolute;
   font-family: 'MajorMonoDisplay';
   @media screen and (max-width: 768px) {

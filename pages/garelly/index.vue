@@ -1,7 +1,6 @@
 <template lang="pug">
   .container
     after-moving-blind.moving-blind(v-if="routeFlag")
-    blind-modal.blind
     toggle-menu
     .content
       .image-wrap
@@ -54,6 +53,11 @@ export default {
         left: '100vw',
         ease: Power4.easeOut
       })
+      setTimeout(() => {
+        TweenMax.to('.moving-blind', 1 , {
+          bottom: '100vh'
+        })
+      }, 4400)
     }
   }
 }
@@ -126,5 +130,12 @@ export default {
 .moving-blind {
   position: fixed;
   z-index: 999;
+}
+</style>
+
+<style lang="scss">
+// /garellyのモーダルのフォントを先行して読み込み
+.welcome-text {
+  font-family: 'MajorMonoDisplay';
 }
 </style>
