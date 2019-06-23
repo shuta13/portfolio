@@ -60,7 +60,6 @@ export default {
 
 .welcome-text {
   position: absolute;
-  font-family: 'MajorMonoDisplay';
   @media screen and (max-width: 768px) {
     font-size: 2rem;
   }
