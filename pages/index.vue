@@ -38,7 +38,8 @@ export default {
     setTimeout(() => {
       TweenMax.to('.animation-modal', 1, {
         ease: Power4.easeOut,
-        left: '100vw'
+        left: '100vw',
+        opacity: 0
       })
     }, 6000)
   },
@@ -169,6 +170,7 @@ a {
   width: 100vw;
   height: 100vh;
   z-index: 999;
+  opacity: 1;
 }
 
 .animation-enter, .blind-leave-to {
