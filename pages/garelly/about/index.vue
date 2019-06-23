@@ -47,7 +47,7 @@ export default {
   methods: {
     fadeInContent() {
       TweenMax.to('.content-wrap', 1.4, {
-        delay: 1.4,
+        delay: 1.2,
         opacity: 1,
         top: '0vh'
       })
