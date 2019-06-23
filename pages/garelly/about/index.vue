@@ -40,11 +40,14 @@ export default {
     ToggleMenu
   },
   mounted() {
-    this.fadeInContent()
+    this.$nextTick(() => {
+      this.fadeInContent()
+    })
   },
   methods: {
     fadeInContent() {
       TweenMax.to('.content-wrap', 1.4, {
+        delay: 1.4,
         opacity: 1,
         top: '0vh'
       })
