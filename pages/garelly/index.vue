@@ -132,10 +132,3 @@ export default {
   z-index: 999;
 }
 </style>
-
-<style lang="scss">
-// /garellyのモーダルのフォントを先行して読み込み
-.welcome-text {
-  font-family: 'MajorMonoDisplay';
-}
-</style>

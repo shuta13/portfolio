@@ -1,0 +1,4 @@
+/* garellyのモーダルのフォントを先行して読み込み */
+.welcome-text {
+  font-family: 'MajorMonoDisplay';
+}
