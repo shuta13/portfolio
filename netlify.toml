@@ -1,5 +1,5 @@
 [[headers]]
-for = "/*.woff"
+for = "/dist/*.woff"
 [headers.values]
 Access-Control-Allow-Origin = "*"
 Content-Type = "application/font-woff"
