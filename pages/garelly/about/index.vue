@@ -88,7 +88,7 @@ a {
     align-items: center;
   }
   @media screen and (max-width: 768px) {
-    margin-top: 20vh;
+    margin-top: 10vh;
   }
 }
 
