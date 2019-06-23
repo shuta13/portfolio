@@ -29,7 +29,7 @@ export default {
       in: false
     }
   },
-  mounted() {
+  created() {
     this.$nextTick(() => {
       this.$nuxt.$loading.start()
       setTimeout(() => {
