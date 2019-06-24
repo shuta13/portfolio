@@ -29,6 +29,12 @@
         work12.work(v-if="$store.state.work12State")
       transition(name="works-modal")
         work13.work(v-if="$store.state.work13State")
+      transition(name="works-modal")
+        work14.work(v-if="$store.state.work14State")
+      transition(name="works-modal")
+        work15.work(v-if="$store.state.work15State")
+      transition(name="works-modal")
+        work16.work(v-if="$store.state.work16State")
       .image-wrap
         .image(:style="{ 'background-image': 'url(/top/thumnails/work13.jpg)' }").centering(@click="updateWork13State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work01.jpg)' }").centering(@click="updateWork01State")
@@ -43,6 +49,9 @@
         .image(:style="{ 'background-image': 'url(/top/thumnails/work10.jpg)' }").centering(@click="updateWork10State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work11-thumbnail.jpg)' }")(@click="updateWork11State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work12.jpg)' }").centering(@click="updateWork12State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work14.jpg)' }").centering(@click="updateWork14State").onlyPC
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work15.jpg)' }").centering(@click="updateWork15State").onlyPC
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work16.jpg)' }").centering(@click="updateWork16State").onlyPC
 </template>
 
 <script>
@@ -65,6 +74,9 @@ import Work10 from '~/components/garelly/top/Work10'
 import Work11 from '~/components/garelly/top/Work11'
 import Work12 from '~/components/garelly/top/Work12'
 import Work13 from '~/components/garelly/top/Work13'
+import Work14 from '~/components/garelly/top/Work14'
+import Work15 from '~/components/garelly/top/Work15'
+import Work16 from '~/components/garelly/top/Work16'
 
 export default {
   data() {
@@ -88,7 +100,10 @@ export default {
     Work10,
     Work11,
     Work12,
-    Work13
+    Work13,
+    Work14,
+    Work15,
+    Work16
   },
   mounted() {
     this.moveBlind()
@@ -149,6 +164,15 @@ export default {
     },
     updateWork13State() {
       this.$store.commit('updateWork13State', true)
+    },
+    updateWork14State() {
+      this.$store.commit('updateWork14State', true)
+    },
+    updateWork15State() {
+      this.$store.commit('updateWork15State', true)
+    },
+    updateWork16State() {
+      this.$store.commit('updateWork16State', true)
     }
   }
 }
@@ -233,7 +257,14 @@ export default {
 .works-modal-enter-active, .works-modal-leave-active {
   transition: opacity .6s;
 }
+
 .works-modal-enter, .works-modal-leave-to {
   opacity: 0;
+}
+
+.onlyPC {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 </style>

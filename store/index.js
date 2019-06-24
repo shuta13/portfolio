@@ -15,6 +15,9 @@ export const state = () => ({
   work11State: false,
   work12State: false,
   work13State: false,
+  work14State: false,
+  work15State: false,
+  work16State: false,
   webmotionsWork01State: false,
   webmotionsWork02State: false,
   webmotionsWork03State: false
@@ -68,6 +71,15 @@ export const mutations = {
   },
   updateWork13State(state, flag) {
     state.work13State = flag
+  },
+  updateWork14State(state, flag) {
+    state.work14State = flag
+  },
+  updateWork15State(state, flag) {
+    state.work15State = flag
+  },
+  updateWork16State(state, flag) {
+    state.work16State = flag
   },
   updateWebmotionsWork01State(state, flag) {
     state.webmotionsWork01State = flag
