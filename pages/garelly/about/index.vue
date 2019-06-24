@@ -11,7 +11,7 @@
             .title About Me
             .text1-wrap
               .text1 1999年生まれ．クリエイティブ成分を好みます
-              .text1 現在、学生をしつつ大阪のWeb系企業でインターンをしています
+              .text1 現在、学生をしつつ大阪のWeb系企業でアレコレ開発をしています
             .title Skill
             .text2 ・よく書く
             .text3-wrap
