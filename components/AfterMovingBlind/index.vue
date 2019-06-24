@@ -3,11 +3,11 @@
     .moving-modal-wrap
       .moving-modal
         .text-wrap
-          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") Welcome
+          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") Welcome
         .text-wrap
-          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") to
+          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") to
         .text-wrap
-          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") Garelly
+          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") Garelly
 </template>
 
 <script>

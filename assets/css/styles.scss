@@ -25,6 +25,12 @@
 }
 
 @font-face {
+  font-family: 'MajorMonoDisplay-Completed';
+  src: url('../fonts/MajorMonoDisplay-Regular-Completed.woff') format("woff");
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'WireOne';
   src: url('../fonts/WireOne.woff') format("woff");
 }
