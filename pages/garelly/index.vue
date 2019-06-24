@@ -232,7 +232,7 @@ export default {
 }
 
 .works-modal-enter-active, .works-modal-leave-active {
-  transition: opacity .4s;
+  transition: opacity .6s;
 }
 .works-modal-enter, .works-modal-leave-to {
   opacity: 0;

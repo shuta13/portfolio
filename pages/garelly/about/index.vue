@@ -25,7 +25,7 @@
               a(href="https://did0es.me/garelly").text3.link-garelly #{s}>>#{s}Garelly(CreativeなCoding)
             .text2 ・活動
               .text3 CyberAgent#{s}Architecture#{s}Challenge#{s}(2019)
-              .text3 CyberAgent#{s}Architecture#{s}学生版ヒダッカソン-API編-#{s}(2019)
+              .text3 CyberAgent#{s}学生版ヒダッカソン-API編-#{s}(2019)
               .text3 Cookpad#{s}Spring#{s}Internship#{s}(2019)#{s}#{s}等に参加
 </template>
 
