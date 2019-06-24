@@ -173,7 +173,7 @@ a {
   opacity: 1;
 }
 
-.animation-enter, .blind-leave-to {
+.animation-enter, .animation-leave-to {
   opacity: .4;
 }
 

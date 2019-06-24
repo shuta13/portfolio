@@ -1,19 +1,22 @@
 <template lang="pug">
   .container
     .image-wrap
-      .content
-        .image(:style="{ 'background-image': 'url(/top/work05.png)' }")
+      .content(@click="updateWork09State")
+        not-found
         .bottom-wrap
-          .back(@click="updateRouteStore") back
+          .back(@click="updateWork09State") back
 </template>
 
 <script>
+import NotFound from '~/components/NotFound'
+
 export default {
+  components: {
+    NotFound
+  },
   methods: {
-    updateRouteStore() {
-      const route = '/work*'
-      this.$store.commit('setCurrentRoute', route)
-      this.$router.push('/garelly')
+    updateWork09State() {
+      this.$store.commit('updateWork09State', false)
     }
   }
 }

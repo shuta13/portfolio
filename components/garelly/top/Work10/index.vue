@@ -1,19 +1,17 @@
 <template lang="pug">
   .container
-    .image-wrap
+    .image-wrap(@click="updateWork10State")
       .content
-        .image(:style="{ 'background-image': 'url(/top/work01.png)' }")
+        .image(:style="{ 'background-image': 'url(/top/work10.jpg)' }")
         .bottom-wrap
-          .back(@click="updateRouteStore") back
+          .back(@click="updateWork10State") back
 </template>
 
 <script>
 export default {
   methods: {
-    updateRouteStore() {
-      const route = '/work*'
-      this.$store.commit('setCurrentRoute', route)
-      this.$router.push('/garelly')
+    updateWork10State() {
+      this.$store.commit('updateWork10State', false)
     }
   }
 }
@@ -29,6 +27,7 @@ a {
 }
 
 .image-wrap {
+  background-color: rgba(0, 0, 0, .5);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -72,7 +71,10 @@ a {
 
 .back {
   cursor: pointer;
-  color: rgb(255, 255, 255);
+  color: #fff;
+  @media screen and (max-width: 768px) {
+    color: #000;
+  }
   font-family: 'CutiveMono';
   font-size: 1.2rem;
 }

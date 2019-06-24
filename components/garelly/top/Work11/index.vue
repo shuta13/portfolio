@@ -1,19 +1,18 @@
 <template lang="pug">
   .container
-    .image-wrap
+    .image-wrap(@click="updateWork11State")
       .content
-        .image(:style="{ 'background-image': 'url(/top/work08.png)' }")
+        .image-wrap
+          .image(:style="{ 'background-image': 'url(/top/work11.png)' }")
         .bottom-wrap
-          .back(@click="updateRouteStore") back
+          .back(@click="updateWork11State") back
 </template>
 
 <script>
 export default {
   methods: {
-    updateRouteStore() {
-      const route = '/work*'
-      this.$store.commit('setCurrentRoute', route)
-      this.$router.push('/garelly')
+    updateWork11State() {
+      this.$store.commit('updateWork11State', false)
     }
   }
 }
@@ -28,14 +27,6 @@ a {
   text-decoration: none;
 }
 
-.image-wrap {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .content {
   position: relative;
   // background-color: red;
@@ -43,8 +34,17 @@ a {
   height: 100vh;
   display: flex;
   justify-content: center;
-  // align-items: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+.image-wrap {
+  background-color: rgba(0, 0, 0, .2);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
@@ -52,7 +52,9 @@ a {
   z-index: 1;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  @media screen and (max-width: 768px) {
+    height: vh;
+  }
   overflow: hidden;
   background: no-repeat;
   background-position: center center;
@@ -75,7 +77,7 @@ a {
   color: rgb(0, 0, 0);
   font-family: 'CutiveMono';
   @media screen and (max-width: 768px) {
-    color: rgb(150, 120, 100);
+    top: 0;
   }
   font-size: 1.2rem;
 }

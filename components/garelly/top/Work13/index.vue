@@ -1,10 +1,10 @@
 <template lang="pug">
   .container
-    .image-wrap
+    .image-wrap(@click="updateWork13State")
       .content
         glitch-cubes
         .bottom-wrap
-          .back(@click="updateRouteStore") back
+          .back(@click="updateWork13State") back
 </template>
 
 <script>
@@ -15,10 +15,8 @@ export default {
     GlitchCubes
   },
   methods: {
-    updateRouteStore() {
-      const route = '/work*'
-      this.$store.commit('setCurrentRoute', route)
-      this.$router.push('/garelly')
+    updateWork13State() {
+      this.$store.commit('updateWork13State', false)
     }
   }
 }

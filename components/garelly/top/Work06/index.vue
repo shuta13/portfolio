@@ -1,24 +1,17 @@
 <template lang="pug">
   .container
     .image-wrap
-      .content
-        deep-sea
+      .content(@click="updateWork06State")
+        .image(:style="{ 'background-image': 'url(/top/work06.png)' }")
         .bottom-wrap
-          .back(@click="updateRouteStore") back
+          .back(@click="updateWork06State") back
 </template>
 
 <script>
-import DeepSea from '~/components/DeepSea'
-
 export default {
-  components: {
-    DeepSea
-  },
   methods: {
-    updateRouteStore() {
-      const route = '/work*'
-      this.$store.commit('setCurrentRoute', route)
-      this.$router.push('/garelly')
+    updateWork06State() {
+      this.$store.commit('updateWork06State', false)
     }
   }
 }

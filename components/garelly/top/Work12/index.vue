@@ -1,19 +1,22 @@
 <template lang="pug">
   .container
-    .image-wrap
+    .image-wrap(@click="updateWork12State")
       .content
-        .image(:style="{ 'background-image': 'url(/top/work07.png)' }")
+        deep-sea
         .bottom-wrap
-          .back(@click="updateRouteStore") back
+          .back(@click="updateWork12State") back
 </template>
 
 <script>
+import DeepSea from '~/components/DeepSea'
+
 export default {
+  components: {
+    DeepSea
+  },
   methods: {
-    updateRouteStore() {
-      const route = '/work*'
-      this.$store.commit('setCurrentRoute', route)
-      this.$router.push('/garelly')
+    updateWork12State() {
+      this.$store.commit('updateWork12State', false)
     }
   }
 }
@@ -72,10 +75,7 @@ a {
 
 .back {
   cursor: pointer;
-  color: rgb(0, 0, 0);
-  @media screen and (max-width: 768px) {
-    color: rgb(255, 255, 255);
-  }
+  color: rgb(255, 255, 255);
   font-family: 'CutiveMono';
   font-size: 1.2rem;
 }

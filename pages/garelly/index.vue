@@ -3,20 +3,46 @@
     after-moving-blind.moving-blind(v-if="routeFlag")
     toggle-menu
     .content
+      transition(name="works-modal")
+        work01.work(v-if="$store.state.work01State")
+      transition(name="works-modal")
+        work02.work(v-if="$store.state.work02State")
+      transition(name="works-modal")
+        work03.work(v-if="$store.state.work03State")
+      transition(name="works-modal")
+        work04.work(v-if="$store.state.work04State")
+      transition(name="works-modal")
+        work05.work(v-if="$store.state.work05State")
+      transition(name="works-modal")
+        work06.work(v-if="$store.state.work06State")
+      transition(name="works-modal")
+        work07.work(v-if="$store.state.work07State")
+      transition(name="works-modal")
+        work08.work(v-if="$store.state.work08State")
+      transition(name="works-modal")
+        work09.work(v-if="$store.state.work09State")
+      transition(name="works-modal")
+        work10.work(v-if="$store.state.work10State")
+      transition(name="works-modal")
+        work11.work(v-if="$store.state.work11State")
+      transition(name="works-modal")
+        work12.work(v-if="$store.state.work12State")
+      transition(name="works-modal")
+        work13.work(v-if="$store.state.work13State")
       .image-wrap
-        nuxt-link(to="/garelly/work13").image(:style="{ 'background-image': 'url(/top/thumnails/work13.jpg)' }").centering
-        nuxt-link(to="/garelly/work01").image(:style="{ 'background-image': 'url(/top/thumnails/work01.jpg)' }").centering
-        nuxt-link(to="/garelly/work02").image(:style="{ 'background-image': 'url(/top/thumnails/work02.jpg)' }").centering
-        nuxt-link(to="/garelly/work03").image(:style="{ 'background-image': 'url(/top/thumnails/work03.jpg)' }").centering
-        nuxt-link(to="/garelly/work04").image(:style="{ 'background-image': 'url(/top/thumnails/work04.jpg)' }").centering
-        nuxt-link(to="/garelly/work05").image(:style="{ 'background-image': 'url(/top/thumnails/work05.jpg)' }").centering
-        nuxt-link(to="/garelly/work06").image(:style="{ 'background-image': 'url(/top/thumnails/work06.jpg)' }").centering
-        nuxt-link(to="/garelly/work07").image(:style="{ 'background-image': 'url(/top/thumnails/work07.jpg)' }").centering
-        nuxt-link(to="/garelly/work08").image(:style="{ 'background-image': 'url(/top/thumnails/work08.jpg)' }").centering
-        nuxt-link(to="/garelly/work09").image(:style="{ 'background-image': 'url(/top/thumnails/work09.jpg)' }").centering
-        nuxt-link(to="/garelly/work10").image(:style="{ 'background-image': 'url(/top/thumnails/work10.jpg)' }").centering
-        nuxt-link(to="/garelly/work11").image(:style="{ 'background-image': 'url(/top/thumnails/work11-thumbnail.jpg)' }")
-        nuxt-link(to="/garelly/work12").image(:style="{ 'background-image': 'url(/top/thumnails/work12.jpg)' }").centering
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work13.jpg)' }").centering(@click="updateWork13State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work01.jpg)' }").centering(@click="updateWork01State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work02.jpg)' }").centering(@click="updateWork02State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work03.jpg)' }").centering(@click="updateWork03State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work04.jpg)' }").centering(@click="updateWork04State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work05.jpg)' }").centering(@click="updateWork05State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work06.jpg)' }").centering(@click="updateWork06State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work07.jpg)' }").centering(@click="updateWork07State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work08.jpg)' }").centering(@click="updateWork08State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work09.jpg)' }").centering(@click="updateWork09State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work10.jpg)' }").centering(@click="updateWork10State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work11-thumbnail.jpg)' }")(@click="updateWork11State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work12.jpg)' }").centering(@click="updateWork12State")
 </template>
 
 <script>
@@ -25,6 +51,20 @@ import { TweenMax, Power4 } from 'gsap'
 import AfterMovingBlind from '~/components/AfterMovingBlind'
 import BlindModal from '~/components/BlindModal'
 import ToggleMenu from '~/components/ToggleMenu'
+// コンテンツのコンポーネント群
+import Work01 from '~/components/garelly/top/Work01'
+import Work02 from '~/components/garelly/top/Work02'
+import Work03 from '~/components/garelly/top/Work03'
+import Work04 from '~/components/garelly/top/Work04'
+import Work05 from '~/components/garelly/top/Work05'
+import Work06 from '~/components/garelly/top/Work06'
+import Work07 from '~/components/garelly/top/Work07'
+import Work08 from '~/components/garelly/top/Work08'
+import Work09 from '~/components/garelly/top/Work09'
+import Work10 from '~/components/garelly/top/Work10'
+import Work11 from '~/components/garelly/top/Work11'
+import Work12 from '~/components/garelly/top/Work12'
+import Work13 from '~/components/garelly/top/Work13'
 
 export default {
   data() {
@@ -35,7 +75,20 @@ export default {
   components: {
     AfterMovingBlind,
     BlindModal,
-    ToggleMenu
+    ToggleMenu,
+    Work01,
+    Work02,
+    Work03,
+    Work04,
+    Work05,
+    Work06,
+    Work07,
+    Work08,
+    Work09,
+    Work10,
+    Work11,
+    Work12,
+    Work13
   },
   mounted() {
     this.moveBlind()
@@ -49,7 +102,7 @@ export default {
   methods: {
     moveBlind() {
       TweenMax.to('.moving-blind', 1.6, {
-        delay: 3.6,
+        delay: 1.6,
         left: '100vw',
         ease: Power4.easeOut
       })
@@ -57,7 +110,46 @@ export default {
         TweenMax.to('.moving-blind', 1 , {
           bottom: '100vh'
         })
-      }, 4400)
+      }, 2600)
+    },
+    updateWork01State() {
+      this.$store.commit('updateWork01State', true)
+    },
+    updateWork02State() {
+      this.$store.commit('updateWork02State', true)
+    },
+    updateWork03State() {
+      this.$store.commit('updateWork03State', true)
+    },
+    updateWork04State() {
+      this.$store.commit('updateWork04State', true)
+    },
+    updateWork05State() {
+      this.$store.commit('updateWork05State', true)
+    },
+    updateWork06State() {
+      this.$store.commit('updateWork06State', true)
+    },
+    updateWork07State() {
+      this.$store.commit('updateWork07State', true)
+    },
+    updateWork08State() {
+      this.$store.commit('updateWork08State', true)
+    },
+    updateWork09State() {
+      this.$store.commit('updateWork09State', true)
+    },
+    updateWork10State() {
+      this.$store.commit('updateWork10State', true)
+    },
+    updateWork11State() {
+      this.$store.commit('updateWork11State', true)
+    },
+    updateWork12State() {
+      this.$store.commit('updateWork12State', true)
+    },
+    updateWork13State() {
+      this.$store.commit('updateWork13State', true)
     }
   }
 }
@@ -73,9 +165,11 @@ export default {
 }
 
 .content {
+  width: 100vw;
+  // height: 100vh; // ずれる
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center; // 上に合わせる
 }
 
 .image-wrap {
@@ -114,6 +208,7 @@ export default {
   object-fit: cover;
   overflow: hidden;
   background: no-repeat;
+  cursor: pointer;
 }
 
 .image-wrap:after {
@@ -130,5 +225,16 @@ export default {
 .moving-blind {
   position: fixed;
   z-index: 999;
+}
+
+.work {
+  position: fixed;
+}
+
+.works-modal-enter-active, .works-modal-leave-active {
+  transition: opacity .4s;
+}
+.works-modal-enter, .works-modal-leave-to {
+  opacity: 0;
 }
 </style>
