@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import GlitchCubes from '~/components/GlitchCubes'
+import GlitchCubes from '~/components/garelly/works/GlitchCubes'
 
 export default {
   components: {

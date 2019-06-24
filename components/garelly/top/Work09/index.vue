@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import NotFound from '~/components/NotFound'
+import NotFound from '~/components/garelly/works/NotFound'
 
 export default {
   components: {

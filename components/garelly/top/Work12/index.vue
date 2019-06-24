@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import DeepSea from '~/components/DeepSea'
+import DeepSea from '~/components/garelly/works/DeepSea'
 
 export default {
   components: {
