@@ -15,10 +15,10 @@
             .title Skill
             .text2 ・よく書く
             .text3-wrap
-              .text3 #{s}#{s}>#{s}JavaScript,#{s}Vue.js/Nuxt.js,#{s}C/C++,#{s}Ruby
+              .text3 #{s}>#{s}JavaScript,#{s}Vue.js/Nuxt.js,#{s}C/C++,#{s}Ruby
             .text2 ・つかう
             .text3-wrap
-              .text3 #{s}#{s}>#{s}Docker,#{s}Git,#{s}PHP(Laravel),#{s}Rails,#{s}Three.js
+              .text3 #{s}>#{s}Docker,#{s}Git,#{s}PHP(Laravel),#{s}Rails,#{s}Three.js
         .other-wrap
           .other
             .items-activity 創造的活動#{s}#{s}>#{s}#{s}
@@ -100,10 +100,10 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  // @media screen and (max-width: 768px) {
-  //   font-family: '源ノ角ゴシック';
-  //   font-weight: 100;
-  // }
+  @media screen and (max-width: 768px) {
+    font-family: 'monospace';
+    font-weight: 100;
+  }
   font-family: 'ChogokubosoGothic', 'monospace';
   font-weight: 900;
 }
@@ -206,7 +206,7 @@ a {
 
 .other {
   @media screen and (max-width: 768px) {
-    margin-top: 4vh;
+    margin-top: 6vh;
   }
 }
 
