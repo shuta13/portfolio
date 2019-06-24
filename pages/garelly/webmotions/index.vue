@@ -48,7 +48,7 @@ export default {
       this.appear = false
     }
     TweenMax.to('.animation-modal', 1, {
-      delay: 1.2,
+      delay: 1.8,
       ease: Power4.easeOut,
       left: '100vw'
     })

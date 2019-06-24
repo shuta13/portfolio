@@ -2,19 +2,25 @@
   .container(crossorigin="anonymous")
     .moving-modal-wrap
       .moving-modal
-          .text-wrap
-            .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") Welcome
-          .text-wrap
-            .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") to
-          .text-wrap
-            .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") Garelly
+        .text-wrap
+          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") Welcome
+        .text-wrap
+          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") to
+        .text-wrap
+          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, monospace' }") Garelly
 </template>
 
 <script>
+import TweenMax from 'gsap'
+
 export default {
   mounted() {
     this.$nextTick(() => {
       this.loadFont()
+    })
+    TweenMax.to('.text-wrap', 0.4, {
+      delay: 0.8,
+      opacity: 0
     })
   },
   methods: {

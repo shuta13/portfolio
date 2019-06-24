@@ -35,13 +35,16 @@ export default {
   },
   mounted() {
     this.bgMotion()
-    setTimeout(() => {
-      TweenMax.to('.animation-modal', 1.4, {
-        ease: Power4.easeOut,
-        bottom: '100vh',
-        opacity: 0
-      })
-    }, 4800)
+    TweenMax.to('.text', 0.4, {
+      delay: 1,
+      opacity: 0
+    })
+    TweenMax.to('.animation-modal', 1.4, {
+      delay: 1.8,
+      ease: Power4.easeOut,
+      left: '100vw',
+      opacity: 0
+    })
   },
   methods: {
     toDisappear() {

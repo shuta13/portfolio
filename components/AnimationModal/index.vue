@@ -20,6 +20,10 @@ export default {
         ease: Linear.easeNone,
         repeat: -1
       })
+      TweenMax.to('.bg-image', .4, { 
+        delay: 1,
+        opacity: 0
+      })
     }
   }
 }
