@@ -3,11 +3,11 @@
     .moving-modal-wrap
       .moving-modal
         .text-wrap
-          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") Welcome
+          .welcome-text(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") Welcome
         .text-wrap
-          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") to
+          .welcome-text(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") to
         .text-wrap
-          .welcome-text(v-if="$store.state.MajorMonoDisplayLoaded")(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") Garelly
+          .welcome-text(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") Garelly
 </template>
 
 <script>
@@ -22,16 +22,6 @@ export default {
       delay: 0.8,
       opacity: 0
     })
-  },
-  methods: {
-    loadFont() {
-      const font = new FontFace('MajorMonoDisplay', 'url(/assets/fonts/MajorMonoDisplay-Regular.woff)')
-      font.load().then(function () {
-        document.fonts.add(font)
-        document.body.style.fontFamily = 'MajorMonoDisplay'
-      })
-      this.$store.commit('updateMajorMonoDisplayLoadedState', true)
-    }
   }
 }
 </script>

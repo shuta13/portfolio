@@ -2,7 +2,6 @@ export const state = () => ({
   currentRoute: '',
   garellyTopCount: 0,
   webmotionsCount: 0,
-  MajorMonoDisplayLoaded: false,
   work01State: false,
   work02State: false,
   work03State: false,
@@ -30,9 +29,6 @@ export const mutations = {
   },
   incrementPageCount(state, count) {
     state.webmotionsCount = count
-  },
-  updateMajorMonoDisplayLoadedState(state, loaded) {
-    state.MajorMonoDisplayLoaded = loaded
   },
   updateWork01State(state, flag) {
     state.work01State = flag
