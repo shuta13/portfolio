@@ -4,10 +4,16 @@
     blind-modal.blind
     toggle-menu
     .content
+      transition(name="webmotions-works-modal")
+        webmotions-work01.work(v-if="$store.state.webmotionsWork01State")
+      transition(name="webmotions-works-modal")
+        webmotions-work02.work(v-if="$store.state.webmotionsWork02State")
+      transition(name="webmotions-works-modal")
+        webmotions-work03.work(v-if="$store.state.webmotionsWork03State")
       .image-wrap
-        nuxt-link(to="/garelly/webmotions/work03").image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work03.jpg)' }").centering
-        nuxt-link(to="/garelly/webmotions/work02").image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work02.jpg)' }").centering
-        nuxt-link(to="/garelly/webmotions/work01").image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work01.jpg)' }").centering
+        .image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work03.jpg)' }").centering(@click="updateWebmotionsWork01State")
+        .image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work02.jpg)' }").centering(@click="updateWebmotionsWork02State")
+        .image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work01.jpg)' }").centering(@click="updateWebmotionsWork03State")
 </template>
 
 <script>
@@ -15,12 +21,19 @@ import { TweenMax, Power4 } from 'gsap'
 import AnimationModal from '~/components/AnimationModal'
 import BlindModal from '~/components/BlindModal'
 import ToggleMenu from '~/components/ToggleMenu'
+// コンテンツのコンポーネント群
+import webmotionsWork01 from '~/components/garelly/webmotions/Work01'
+import webmotionsWork02 from '~/components/garelly/webmotions/Work02'
+import webmotionsWork03 from '~/components/garelly/webmotions/Work03'
 
 export default {
   components: {
     AnimationModal,
     BlindModal,
-    ToggleMenu
+    ToggleMenu,
+    webmotionsWork01,
+    webmotionsWork02,
+    webmotionsWork03
   },
   data() {
     return {
@@ -34,17 +47,26 @@ export default {
     } else {
       this.appear = false
     }
-    setTimeout(() => {
-      TweenMax.to('.animation-modal', 1, {
-        ease: Power4.easeOut,
-        left: '100vw'
-      })
-    }, 6000)
-    setTimeout(() => {
-      TweenMax.to('.animation-modal', 1, {
-        bottom: '100vh'
-      })
-    }, 6400)
+    TweenMax.to('.animation-modal', 1, {
+      delay: 1.2,
+      ease: Power4.easeOut,
+      left: '100vw'
+    })
+    TweenMax.to('.animation-modal', 1, {
+      delay: 2.6,
+      bottom: '100vh'
+    })
+  },
+  methods: {
+    updateWebmotionsWork01State() {
+      this.$store.commit('updateWebmotionsWork01State', true)
+    },
+    updateWebmotionsWork02State() {
+      this.$store.commit('updateWebmotionsWork02State', true)
+    },
+    updateWebmotionsWork03State() {
+      this.$store.commit('updateWebmotionsWork03State', true)
+    }
   }
 }
 </script>
@@ -61,7 +83,7 @@ export default {
 .content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  // align-items: center;
 }
 
 .image-wrap {
@@ -98,6 +120,7 @@ export default {
   object-fit: cover;
   overflow: hidden;
   background: no-repeat;
+  cursor: pointer;
 }
 
 .image-wrap:after {
@@ -114,5 +137,16 @@ export default {
 .animation-modal {
   overflow: hidden;
   z-index: 999;
+}
+
+.work {
+  position: fixed;
+}
+
+.webmotions-works-modal-enter-active, .webmotions-works-modal-leave-active {
+  transition: opacity .4s;
+}
+.webmotions-works-modal-enter, .webmotions-works-modal-leave-to {
+  opacity: 0;
 }
 </style>

@@ -1,24 +1,22 @@
 <template lang="pug">
   .container
-    .image-wrap
+    .image-wrap(@click="updateWebmotionsWork02State")
       .content
-        glitch-cubes
+        deep-sea
         .bottom-wrap
-          .back(@click="updateRouteStore") back
+          .back(@click="updateWebmotionsWork02State") back
 </template>
 
 <script>
-import GlitchCubes from '~/components/GlitchCubes'
+import DeepSea from '~/components/garelly/works/DeepSea'
 
 export default {
   components: {
-    GlitchCubes
+    DeepSea
   },
   methods: {
-    updateRouteStore() {
-      const route = '/work*'
-      this.$store.commit('setCurrentRoute', route)
-      this.$router.push('/garelly/webmotions')
+    updateWebmotionsWork02State() {
+      this.$store.commit('updateWebmotionsWork02State', false)
     }
   }
 }

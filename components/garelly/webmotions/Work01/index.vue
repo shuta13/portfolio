@@ -1,24 +1,22 @@
 <template lang="pug">
   .container
-    .image-wrap
+    .image-wrap(@click="updateWebmotionsWork01State")
       .content
         not-found
         .bottom-wrap
-          .back(@click="updateRouteStore") back
+          .back(@click="updateWebmotionsWork01State") back
 </template>
 
 <script>
-import NotFound from '~/components/NotFound'
+import NotFound from '~/components/garelly/works/NotFound'
 
 export default {
   components: {
     NotFound
   },
   methods: {
-    updateRouteStore() {
-      const route = '/work*'
-      this.$store.commit('setCurrentRoute', route)
-      this.$router.push('/garelly/webmotions')
+    updateWebmotionsWork01State() {
+      this.$store.commit('updateWebmotionsWork01State', false)
     }
   }
 }

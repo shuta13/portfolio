@@ -19,20 +19,18 @@
             .text2 ・つかう
             .text3-wrap
               .text3 #{s}>#{s}Docker,#{s}Git,#{s}PHP(Laravel),#{s}Rails,#{s}Three.js
-        .other-wrap
-          .other
-            .items-activity 創造的活動#{s}#{s}>#{s}#{s}
-              a(href="https://www.pixiv.net/member.php?id=19834475").link-pixiv Pixiv(絵を書きます),#{s}#{s}
-              a(href="https://soundcloud.com/user-858183512").link-soundcloud Soundcloud(曲を作ります),#{s}#{s}
-              a(href="https://did0es.me/garelly").link-garelly Garelly(CreativeなCodingしてます)
-            .items-archive その他#{s}#{s}>#{s}#{s}
-              .archive-wrap
-                span.archive CyberAgent#{s}Architecture#{s}Challenge#{s}2019
-                span.archive Cookpad#{s}Spring#{s}Internship#{s}2019#{s}#{s}等に参加
+            .text2 ・創造的活動
+              a(href="https://www.pixiv.net/member.php?id=19834475").text3.link-pixiv #{s}>>#{s}Pixiv(絵を書きます)
+              a(href="https://soundcloud.com/user-858183512").text3.link-soundcloud #{s}>>#{s}Soundcloud(おうたを作ります)
+              a(href="https://did0es.me/garelly").text3.link-garelly #{s}>>#{s}Garelly(CreativeなCoding)
+            .text2 ・活動
+              .text3 CyberAgent#{s}Architecture#{s}Challenge#{s}(2019)
+              .text3 CyberAgent#{s}Architecture#{s}学生版ヒダッカソン-API編-#{s}(2019)
+              .text3 Cookpad#{s}Spring#{s}Internship#{s}(2019)#{s}#{s}等に参加
 </template>
 
 <script>
-import TweenMax from 'gsap'
+import { TweenMax, Power4 } from 'gsap'
 import ToggleMenu from '~/components/ToggleMenu'
 
 export default {
@@ -46,9 +44,9 @@ export default {
   },
   methods: {
     fadeInContent() {
-      TweenMax.to('.content-wrap', 1.4, {
-        delay: 1.2,
+      TweenMax.to('.content-wrap', 1.6, {
         opacity: 1,
+        ease: Power4.easeOut,
         top: '0vh'
       })
     }
@@ -59,9 +57,12 @@ export default {
 <style lang="scss" scoped>
 .container {
   position: absolute;
-  // background-color: rgb(255, 120, 120);
+  background-color: rgb(240, 240, 240);
   margin: 0 auto;
   width: 100vw;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
   height: 100vh;
 }
 
@@ -69,7 +70,7 @@ export default {
   position: fixed;
   height: 2vw;
   width: 2vw;
-  z-index: 9;
+  z-index: 999;
 }
 
 a {
@@ -79,16 +80,19 @@ a {
 .content-wrap {
   position: absolute;
   width: 100vw;
-  height: 100vh;
-  top: 14vh;
+  @media screen and (max-width: 768px) {
+    height: auto;
+  }
+  height: auto;
+  top: 20vh;
   opacity: 0;
   display: flex;
   justify-content: center;
-  @media screen and (min-width: 769px) {
-    align-items: center;
-  }
   @media screen and (max-width: 768px) {
-    margin-top: 10vh;
+    margin-top: 2vh;
+  }
+  @media screen and (min-width: 769px) {
+    margin-top: 20vh;
   }
 }
 
@@ -100,12 +104,8 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  @media screen and (max-width: 768px) {
-    font-family: 'monospace';
-    font-weight: 100;
-  }
-  font-family: 'ChogokubosoGothic', 'monospace';
-  font-weight: 900;
+  font-family: 'monospace';
+  color: rgba(40, 40, 40, .8)
 }
 
 .image-wrap {
@@ -137,7 +137,7 @@ a {
     height: 28vh;
   }
   width: 40vw;
-  height: 30vh;
+  height: 40vh;
 }
 
 .title {
@@ -145,25 +145,19 @@ a {
     font-size: 1.6rem;
   }
   font-size: 2vw;
-  line-height: 4vh;
-  margin-bottom: 1.2vh;
-}
-
-.text {
-  font-size: 1.2vw;
+  line-height: 6vh;
 }
 
 .text1 {
+  font-size: 1.2vw;
   // background-color: rgb(120, 100, 100);
   @media screen and (max-width: 768px) {
     font-size: 0.8rem;
   }
-  margin-bottom: 1.4vh;
 }
 
 .text2 {
   // background-color: rgb(120, 255, 120);
-  margin-bottom: 0.5vh;
   @media screen and (min-width: 768px) {
     font-size: 1.4vw;
   }
@@ -174,6 +168,7 @@ a {
   width: 40vw;
   display: flex;
   flex-wrap: wrap;
+  line-height: 3.6vh;
 }
 
 .text3-wrap {
