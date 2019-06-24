@@ -218,6 +218,10 @@ a {
   // background-image: url(http://localhost:3000/loading/work05-loading.png);
 }
 
+_::-webkit-full-page-media, _:future, :root .text {
+  color: rgb(255, 255, 255);
+}
+
 // keyframes拳
 
 @keyframes vertical {

@@ -75,6 +75,11 @@ export default {
   }
 }
 
+// Safari用
+_::-webkit-full-page-media, _:future, :root .bg-image {
+  color: rgb(0, 0, 0);
+}
+
 @keyframes loadingVertical {
   0% { transform:translateY(-8px); }
   100% { transform:translateY(  8px); }
