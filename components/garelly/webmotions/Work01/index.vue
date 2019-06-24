@@ -8,11 +8,17 @@
 </template>
 
 <script>
+import TweenMax from 'gsap'
 import NotFound from '~/components/garelly/works/NotFound'
 
 export default {
   components: {
     NotFound
+  },
+  mounted() {
+    TweenMax.to('.image', 1, {
+      opacity: 1
+    })
   },
   methods: {
     updateWebmotionsWork01State() {

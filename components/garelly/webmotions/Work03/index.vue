@@ -8,11 +8,17 @@
 </template>
 
 <script>
+import TweenMax from 'gsap'
 import GlitchCubes from '~/components/garelly/works/GlitchCubes'
 
 export default {
   components: {
     GlitchCubes
+  },
+  mounted() {
+    TweenMax.to('.image', 1, {
+      opacity: 1
+    })
   },
   methods: {
     updateWebmotionsWork03State() {

@@ -106,11 +106,10 @@ export default {
         left: '100vw',
         ease: Power4.easeOut
       })
-      setTimeout(() => {
-        TweenMax.to('.moving-blind', 1 , {
-          bottom: '100vh'
-        })
-      }, 2600)
+      TweenMax.to('.moving-blind', 1 , {
+        delay: 2.6,
+        bottom: '100vh'
+      })
     },
     updateWork01State() {
       this.$store.commit('updateWork01State', true)

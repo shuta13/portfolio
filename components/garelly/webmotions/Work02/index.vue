@@ -8,11 +8,17 @@
 </template>
 
 <script>
+import TweenMax from 'gsap'
 import DeepSea from '~/components/garelly/works/DeepSea'
 
 export default {
   components: {
     DeepSea
+  },
+  mounted() {
+    TweenMax.to('.image', 1, {
+      opacity: 1
+    })
   },
   methods: {
     updateWebmotionsWork02State() {

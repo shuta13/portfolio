@@ -8,7 +8,14 @@
 </template>
 
 <script>
+import TweenMax from 'gsap'
+
 export default {
+  mounted() {
+    TweenMax.to('.image', 1, {
+      opacity: 1
+    })
+  },
   methods: {
     updateWork04State() {
       this.$store.commit('updateWork04State', false)

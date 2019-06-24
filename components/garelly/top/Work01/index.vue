@@ -8,7 +8,14 @@
 </template>
 
 <script>
+import TweenMax from 'gsap'
+
 export default {
+  mounted() {
+    TweenMax.to('.image', 1, {
+      opacity: 1
+    })
+  },
   methods: {
     updateWork01State() {
       this.$store.commit('updateWork01State', false)
@@ -54,6 +61,7 @@ a {
   overflow: hidden;
   background: no-repeat;
   background-position: center center;
+  opacity: 0;
 }
 
 .bottom-wrap {
