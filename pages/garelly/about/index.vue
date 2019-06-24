@@ -84,7 +84,7 @@ a {
     height: auto;
   }
   height: auto;
-  top: 20vh;
+  top: 10vh;
   opacity: 0;
   display: flex;
   justify-content: center;
