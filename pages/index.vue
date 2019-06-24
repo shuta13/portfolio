@@ -41,7 +41,7 @@ export default {
         bottom: '100vh',
         opacity: 0
       })
-    }, 6000)
+    }, 4800)
   },
   methods: {
     toDisappear() {
