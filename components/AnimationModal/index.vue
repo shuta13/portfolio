@@ -66,6 +66,11 @@ export default {
   -webkit-background-clip: text;
 }
 
+// Safari用
+_::-webkit-full-page-media, _:future, :root .bg-image {
+  font-family: 'JosefinSansBoldItalic';
+}
+
 .bg-image {
   width: 100vw;
   height: 100vh;
