@@ -54,7 +54,7 @@ export default {
           // 勝手にリサイズ止める
           texture.minFilter = THREE.LinearFilter
           // クロスオリジンのアレ
-          texture.crossOrigin = 'anonymous'
+          texture.crossOrigin = '*'
           const material = new THREE.MeshBasicMaterial({ map: texture })
           const plane = new THREE.Mesh(geometry, material)
           plane.scale.set(w, h, 1)
