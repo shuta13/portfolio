@@ -69,10 +69,10 @@ ul {
     text-decoration: none;
     font-family: 'Cutive Mono';
     @media screen and (max-width: 1300px) {
-      font-size: 2.0rem;
+      font-size: 2.1rem;
     }
-    font-size: 3vw;
-    line-height: 8vh;
+    font-size: 3.4vw;
+    line-height: 11.4vh;
     cursor: pointer;
     color: #fff;
     width: 100vw;
