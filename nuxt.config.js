@@ -1,4 +1,3 @@
-
 export default {
   mode: 'universal',
   /*
@@ -41,10 +40,6 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    {
-      src: '~/plugins/pixi',
-      ssr: false
-    }
   ],
   /*
   ** Nuxt.js modules

@@ -1,5 +1,6 @@
 <template lang="pug">
-  .container(ref="canvas")#canvas
+  .container
+    #canvas(ref="canvas")
     div.main
       span.letters 404
       span.subletters01
