@@ -17,6 +17,7 @@ export default {
       { hid: 'og:image', property: 'og:image', content: 'https://did0es.me/thumbnail.png' }
     ],
     link: [
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap' }
     ]
   },
   /*
@@ -36,6 +37,10 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    {
+      src: '~/plugins/pixi',
+      ssr: false
+    }
   ],
   /*
   ** Nuxt.js modules

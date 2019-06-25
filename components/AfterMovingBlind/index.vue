@@ -3,11 +3,11 @@
     .moving-modal-wrap
       .moving-modal
         .text-wrap
-          .welcome-text(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") Welcome
+          .welcome-text(:style="{ 'font-family': 'Major Mono Display, monospace' }") Welcome
         .text-wrap
-          .welcome-text(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") to
+          .welcome-text(:style="{ 'font-family': 'Major Mono Display, monospace' }") to
         .text-wrap
-          .welcome-text(:style="{ 'font-family': 'MajorMonoDisplay, MajorMonoDisplay-Completed, monospace' }") Garelly
+          .welcome-text(:style="{ 'font-family': 'Major Mono Display, monospace' }") Garelly
 </template>
 
 <script>
