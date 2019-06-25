@@ -46,13 +46,15 @@ export default {
       this.camera.position.set(0, 0, 10)
     },
     loadTexture() {
-      const texture = new THREE.TextureLoader().load(this.$store.state.bgImageState,
+      const texture = new THREE.TextureLoader().load('http://localhost:3000/bg.png',
         (tex) => {
           const w = 0.17
           const h = tex.image.height / (tex.image.width / w)
           const geometry = new THREE.PlaneGeometry(100, 100)
           // 勝手にリサイズ止める
           texture.minFilter = THREE.LinearFilter
+          // クロスオリジンのアレ
+          texture.crossOrigin = 'anonymous'
           const material = new THREE.MeshBasicMaterial({ map: texture })
           const plane = new THREE.Mesh(geometry, material)
           plane.scale.set(w, h, 1)
