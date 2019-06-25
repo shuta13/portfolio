@@ -44,6 +44,9 @@ export default {
   /*
   ** Nuxt.js modules
   */
+  env: {
+    bgImageUrl: process.env.BG_IMAGE_URL || 'http://localhost:3000/bg.png'
+  },
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
