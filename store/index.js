@@ -1,5 +1,5 @@
 export const state = () => ({
-  currentRoute: '',
+  bgImageState: undefined,
   garellyTopCount: 0,
   webmotionsCount: 0,
   work01State: false,
@@ -24,8 +24,8 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setCurrentRoute(state, route) {
-    state.currentRoute = route
+  setBgImageData(state, data) {
+    state.bgImageState = data
   },
   incrementTopPageCount(state, count) {
     state.garellyTopCount = count
@@ -89,5 +89,12 @@ export const mutations = {
   },
   updateWebmotionsWork03State(state, flag) {
     state.webmotionsWork03State = flag
+  }
+}
+
+export const actions = {
+  async getBgImageData({ commit }) {
+    const res = await this.$axios.get('http://localhost:3000/bg.png')
+    commit('setBgImageData', res.data)
   }
 }
