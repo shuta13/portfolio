@@ -18,7 +18,9 @@ export default {
     ],
     link: [
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Major+Mono+Display&display=swap' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:600i&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:600i&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro:300&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap' }
     ]
   },
   /*

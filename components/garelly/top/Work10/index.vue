@@ -85,7 +85,7 @@ a {
   @media screen and (max-width: 768px) {
     color: #000;
   }
-  font-family: 'CutiveMono';
+  font-family: 'Cutive Mono';
   font-size: 1.2rem;
 }
 </style>

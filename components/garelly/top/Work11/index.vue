@@ -85,7 +85,7 @@ a {
 .back {
   cursor: pointer;
   color: rgb(0, 0, 0);
-  font-family: 'CutiveMono';
+  font-family: 'Cutive Mono';
   @media screen and (max-width: 768px) {
     top: 0;
   }

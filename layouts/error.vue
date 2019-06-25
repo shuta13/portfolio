@@ -38,7 +38,7 @@ export default {
 
 .back {
   color: rgb(255, 255, 255);
-  font-family: 'CutiveMono';
+  font-family: 'Cutive Mono';
   font-size: 1.2rem;
 }
 </style>

@@ -119,7 +119,7 @@ a {
   align-items: center;
   white-space: nowrap;
   color: #fff;
-  font-family: 'CutiveMono';
+  font-family: 'Cutive Mono';
   font-size: 4vw;
   height: 8vh;
   width: 42vw;
@@ -160,7 +160,7 @@ a {
     }
     margin-left: $item-margin;
     margin-right: $item-margin;
-    font-family: 'CutiveMono';
+    font-family: 'Cutive Mono';
     color: #fff;
     font-size: 2vw;
     cursor: pointer;

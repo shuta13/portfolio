@@ -85,7 +85,7 @@ a {
     color: #000;
   }
   color: #fff;
-  font-family: 'CutiveMono';
+  font-family: 'Cutive Mono';
   font-size: 1.2rem;
 }
 </style>

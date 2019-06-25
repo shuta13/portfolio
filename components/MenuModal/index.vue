@@ -67,7 +67,7 @@ ul {
   a {
     margin-top: 1.4vh;
     text-decoration: none;
-    font-family: 'CutiveMono';
+    font-family: 'Cutive Mono';
     @media screen and (max-width: 1300px) {
       font-size: 2.0rem;
     }
