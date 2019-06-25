@@ -60,12 +60,7 @@ export default {
   ** Build configuration
   */
   proxy: {
-    '/api': {
-      target: 'https://did0es.me',
-      pathRewrite: {
-        '^/api': '/'
-      }
-    }
+    'http://localhost:3000': 'https://did0es.me'
   },
   build: {
     /*
