@@ -1,5 +1,4 @@
 export const state = () => ({
-  currentRoute: '',
   garellyTopCount: 0,
   webmotionsCount: 0,
   work01State: false,
@@ -24,9 +23,6 @@ export const state = () => ({
 })
 
 export const mutations = {
-  setCurrentRoute(state, route) {
-    state.currentRoute = route
-  },
   incrementTopPageCount(state, count) {
     state.garellyTopCount = count
   },
