@@ -152,6 +152,11 @@ export default {
   }
 }
 
+// Safari用(他に該当箇所複数アリ)
+_::-webkit-full-page-media, _:future, :root .letters {
+  font-family: 'JosefinSansBoldItalic';
+}
+
 .subletters01 {
   // background-color: #ccc;
   text-align: left;

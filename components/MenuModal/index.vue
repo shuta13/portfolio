@@ -78,5 +78,10 @@ ul {
     width: 100vw;
     display: flex;
   }
+
+  // Safari用(他に該当箇所複数アリ)
+  _::-webkit-full-page-media, _:future, :root a {
+    font-family: 'CutiveMono';
+  }
 }
 </style>
