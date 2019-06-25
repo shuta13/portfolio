@@ -45,7 +45,7 @@ export default {
       this.camera.position.set(0, 0, 10)
     },
     loadTexture() {
-      const texture = new THREE.TextureLoader().load('http://localhost:3000/api/bg.png',
+      const texture = new THREE.TextureLoader().load('http://localhost:3000/bg.png',
         (tex) => {
           const w = 0.17
           const h = tex.image.height / (tex.image.width / w)
