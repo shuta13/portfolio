@@ -47,8 +47,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/eslint-module',
-    '@nuxtjs/proxy'
+    '@nuxtjs/eslint-module'
   ],
   /*
   ** Axios module configuration
@@ -59,9 +58,6 @@ export default {
   /*
   ** Build configuration
   */
-  proxy: {
-    '/api/': { target: 'http://localhost:3000', pathRewrite: { '^/api/': '' } }
-  },
   build: {
     /*
     ** You can extend webpack config here
