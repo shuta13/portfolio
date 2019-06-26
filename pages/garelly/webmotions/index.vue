@@ -53,7 +53,7 @@ export default {
       left: '100vw'
     })
     TweenMax.to('.animation-modal', 1, {
-      delay: 2.6,
+      delay: 2.14,
       bottom: '100vh'
     })
   },
