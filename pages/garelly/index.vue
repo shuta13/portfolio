@@ -36,7 +36,6 @@
       transition(name="works-modal")
         work16.work(v-if="$store.state.work16State")
       .image-wrap
-        .image(:style="{ 'background-image': 'url(/top/thumnails/work13.jpg)' }").centering(@click="updateWork13State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work01.jpg)' }").centering(@click="updateWork01State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work02.jpg)' }").centering(@click="updateWork02State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work03.jpg)' }").centering(@click="updateWork03State")
@@ -49,6 +48,7 @@
         .image(:style="{ 'background-image': 'url(/top/thumnails/work10.jpg)' }").centering(@click="updateWork10State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work11-thumbnail.jpg)' }")(@click="updateWork11State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work12.jpg)' }").centering(@click="updateWork12State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work13.jpg)' }").centering(@click="updateWork13State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work14.jpg)' }").centering(@click="updateWork14State").onlyPC
         .image(:style="{ 'background-image': 'url(/top/thumnails/work15.jpg)' }").centering(@click="updateWork15State").onlyPC
         .image(:style="{ 'background-image': 'url(/top/thumnails/work16.jpg)' }").centering(@click="updateWork16State").onlyPC
