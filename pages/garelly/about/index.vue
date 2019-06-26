@@ -18,7 +18,7 @@
               span.text3 #{s}>#{s}JavaScript,#{s}Vue.js/Nuxt.js,#{s}C/C++,#{s}Ruby,#{s}Processing
             .text2 ・つかう
             .text3-wrap
-              span.text3 #{s}>#{s}Docker,#{s}Git,#{s}Laravel,#{s}Rails,#{s}Three.js,#{s}Photoshop,#{s}Figma
+              span.text3 #{s}>#{s}Docker,#{s}Git,#{s}Laravel,#{s}Rails,#{s}MySQL,#{s}Three.js,#{s}GLSL,#{s}Photoshop,#{s}Figma
             .text2 ・創造的活動
               a(href="https://www.pixiv.net/member.php?id=19834475").text3.link-pixiv #{s}>>#{s}Pixiv(絵を書きます)
               a(href="https://soundcloud.com/user-858183512").text3.link-soundcloud #{s}>>#{s}Soundcloud(おうたを作ります)

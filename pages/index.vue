@@ -1,7 +1,7 @@
 <template lang="pug">
   .container
     .main
-      background-motion.bg-motion
+      background-motion.bg-motion(v-if="bgMotionShow")
       span.title did0es portfolio
       .content
         .item-wrap
@@ -30,7 +30,8 @@ export default {
   data() {
     return {
       appear: true,
-      in: false
+      in: false,
+      bgMotionShow: true
     }
   },
   mounted() {
@@ -45,6 +46,7 @@ export default {
       left: '100vw',
       opacity: 0
     })
+    this.bgMotionShowMutate()
   },
   methods: {
     toDisappear() {
@@ -61,6 +63,9 @@ export default {
         ease: Linear.easeNone,
         repeat: -1
       })
+    },
+    bgMotionShowMutate() {
+      if (window.innerWidth < 1300) this.bgMotionShow = !this.bgMotionShow
     }
   }
 }
@@ -98,11 +103,11 @@ a {
   }
 }
 
-.bg-motion {
-  @media screen and (max-width: 1300px) {
-    display: none;
-  }
-}
+// .bg-motion {
+//   @media screen and (max-width: 1300px) {
+//     display: none;
+//   }
+// }
 
 .main {
   // background-color: #777;
