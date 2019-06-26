@@ -6,13 +6,33 @@
 <script>
 import * as THREE from 'three'
 
+import vertexSource from './shader/vertex.glsl'
+import fragmentSource from './shader/fragment.glsl'
+
 export default {
   data() {
     return {
       scene: undefined,
       camera: undefined,
       renderer: undefined,
-      started: false
+      started: false,
+      targetPercent: undefined,
+      uniforms: {
+        uTime: {
+          value: undefined
+        },
+        uMouse: {
+          value: undefined
+        },
+        uPercent: {
+          value: undefined
+        },
+        uTex: {
+          value: undefined
+        }
+      },
+      mouseX: undefined,
+      mouseY: undefined
     }
   },
   mounted() {
@@ -22,6 +42,10 @@ export default {
     this.loadTexture()
     this.bindWindowEvents()
     this.$refs.canvas.appendChild(this.renderer.domElement)
+    this.$refs.canvas.addEventListener('mousemove', function (e) {
+      this.mouseX = e.clientX
+      this.mouseY = e.clientY
+    })
     this.startScene()
   },
   methods: {
@@ -45,18 +69,39 @@ export default {
       this.camera.position.set(0, 0, 10)
     },
     loadTexture() {
+      this.targetPercent = 0.0
       const texture = new THREE.TextureLoader().load(process.env.bgImageUrl,
         (tex) => {
-          const w = 0.17
-          const h = tex.image.height / (tex.image.width / w)
+          // const w = 0.17
+          // const h = tex.image.height / (tex.image.width / w)
           const geometry = new THREE.PlaneGeometry(100, 100)
           // 勝手にリサイズ止める
           texture.minFilter = THREE.LinearFilter
           // クロスオリジンのアレ
           texture.crossOrigin = 'anonymous'
-          const material = new THREE.MeshBasicMaterial({ map: texture })
+          // 表示するだけ
+          this.uniforms = {
+            uTime: {
+              value: 0.0
+            },
+            uMouse: {
+              value: new THREE.Vector2(0.5, 0.5)
+            },
+            uPercent: {
+              value: this.targetPercent
+            },
+            uTex: {
+              value: texture
+            }
+          }
+          const material = new THREE.ShaderMaterial({
+            uniforms: this.uniforms,
+            vertexShader: vertexSource,
+            fragmentShader: fragmentSource
+          })
+          // const material = new THREE.MeshBasicMaterial({ map: texture })
           const plane = new THREE.Mesh(geometry, material)
-          plane.scale.set(w, h, 1)
+          // plane.scale.set(w, h, 1)
           this.scene.add(plane)
         })
     },
@@ -76,6 +121,9 @@ export default {
       this.renderer.render(this.scene, this.camera)
       this.camera.updateProjectionMatrix()
       this.renderer.setSize(window.innerWidth, window.innerHeight)
+      this.uniforms.uTime.value += 0.0008
+      if (this.targetPercent < 10.0 && this.targetPercent <= 0.0) this.targetPercent += 1.0
+      else if (this.targetPercent >= 10.0) this.targetPercent -= 0.5
     }
   }
 }

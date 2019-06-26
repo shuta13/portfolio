@@ -1,31 +1,31 @@
 <template lang="pug">
   .container
     .main
+      background-motion.bg-motion
       span.title did0es portfolio
-      .item-wrap
-        a(href="https://twitter.com/did0es")
-          img.item(src="~/assets/images/twitter-square-brands.svg")
-        a(href="https://github.com/shuta13")
-          img.item(src="~/assets/images/github-square-brands.svg")
-        a(href="https://www.facebook.com/profile.php?id=100028982675881")
-          img.item(src="~/assets/images/facebook-square-brands.svg")
-        .link-wrap(@click="updateRouteStore")
-          span.link GARELLY
+      .content
+        .item-wrap
+          a(href="https://twitter.com/did0es")
+            img.item(src="~/assets/images/twitter-square-brands.svg")
+          a(href="https://github.com/shuta13")
+            img.item(src="~/assets/images/github-square-brands.svg")
+          a(href="https://www.facebook.com/profile.php?id=100028982675881")
+            img.item(src="~/assets/images/facebook-square-brands.svg")
+          .link-wrap(@click="updateRouteStore")
+            span.link GARELLY
       transition(name="animation")
-        //- animation-modal.animation-modal(v-if="appear")
-        .animation-modal(v-if="appear")
-          .content
-            .text-wrap
-              .bg-image(:style="{ 'background-image': 'url(http://localhost:3000/loading/work05-loading.jpg);' }").text LOADING...
+        animation-modal.animation-modal(v-if="appear")
 </template>
 
 <script>
 import { TweenMax, Linear, Power4 } from 'gsap'
-// import AnimationModal from '~/components/AnimationModal'
+import AnimationModal from '~/components/AnimationModal'
+import BackgroundMotion from '~/components/BackgroundMotion'
 
 export default {
   components: {
-    // AnimationModal
+    AnimationModal,
+    BackgroundMotion
   },
   data() {
     return {
@@ -83,6 +83,7 @@ a {
 
 <style lang="scss" scoped>
 .container {
+  position: absolute;
   background-color: #000;
   min-height: 100vh;
   margin: 0 auto;
@@ -97,15 +98,22 @@ a {
   }
 }
 
+.bg-motion {
+  @media screen and (max-width: 1300px) {
+    display: none;
+  }
+}
+
 .main {
   // background-color: #777;
+  // position: relative;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 56vw;
+  width: 100vw;
 }
 
 .title {
@@ -124,6 +132,11 @@ a {
   height: 8vh;
   width: 42vw;
   margin-bottom: 2vh;
+  z-index: 99;
+}
+
+.content {
+  width: 80vw;
 }
 
 .item-wrap {

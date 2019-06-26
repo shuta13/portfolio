@@ -66,6 +66,13 @@ export default {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.glsl$/,
+        use: {
+          loader: 'webpack-glsl-loader'
+        },
+        exclude: /(node_modules)/
+      })
     }
   },
   generate: {
