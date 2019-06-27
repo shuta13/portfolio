@@ -2,7 +2,7 @@
   .container
     .content
       .text-wrap
-        .text.bg-image LOADING...
+        .text.bg-image(:style="{ 'background-image': 'url(http://localhost:3000/top/work05.png);' }") LOADING...
 </template>
 
 <script>
@@ -75,7 +75,6 @@ _::-webkit-full-page-media, _:future, :root .bg-image {
 .bg-image {
   width: 100vw;
   height: 100vh;
-  background-image: url(http://localhost:3000/top/work05.png);
   @media screen and (max-width: 768px) {
     color: rgb(0, 0, 0);
   }
