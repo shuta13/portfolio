@@ -20,7 +20,8 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Josefin+Sans:600i&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro:300&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Wire+One&display=swap' }
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Wire+One&display=swap' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap' }
     ]
   },
   /*

@@ -104,7 +104,7 @@ a {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  font-family: 'monospace';
+  font-family: 'Sawarabi Gothic';
   color: rgba(40, 40, 40, .8)
 }
 
