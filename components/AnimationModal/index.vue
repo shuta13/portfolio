@@ -2,7 +2,7 @@
   .container
     .content
       .text-wrap
-        .text.bg-image(:style="{ 'background-image': 'url(http://localhost:3000/top/work05.png);' }") LOADING...
+        .text.bg-image(:style="{ 'background-image': 'url(https://did0es.me/top/work05.png);' }") LOADING...
 </template>
 
 <script>
