@@ -17,16 +17,16 @@ import { EffectComposer, RenderPass, GlitchPass, MaskPass, ShaderPass, CopyShade
 export default {
   data() {
     return {
-      data: undefined,
-      scene: undefined,
-      camera: undefined,
-      object: undefined,
-      renderer: undefined,
-      composer: undefined,
-      renderPass: undefined,
-      glitchPass: undefined,
-      customPass: undefined,
-      effectGlitch: undefined,
+      data: null,
+      scene: null,
+      camera: null,
+      object: null,
+      renderer: null,
+      composer: null,
+      renderPass: null,
+      glitchPass: null,
+      customPass: null,
+      effectGlitch: null,
       started: false
     }
   },

@@ -12,27 +12,27 @@ import fragmentSource from './shader/fragment.glsl'
 export default {
   data() {
     return {
-      scene: undefined,
-      camera: undefined,
-      renderer: undefined,
+      scene: null,
+      camera: null,
+      renderer: null,
       started: false,
-      targetPercent: undefined,
+      targetPercent: null,
       uniforms: {
         uTime: {
-          value: undefined
+          value: null
         },
         uMouse: {
-          value: undefined
+          value: null
         },
         uPercent: {
-          value: undefined
+          value: null
         },
         uTex: {
-          value: undefined
+          value: null
         }
       },
-      mouseX: undefined,
-      mouseY: undefined
+      mouseX: null,
+      mouseY: null
     }
   },
   mounted() {
