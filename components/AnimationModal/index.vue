@@ -54,7 +54,8 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Josefin Sans';
+  // font-family: 'Josefin Sans';
+  font-family: 'JosefinSansBoldItalic';
   font-size: 7vw;
   @media screen and (max-width: 768px) {
     font-size: 3rem;
