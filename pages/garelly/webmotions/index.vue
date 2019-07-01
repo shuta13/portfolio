@@ -10,7 +10,7 @@
         webmotions-work02.work(v-if="$store.state.webmotionsWork02State")
       transition(name="webmotions-works-modal")
         webmotions-work03.work(v-if="$store.state.webmotionsWork03State")
-      lazy-component.image-wrap
+      .image-wrap
         .image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work03.jpg)' }").centering(@click="updateWebmotionsWork01State")
         .image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work02.jpg)' }").centering(@click="updateWebmotionsWork02State")
         .image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work01.jpg)' }").centering(@click="updateWebmotionsWork03State")

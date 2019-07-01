@@ -35,7 +35,7 @@
         work15.work(v-if="$store.state.work15State")
       transition(name="works-modal")
         work16.work(v-if="$store.state.work16State")
-      lazy-component.image-wrap
+      .image-wrap
         .image(:style="{ 'background-image': 'url(/top/thumnails/work01.jpg)' }").centering(@click="updateWork01State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work02.jpg)' }").centering(@click="updateWork02State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work03.jpg)' }").centering(@click="updateWork03State")
