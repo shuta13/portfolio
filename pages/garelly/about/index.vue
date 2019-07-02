@@ -1,5 +1,4 @@
 <template lang="pug">
-- var s = '\0'
   .container
     toggle-menu.menu
     .content-wrap
@@ -15,18 +14,18 @@
             .title Skill
             .text2 ・よく書く
             .text3-wrap
-              span.text3 #{s}>#{s}JavaScript,#{s}Vue.js/Nuxt.js,#{s}C/C++,#{s}Ruby,#{s}Processing
+              span.text3  > JavaScript, Vue.js/Nuxt.js, C/C++, Ruby, Processing
             .text2 ・つかう
             .text3-wrap
-              span.text3 #{s}>#{s}Docker,#{s}Git,#{s}Laravel,#{s}Rails,#{s}MySQL,#{s}Three.js,#{s}GLSL,#{s}Photoshop,#{s}Figma
+              span.text3  > Docker, Git, Laravel, Rails, MySQL, Three.js, GLSL, Photoshop, Figma
             .text2 ・創造的活動
-              a(href="https://www.pixiv.net/member.php?id=19834475").text3.link-pixiv #{s}>>#{s}Pixiv(絵をかきます)
-              a(href="https://soundcloud.com/user-858183512").text3.link-soundcloud #{s}>>#{s}Soundcloud(おうたを作ります)
-              a(href="https://did0es.me/garelly").text3.link-garelly #{s}>>#{s}Garelly(CreativeなCoding)
+              a(href="https://www.pixiv.net/member.php?id=19834475").text3.link-pixiv  >> Pixiv(絵をかきます)
+              a(href="https://soundcloud.com/user-858183512").text3.link-soundcloud  >> Soundcloud(おうたを作ります)
+              a(href="https://did0es.me/garelly").text3.link-garelly  >> Garelly(CreativeなCoding)
             .text2 ・活動
-              span.text3 CyberAgent#{s}Architecture#{s}Challenge#{s}(2019)
-              span.text3 CyberAgent#{s}学生版ヒダッカソン-API編-#{s}(2019)
-              span.text3 Cookpad#{s}Spring#{s}Internship#{s}(2019)#{s}#{s}等に参加
+              span.text3 CyberAgent Architecture Challenge (2019)
+              span.text3 CyberAgent 学生版ヒダッカソン-API編- (2019)
+              span.text3 Cookpad Spring Internship (2019)  等に参加
 </template>
 
 <script>
@@ -202,6 +201,10 @@ a {
   font-size: 1.1vw;
   @media screen and (max-width: 768px) {
     line-height: 1.8vh;
+  }
+  // iPhone5世代以前のためのメディアクエリ
+  @media screen and (max-height: 640px) {
+    font-size: 0.4rem;
   }
 }
 
