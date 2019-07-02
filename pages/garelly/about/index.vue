@@ -187,7 +187,7 @@ a {
     width: 60vw;
   }
   width: 40vw;
-  height: 3vh;
+  // height: 3vh;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

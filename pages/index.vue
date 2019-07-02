@@ -126,6 +126,9 @@ a {
   @media screen and (max-width: 768px) {
     font-size: 2.2rem;
   }
+  @media screen and (max-height: 640px) {
+    font-size: 1.8rem;
+  }
   display: flex;
   flex-direction: row;
   justify-content: center;
