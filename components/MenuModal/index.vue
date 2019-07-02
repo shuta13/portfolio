@@ -69,6 +69,9 @@ ul {
     text-decoration: none;
     font-family: 'Cutive Mono';
     @media screen and (max-width: 1300px) {
+      font-size: 4vw;
+    }
+    @media screen and (max-width: 768px) {
       font-size: 2.1rem;
     }
     @media screen and (max-height: 640px) {

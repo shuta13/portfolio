@@ -87,12 +87,10 @@ a {
   opacity: 0;
   display: flex;
   justify-content: center;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1200px) {
     margin-top: 8vh;
-  }
-  @media screen and (min-width: 769px) {
-    margin-top: 20vh;
-  }
+    }
+  margin-top: 20vh;
 }
 
 .content {
@@ -115,8 +113,8 @@ a {
   }
   width: 18vw;
   height: 18vw;
-  min-width: 200px;
-  min-height: 200px;
+  min-width: 240px;
+  min-height: 240px;
   display: flex;
   justify-content: center;
   align-items: center;
