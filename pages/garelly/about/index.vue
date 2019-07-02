@@ -17,7 +17,7 @@
               span.text3  > JavaScript, Vue.js/Nuxt.js, C/C++, Ruby, Processing
             .text2 ・つかう
             .text3-wrap
-              span.text3  > Docker, Git, Laravel, Rails, MySQL, Three.js, GLSL, Photoshop, Figma
+              span.text3  > Docker, Git, Laravel, Rails, MySQL, TypeScript, Three.js, GLSL, Photoshop, Figma
             .text2 ・創造的活動
               a(href="https://www.pixiv.net/member.php?id=19834475").text3.link-pixiv  >> Pixiv(絵をかきます)
               a(href="https://soundcloud.com/user-858183512").text3.link-soundcloud  >> Soundcloud(おうたを作ります)
