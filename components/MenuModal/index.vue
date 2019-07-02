@@ -71,6 +71,9 @@ ul {
     @media screen and (max-width: 1300px) {
       font-size: 2.1rem;
     }
+    @media screen and (max-height: 640px) {
+      font-size: 1.7rem;
+    }
     font-size: 3.4vw;
     line-height: 11.4vh;
     cursor: pointer;
