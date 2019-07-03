@@ -221,7 +221,7 @@ a {
     }
     @media screen and (max-height: 640px) {
       min-width: 80px;
-      height: 2.8vh;
+      height: 3.4vh;
     }
     width: 8.7vw;
     height: 3.6vh;
