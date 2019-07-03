@@ -73,7 +73,7 @@ export default {
       if (window.innerWidth > 768) {
         TweenMax.to('.link', 0.6, {
           backgroundColor: 'rgba(255, 255, 255, 1)',
-          borderRadius: 3,
+          borderRadius: 2,
           y: '2%',
           ease: Power4.easeOut
         })
@@ -204,7 +204,9 @@ a {
     align-items: center;
   }
   .link-wrap {
-    // background-color: red;
+    @media screen and (max-width: 768px) {
+      background-color: #fff;
+    }
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,12 +216,12 @@ a {
       height: 2.4vw;
     }
     @media screen and (max-width: 768px) {
-      width: 14vw;
-      height: 2.8vw;
+      min-width: 90px;
+      height: 2.8vh;
     }
     @media screen and (max-height: 640px) {
-      width: 18vw;
-      height: 2.7vw;
+      min-width: 80px;
+      height: 2.8vh;
     }
     width: 8.7vw;
     height: 3.6vh;
@@ -268,7 +270,7 @@ a {
     position: absolute;
     font-family: 'Cutive Mono';
     @media screen and (max-width: 768px) {
-      width: 10vw;
+      width: 18vw;
     }
     width: 10vw;
     @media screen and (max-width: 1300px) {
@@ -283,6 +285,9 @@ a {
     }
     @media screen and (max-width: 768px) {
       font-size: 0.8rem;
+    }
+    @media screen and (max-width: 768px) {
+      color: #000;
     }
     color: #fff;
     font-size: 2vw;
