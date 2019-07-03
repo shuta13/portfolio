@@ -185,6 +185,8 @@ a {
     color: #fff;
     font-size: 2vw;
     cursor: pointer;
+    border: solid 1px #ffffff;
+    border-radius: 4px;
   }
 }
 
