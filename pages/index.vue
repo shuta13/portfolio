@@ -70,26 +70,30 @@ export default {
       if (window.innerWidth < 1300) this.bgMotionShow = !this.bgMotionShow
     },
     hoveredGarellyButton() {
-      TweenMax.to('.link', 0.6, {
-        backgroundColor: 'rgba(255, 255, 255, 1)',
-        borderRadius: 4,
-        y: 2,
-        ease: Power4.easeOut
-      })
-      TweenMax.to('.garelly', 1, {
-        color: 'rgb(40, 20, 60)',
-        transform: 'matrix(1, 0, 0, 1, 0, 0)'
-      })
+      if (window.innerWidth > 768) {
+        TweenMax.to('.link', 0.6, {
+          backgroundColor: 'rgba(255, 255, 255, 1)',
+          borderRadius: 3,
+          y: '2%',
+          ease: Power4.easeOut
+        })
+        TweenMax.to('.garelly', 1, {
+          color: 'rgb(40, 20, 60)',
+          transform: 'matrix(1, 0, 0, 1, 0, 0)'
+        })
+      }
     },
     leftGarellyButton() {
-      TweenMax.to('.link', 1, {
-        backgroundColor: 'rgba(255, 255, 255, 1)',
-        y: 100,
-        ease: Power4.easeIn
-      })
-      TweenMax.to('.garelly', 1, {
-        color: '#fff'
-      })
+      if (window.innerWidth > 768) {
+        TweenMax.to('.link', 1, {
+          backgroundColor: 'rgba(255, 255, 255, 1)',
+          y: '100%',
+          ease: Power4.easeIn
+        })
+        TweenMax.to('.garelly', 1, {
+          color: '#fff'
+        })
+      }
     }
   }
 }
@@ -206,22 +210,43 @@ a {
     align-items: center;
     margin-left: $item-margin;
     margin-right: $item-margin;
+    @media screen and (max-width: 1300px) {
+      height: 2.4vw;
+    }
+    @media screen and (max-width: 768px) {
+      width: 14vw;
+      height: 2.8vw;
+    }
+    @media screen and (max-height: 640px) {
+      width: 18vw;
+      height: 2.7vw;
+    }
     width: 8.7vw;
-    height: 4vh;
+    height: 3.6vh;
   }
 
   .link {
     // background-color: blue;
     width: 100vw;
-    height: 2.1vw;
+    height: 2.2vw;
+    @media screen and (max-width: 1300px) {
+      height: 2.6vw;
+    }
     @media screen and (max-width: 768px) {
-      font-size: 1.2rem;
+      height: 2.6vw;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
     }
     // margin-left: $item-margin;
     // margin-right: $item-margin;
     // font-family: 'Cutive Mono';
     // color: #fff;
     // font-size: 2vw;
+    @media screen and (max-width: 768px) {
+      border-top-left-radius: 0.4px;
+      border-top-right-radius: 0.4px;
+    }
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     cursor: pointer;
@@ -229,6 +254,7 @@ a {
     // @media screen and (max-width: 768px) {
     //   padding: 0.3vw 0.4vw;
     // }
+    margin-top: 0.4vw;
     @media screen and (max-width: 768px) {
       background-color: rgba(255, 255, 255, 1);
       color: rgb(40, 20, 60);
@@ -238,10 +264,31 @@ a {
     transform: translate(0%, 100%);
   }
   .garelly {
+    // background-color: red;
     position: absolute;
     font-family: 'Cutive Mono';
+    @media screen and (max-width: 768px) {
+      width: 10vw;
+    }
+    width: 10vw;
+    @media screen and (max-width: 1300px) {
+      height: 2.2vw;
+    }
+    @media screen and (max-width: 768px) {
+      height: 1rem;
+    }
+    height: 2vw;
+    @media screen and (max-width: 1300px) {
+      font-size: 2vw;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 0.8rem;
+    }
     color: #fff;
     font-size: 2vw;
+    @media screen and (max-width: 768px) {
+      border-bottom: none;
+    }
     border-bottom: solid 1px #ffffff;
     cursor: pointer;
   }
