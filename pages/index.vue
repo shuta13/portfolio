@@ -11,8 +11,10 @@
             img.item(src="~/assets/images/github-square-brands.svg")
           a(href="https://www.facebook.com/profile.php?id=100028982675881")
             img.item(src="~/assets/images/facebook-square-brands.svg")
-          .link-wrap(@click="updateRouteStore")
-            span.link GARELLY
+          .button-wrap
+            .link-wrap(@click="updateRouteStore")(@mouseover="hoveredGarellyButton")(@mouseleave="leftGarellyButton")
+              .link
+              span.garelly GARELLY
       transition(name="animation")
         animation-modal.animation-modal(v-if="appear")
 </template>
@@ -66,6 +68,28 @@ export default {
     },
     bgMotionShowMutate() {
       if (window.innerWidth < 1300) this.bgMotionShow = !this.bgMotionShow
+    },
+    hoveredGarellyButton() {
+      TweenMax.to('.link', 0.6, {
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+        borderRadius: 4,
+        y: 2,
+        ease: Power4.easeOut
+      })
+      TweenMax.to('.garelly', 1, {
+        color: 'rgb(40, 20, 60)',
+        transform: 'matrix(1, 0, 0, 1, 0, 0)'
+      })
+    },
+    leftGarellyButton() {
+      TweenMax.to('.link', 3, {
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+        y: 100,
+        ease: Power4.easeOut
+      })
+      TweenMax.to('.garelly', 1, {
+        color: '#fff'
+      })
     }
   }
 }
@@ -147,13 +171,16 @@ a {
   width: 80vw;
 }
 
+.link-wrap {
+  overflow: hidden;
+}
+
 .item-wrap {
   $item-margin: 3vh;
   // background-color: #ccc;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-
   .item {
     // background-color: #000;
     @media screen and (max-width: 768px) {
@@ -167,26 +194,56 @@ a {
     width: 4vw;
     height: 8vh;
   }
-
-  .link-wrap {
+  .button-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  .link-wrap {
+    // background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: $item-margin;
+    margin-right: $item-margin;
+    width: 8.7vw;
+    height: 4vh;
+  }
 
   .link {
-    // background-color: red;
+    // background-color: blue;
+    width: 100vw;
+    height: 2.1vw;
     @media screen and (max-width: 768px) {
       font-size: 1.2rem;
     }
-    margin-left: $item-margin;
-    margin-right: $item-margin;
+    // margin-left: $item-margin;
+    // margin-right: $item-margin;
+    // font-family: 'Cutive Mono';
+    // color: #fff;
+    // font-size: 2vw;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    cursor: pointer;
+    // border: solid 1px #ffffff;
+    // @media screen and (max-width: 768px) {
+    //   padding: 0.3vw 0.4vw;
+    // }
+    @media screen and (max-width: 768px) {
+      background-color: rgba(255, 255, 255, 1);
+      color: rgb(40, 20, 60);
+    }
+    background-color: rgba(255, 255, 255, 1);
+    // padding: 0.2vw 0.4vw;
+    transform: translate(0%, 100%);
+  }
+  .garelly {
+    position: absolute;
     font-family: 'Cutive Mono';
     color: #fff;
     font-size: 2vw;
+    border-bottom: solid 1px #ffffff;
     cursor: pointer;
-    border: solid 1px #ffffff;
-    border-radius: 4px;
   }
 }
 
