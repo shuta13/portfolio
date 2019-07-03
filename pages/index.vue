@@ -82,10 +82,10 @@ export default {
       })
     },
     leftGarellyButton() {
-      TweenMax.to('.link', 3, {
+      TweenMax.to('.link', 1, {
         backgroundColor: 'rgba(255, 255, 255, 1)',
         y: 100,
-        ease: Power4.easeOut
+        ease: Power4.easeIn
       })
       TweenMax.to('.garelly', 1, {
         color: '#fff'
