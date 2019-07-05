@@ -9,7 +9,7 @@
 
 <script>
 import TweenMax from 'gsap'
-import DeepSea from '~/components/garelly/works/DeepSea'
+import DeepSea from '~/components/garelly/works/DeepSea.vue'
 
 export default {
   components: {
