@@ -6,13 +6,13 @@
     .content
       transition(name="webmotions-works-modal")
         webmotions-work01.work(v-if="$store.state.webmotionsWork01State")
-      transition(name="webmotions-works-modal")
-        webmotions-work02.work(v-if="$store.state.webmotionsWork02State")
+      //- transition(name="webmotions-works-modal")
+      //-   webmotions-work02.work(v-if="$store.state.webmotionsWork02State")
       transition(name="webmotions-works-modal")
         webmotions-work03.work(v-if="$store.state.webmotionsWork03State")
       .image-wrap
         .image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work03.jpg)' }").centering(@click="updateWebmotionsWork01State")
-        .image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work02.jpg)' }").centering(@click="updateWebmotionsWork02State")
+        //- .image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work02.jpg)' }").centering(@click="updateWebmotionsWork02State")
         .image(:style="{ 'background-image': 'url(/webmotion/thumbnails/work01.jpg)' }").centering(@click="updateWebmotionsWork03State")
 </template>
 
@@ -24,7 +24,7 @@ import BlindModal from '~/components/BlindModal.vue'
 import ToggleMenu from '~/components/ToggleMenu.vue'
 // コンテンツのコンポーネント群
 import webmotionsWork01 from '~/components/garelly/webmotions/Work01'
-import webmotionsWork02 from '~/components/garelly/webmotions/Work02'
+// import webmotionsWork02 from '~/components/garelly/webmotions/Work02'
 import webmotionsWork03 from '~/components/garelly/webmotions/Work03'
 
 export default {
@@ -33,7 +33,7 @@ export default {
     BlindModal,
     ToggleMenu,
     webmotionsWork01,
-    webmotionsWork02,
+    // webmotionsWork02,
     webmotionsWork03
   },
   data() {

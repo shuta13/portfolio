@@ -1,20 +1,16 @@
 <template lang="pug">
   .container
-    .image-wrap(@click="updateWork12State")
-      .content
-        deep-sea
+    .image-wrap
+      .content(@click="updateWork12State")
+        .image(:style="{ 'background-image': 'url(/top/work12.png)' }")
         .bottom-wrap
-          .back(@click="updateWork12State") back
+          .back(@click="updateWork05State") back
 </template>
 
 <script>
 import TweenMax from 'gsap'
-import DeepSea from '~/components/garelly/works/DeepSea.vue'
 
 export default {
-  components: {
-    DeepSea
-  },
   mounted() {
     TweenMax.to('.image', 1, {
       opacity: 1
