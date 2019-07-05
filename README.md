@@ -5,7 +5,7 @@
 # install
 $ yarn install
 
-# serve(develop)
+# up dev server
 $ yarn dev
 
 # build, launch
