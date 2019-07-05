@@ -22,17 +22,6 @@ class MenuModal extends Vue {
   }
 }
 export default MenuModal
-// export default {
-//   mounted() {
-//     this.updateRouteStore()
-//   },
-//   methods: {
-// updateRouteStore() {
-//   const route = '/garelly/*'
-//   this.$store.commit('setCurrentRoute', route)
-// }
-//   }
-// }
 </script>
 
 <style lang="scss" scoped>

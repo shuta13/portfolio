@@ -19,7 +19,7 @@
 <script>
 import { TweenMax, Power4 } from 'gsap'
 import AnimationModal from '~/components/AnimationModal'
-import BlindModal from '~/components/BlindModal'
+import BlindModal from '~/components/BlindModal.vue'
 // ts仕様
 import ToggleMenu from '~/components/ToggleMenu.vue'
 // コンテンツのコンポーネント群

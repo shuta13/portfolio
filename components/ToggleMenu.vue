@@ -28,23 +28,6 @@ class ToggleMenu extends Vue {
   }
 }
 export default ToggleMenu
-// import MenuModal from '~/components/MenuModal.vue'
-
-// export default {
-//   components: {
-//     MenuModal
-//   },
-//   data() {
-//     return {
-//       appear: false
-//     }
-//   },
-//   methods: {
-//     clicked() {
-//       this.appear = !this.appear
-//     }
-//   }
-// }
 </script>
 
 <style lang="scss" scoped>

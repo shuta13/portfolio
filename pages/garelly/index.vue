@@ -58,8 +58,8 @@
 /* eslint-disable */
 import { TweenMax, Power4 } from 'gsap'
 import AfterMovingBlind from '~/components/AfterMovingBlind'
-import BlindModal from '~/components/BlindModal'
 // ts仕様
+import BlindModal from '~/components/BlindModal.vue'
 import ToggleMenu from '~/components/ToggleMenu.vue'
 // コンテンツのコンポーネント群
 import Work01 from '~/components/garelly/top/Work01'
