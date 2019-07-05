@@ -28,29 +28,53 @@
               span.text3 Cookpad Spring Internship (2019)  等に参加
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
 import { TweenMax, Power4 } from 'gsap'
-import ToggleMenu from '~/components/ToggleMenu'
+import ToggleMenu from '~/components/ToggleMenu.vue'
 
-export default {
+@Component({
   components: {
     ToggleMenu
-  },
+  }
+})
+class About extends Vue {
   mounted() {
     this.$nextTick(() => {
       this.fadeInContent()
     })
-  },
-  methods: {
-    fadeInContent() {
-      TweenMax.to('.content-wrap', 1.6, {
-        opacity: 1,
-        ease: Power4.easeOut,
-        top: '0vh'
-      })
-    }
+  }
+  fadeInContent() {
+    TweenMax.to('.content-wrap', 1.6, {
+      opacity: 1,
+      ease: Power4.easeOut,
+      top: '0vh'
+    })
   }
 }
+export default About
+// import { TweenMax, Power4 } from 'gsap'
+// import ToggleMenu from '~/components/ToggleMenu'
+
+// export default {
+//   components: {
+//     ToggleMenu
+//   },
+//   mounted() {
+//     this.$nextTick(() => {
+//       this.fadeInContent()
+//     })
+//   },
+//   methods: {
+//     fadeInContent() {
+//       TweenMax.to('.content-wrap', 1.6, {
+//         opacity: 1,
+//         ease: Power4.easeOut,
+//         top: '0vh'
+//       })
+//     }
+//   }
+// }
 </script>
 
 <style lang="scss" scoped>

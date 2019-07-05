@@ -69,6 +69,7 @@ const config: NuxtConfiguration = {
     ** You can extend webpack config here
     */
     extend(config, ctx) {
+      if (config.module === undefined) return
       config.module.rules.push({
         test: /\.glsl$/,
         use: {

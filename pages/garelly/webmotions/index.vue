@@ -20,7 +20,8 @@
 import { TweenMax, Power4 } from 'gsap'
 import AnimationModal from '~/components/AnimationModal'
 import BlindModal from '~/components/BlindModal'
-import ToggleMenu from '~/components/ToggleMenu'
+// ts仕様
+import ToggleMenu from '~/components/ToggleMenu.vue'
 // コンテンツのコンポーネント群
 import webmotionsWork01 from '~/components/garelly/webmotions/Work01'
 import webmotionsWork02 from '~/components/garelly/webmotions/Work02'
