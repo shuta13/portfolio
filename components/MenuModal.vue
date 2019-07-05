@@ -8,19 +8,31 @@
           nuxt-link(to="/garelly/about") about
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+
+@Component
+class MenuModal extends Vue {
   mounted() {
     this.updateRouteStore()
-  },
-  methods: {
-    updateRouteStore() {
-      const route = '/garelly/*'
-      this.$store.commit('setCurrentRoute', route)
-      // alert(this.$store.state.currentRoute)
-    }
+  }
+  updateRouteStore() {
+    const route = '/garelly/*'
+    this.$store.commit('setCurrentRoute', route)
   }
 }
+export default MenuModal
+// export default {
+//   mounted() {
+//     this.updateRouteStore()
+//   },
+//   methods: {
+// updateRouteStore() {
+//   const route = '/garelly/*'
+//   this.$store.commit('setCurrentRoute', route)
+// }
+//   }
+// }
 </script>
 
 <style lang="scss" scoped>
