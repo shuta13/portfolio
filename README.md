@@ -1,22 +1,31 @@
 # portfolio
 
-> my new portfolio
+### Build Setup
+```shell
+# install
+$ yarn install
 
-## Build Setup
+# serve(develop)
+$ yarn dev
 
-``` bash
-# install dependencies
-$ npm install
+# build, launch
+$ yarn build
+$ yarn start
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
+# generate
+$ yarn generate
 ```
 
+### scripts
+```javascript
+"scripts": {
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint:fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+ }
+```
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
