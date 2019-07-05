@@ -5,28 +5,28 @@
         .text.bg-image(:style="{ 'background-image': 'url(https://did0es.me/top/work05.png);' }") LOADING...
 </template>
 
-<script>
-/* eslint-disable */
-import TweenMax from 'gsap'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import { TweenMax, Linear } from 'gsap'
 
-export default {
+@Component
+class AnimationModal extends Vue {
   mounted() {
     this.bgMotion()
-  },
-  methods: {
-    bgMotion() {
-      TweenMax.to('.bg-image', .5, { 
-        backgroundPosition: "-100vw 0vw",
-        ease: Linear.easeNone,
-        repeat: -1
-      })
-      TweenMax.to('.bg-image', .4, { 
-        delay: 1,
-        opacity: 0
-      })
-    }
+  }
+  bgMotion() {
+    TweenMax.to('.bg-image', 0.5, {
+      backgroundPosition: '-100vw 0vw',
+      ease: Linear.easeNone,
+      repeat: -1
+    })
+    TweenMax.to('.bg-image', 0.4, {
+      delay: 1,
+      opacity: 0
+    })
   }
 }
+export default AnimationModal
 </script>
 
 <style lang="scss" scoped>
