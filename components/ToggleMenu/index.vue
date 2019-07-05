@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import MenuModal from '~/components/MenuModal'
+import MenuModal from '~/components/MenuModal.vue'
 
 export default {
   components: {

@@ -12,24 +12,39 @@
       .menu
 </template>
 
-<script>
-import MenuModal from '~/components/MenuModal'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import MenuModal from '~/components/MenuModal.vue'
 
-export default {
+@Component({
   components: {
     MenuModal
-  },
-  data() {
-    return {
-      appear: false
-    }
-  },
-  methods: {
-    clicked() {
-      this.appear = !this.appear
-    }
+  }
+})
+class ToggleMenu extends Vue {
+  appear = false
+  clicked() {
+    this.appear = !this.appear
   }
 }
+export default ToggleMenu
+// import MenuModal from '~/components/MenuModal.vue'
+
+// export default {
+//   components: {
+//     MenuModal
+//   },
+//   data() {
+//     return {
+//       appear: false
+//     }
+//   },
+//   methods: {
+//     clicked() {
+//       this.appear = !this.appear
+//     }
+//   }
+// }
 </script>
 
 <style lang="scss" scoped>
