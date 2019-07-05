@@ -4,7 +4,7 @@
       .content(@click="updateWork12State")
         .image(:style="{ 'background-image': 'url(/top/work12.png)' }")
         .bottom-wrap
-          .back(@click="updateWork05State") back
+          .back(@click="updateWork12State") back
 </template>
 
 <script>
