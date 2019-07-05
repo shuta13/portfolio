@@ -19,23 +19,22 @@
         animation-modal.animation-modal(v-if="appear")
 </template>
 
-<script>
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
 import { TweenMax, Linear, Power4 } from 'gsap'
-import AnimationModal from '~/components/AnimationModal'
-import BackgroundMotion from '~/components/BackgroundMotion'
+import AnimationModal from '~/components/AnimationModal.vue'
+import BackgroundMotion from '~/components/BackgroundMotion/BackgroundMotion.vue'
 
-export default {
+@Component({
   components: {
     AnimationModal,
     BackgroundMotion
-  },
-  data() {
-    return {
-      appear: true,
-      in: false,
-      bgMotionShow: true
-    }
-  },
+  }
+})
+class Top extends Vue {
+  appear = true;
+  in = false;
+  bgMotionShow = true;
   mounted() {
     this.bgMotion()
     TweenMax.to('.text', 0.4, {
@@ -49,63 +48,59 @@ export default {
       opacity: 0
     })
     this.bgMotionShowMutate()
-  },
-  methods: {
-    toDisappear() {
-      this.appear = !this.appear
-    },
-    updateRouteStore() {
-      const route = '/'
-      this.$store.commit('setCurrentRoute', route)
-      this.$router.push('/garelly')
-    },
-    bgMotion() {
-      TweenMax.to('.bg-image', 0.4, {
-        backgroundPosition: '-100vw 0vw',
-        ease: Linear.easeNone,
-        repeat: -1
+  }
+  toDisappear() {
+    this.appear = !this.appear
+  }
+  updateRouteStore() {
+    const route = '/'
+    this.$store.commit('setCurrentRoute', route)
+    this.$router.push('/garelly')
+  }
+  bgMotion() {
+    TweenMax.to('.bg-image', 0.4, {
+      backgroundPosition: '-100vw 0vw',
+      ease: Linear.easeNone,
+      repeat: -1
+    })
+  }
+  bgMotionShowMutate() {
+    if (window.innerWidth < 1300) this.bgMotionShow = !this.bgMotionShow
+  }
+  hoveredGarellyButton() {
+    if (window.innerWidth > 768) {
+      TweenMax.to('.link', 0.6, {
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+        borderRadius: 2,
+        y: '2%',
+        ease: Power4.easeOut
       })
-    },
-    bgMotionShowMutate() {
-      if (window.innerWidth < 1300) this.bgMotionShow = !this.bgMotionShow
-    },
-    hoveredGarellyButton() {
-      if (window.innerWidth > 768) {
-        TweenMax.to('.link', 0.6, {
-          backgroundColor: 'rgba(255, 255, 255, 1)',
-          borderRadius: 2,
-          y: '2%',
-          ease: Power4.easeOut
-        })
-        TweenMax.to('.garelly', 1, {
-          color: 'rgb(40, 20, 60)',
-          transform: 'matrix(1, 0, 0, 1, 0, 0)'
-        })
-      }
-    },
-    leftGarellyButton() {
-      if (window.innerWidth > 768) {
-        TweenMax.to('.link', 1, {
-          backgroundColor: 'rgba(255, 255, 255, 1)',
-          y: '100%',
-          ease: Power4.easeIn
-        })
-        TweenMax.to('.garelly', 1, {
-          color: '#fff'
-        })
-      }
+      TweenMax.to('.garelly', 1, {
+        color: 'rgb(40, 20, 60)',
+        transform: 'matrix(1, 0, 0, 1, 0, 0)'
+      })
+    }
+  }
+  leftGarellyButton() {
+    if (window.innerWidth > 768) {
+      TweenMax.to('.link', 1, {
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+        y: '100%',
+        ease: Power4.easeIn
+      })
+      TweenMax.to('.garelly', 1, {
+        color: '#fff'
+      })
     }
   }
 }
+export default Top
 </script>
 
 <style lang="scss">
-* {
-  margin: 0px;
-  padding: 0px;
-}
-
 .container {
+  margin: 0;
+  padding: 0;
   font-size: 62.5%;
 }
 
