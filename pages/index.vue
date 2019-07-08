@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'nuxt-property-decorator'
 import { TweenMax, Linear, Power4 } from 'gsap'
 import AnimationModal from '~/components/AnimationModal.vue'
 import BackgroundMotion from '~/components/BackgroundMotion/BackgroundMotion.vue'

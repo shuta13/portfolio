@@ -29,7 +29,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'nuxt-property-decorator'
 import { TweenMax, Power4 } from 'gsap'
 import ToggleMenu from '~/components/ToggleMenu.vue'
 
