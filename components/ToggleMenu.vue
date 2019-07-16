@@ -23,7 +23,7 @@ import MenuModal from '~/components/MenuModal.vue'
 })
 class ToggleMenu extends Vue {
   appear = false
-  clicked() {
+  clicked () {
     this.appear = !this.appear
   }
 }

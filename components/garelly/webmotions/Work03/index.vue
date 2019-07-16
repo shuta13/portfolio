@@ -15,13 +15,13 @@ export default {
   components: {
     GlitchCubes
   },
-  mounted() {
+  mounted () {
     TweenMax.to('.image', 1, {
       opacity: 1
     })
   },
   methods: {
-    updateWebmotionsWork03State() {
+    updateWebmotionsWork03State () {
       this.$store.commit('updateWebmotionsWork03State', false)
     }
   }

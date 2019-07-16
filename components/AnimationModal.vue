@@ -11,10 +11,10 @@ import { TweenMax, Linear } from 'gsap'
 
 @Component
 class AnimationModal extends Vue {
-  mounted() {
+  mounted () {
     this.bgMotion()
   }
-  bgMotion() {
+  bgMotion () {
     TweenMax.to('.bg-image', 0.5, {
       backgroundPosition: '-100vw 0vw',
       ease: Linear.easeNone,

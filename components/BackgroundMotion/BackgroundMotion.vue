@@ -10,7 +10,7 @@ import vertexSource from './shader/vertex.glsl'
 import fragmentSource from './shader/fragment.glsl'
 
 export default {
-  data() {
+  data () {
     return {
       scene: null,
       camera: null,
@@ -35,7 +35,7 @@ export default {
       mouseY: null
     }
   },
-  mounted() {
+  mounted () {
     this.init()
     this.configScene()
     this.positionCamera()
@@ -49,7 +49,7 @@ export default {
     this.startScene()
   },
   methods: {
-    init() {
+    init () {
       this.scene = new THREE.Scene()
       this.camera = new THREE.PerspectiveCamera(
         50,
@@ -58,17 +58,17 @@ export default {
         1000
       )
       this.renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true })
-      this.renderer.setClearColor(0xffffff, 1)
+      this.renderer.setClearColor(0xFFFFFF, 1)
       this.renderer.setSize(window.innerWidth, window.innerHeight)
     },
-    configScene() {
-      const light = new THREE.AmbientLight(0xffffff)
+    configScene () {
+      const light = new THREE.AmbientLight(0xFFFFFF)
       this.scene.add(light)
     },
-    positionCamera() {
+    positionCamera () {
       this.camera.position.set(0, 0, 10)
     },
-    loadTexture() {
+    loadTexture () {
       this.targetPercent = 0.0
       const texture = new THREE.TextureLoader().load(process.env.bgImageUrl,
         (tex) => {
@@ -105,25 +105,24 @@ export default {
           this.scene.add(plane)
         })
     },
-    bindWindowEvents() {
+    bindWindowEvents () {
       window.addEventListener('resize', this.handleWindowResize(), false)
     },
-    handleWindowResize() {
+    handleWindowResize () {
       this.camera.aspect = window.innerWidth / window.innerHeight
     },
-    startScene() {
-      if (this.started) return
+    startScene () {
+      if (this.started) { return }
       this.renderScene()
       this.started = !this.started
     },
-    renderScene() {
+    renderScene () {
       requestAnimationFrame(this.renderScene)
       this.renderer.render(this.scene, this.camera)
       this.camera.updateProjectionMatrix()
       this.renderer.setSize(window.innerWidth, window.innerHeight)
       this.uniforms.uTime.value += 0.0008
-      if (this.targetPercent < 10.0 && this.targetPercent <= 0.0) this.targetPercent += 1.0
-      else if (this.targetPercent >= 10.0) this.targetPercent -= 0.5
+      if (this.targetPercent < 10.0 && this.targetPercent <= 0.0) { this.targetPercent += 1.0 } else if (this.targetPercent >= 10.0) { this.targetPercent -= 0.5 }
     }
   }
 }

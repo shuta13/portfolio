@@ -13,10 +13,10 @@ import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 class MenuModal extends Vue {
-  mounted() {
+  mounted () {
     this.updateRouteStore()
   }
-  updateRouteStore() {
+  updateRouteStore () {
     const route = '/garelly/*'
     this.$store.commit('setCurrentRoute', route)
   }

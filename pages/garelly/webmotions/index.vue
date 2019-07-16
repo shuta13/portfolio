@@ -36,12 +36,12 @@ export default {
     // webmotionsWork02,
     webmotionsWork03
   },
-  data() {
+  data () {
     return {
       appear: true
     }
   },
-  mounted() {
+  mounted () {
     if (this.$store.state.webmotionsCount === 0) {
       this.appear = true
       this.$store.commit('incrementPageCount', 1)
@@ -59,13 +59,13 @@ export default {
     })
   },
   methods: {
-    updateWebmotionsWork01State() {
+    updateWebmotionsWork01State () {
       this.$store.commit('updateWebmotionsWork01State', true)
     },
-    updateWebmotionsWork02State() {
+    updateWebmotionsWork02State () {
       this.$store.commit('updateWebmotionsWork02State', true)
     },
-    updateWebmotionsWork03State() {
+    updateWebmotionsWork03State () {
       this.$store.commit('updateWebmotionsWork03State', true)
     }
   }

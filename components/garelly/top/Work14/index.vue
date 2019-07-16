@@ -12,13 +12,13 @@
 import TweenMax from 'gsap'
 
 export default {
-  mounted() {
+  mounted () {
     TweenMax.to('.image', 1, {
       opacity: 1
     })
   },
   methods: {
-    updateWork14State() {
+    updateWork14State () {
       this.$store.commit('updateWork14State', false)
     }
   }

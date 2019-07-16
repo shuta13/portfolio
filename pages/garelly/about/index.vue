@@ -39,12 +39,12 @@ import ToggleMenu from '~/components/ToggleMenu.vue'
   }
 })
 class About extends Vue {
-  mounted() {
+  mounted () {
     this.$nextTick(() => {
       this.fadeInContent()
     })
   }
-  fadeInContent() {
+  fadeInContent () {
     TweenMax.to('.content-wrap', 1.6, {
       opacity: 1,
       ease: Power4.easeOut,

@@ -35,7 +35,7 @@ class Top extends Vue {
   appear = true;
   in = false;
   bgMotionShow = true;
-  mounted() {
+  mounted () {
     this.bgMotion()
     TweenMax.to('.text', 0.4, {
       delay: 1,
@@ -49,25 +49,25 @@ class Top extends Vue {
     })
     this.bgMotionShowMutate()
   }
-  toDisappear() {
+  toDisappear () {
     this.appear = !this.appear
   }
-  updateRouteStore() {
+  updateRouteStore () {
     const route = '/'
     this.$store.commit('setCurrentRoute', route)
     this.$router.push('/garelly')
   }
-  bgMotion() {
+  bgMotion () {
     TweenMax.to('.bg-image', 0.4, {
       backgroundPosition: '-100vw 0vw',
       ease: Linear.easeNone,
       repeat: -1
     })
   }
-  bgMotionShowMutate() {
-    if (window.innerWidth < 1300) this.bgMotionShow = !this.bgMotionShow
+  bgMotionShowMutate () {
+    if (window.innerWidth < 1300) { this.bgMotionShow = !this.bgMotionShow }
   }
-  hoveredGarellyButton() {
+  hoveredGarellyButton () {
     if (window.innerWidth > 768) {
       TweenMax.to('.link', 0.6, {
         backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -81,7 +81,7 @@ class Top extends Vue {
       })
     }
   }
-  leftGarellyButton() {
+  leftGarellyButton () {
     if (window.innerWidth > 768) {
       TweenMax.to('.link', 1, {
         backgroundColor: 'rgba(255, 255, 255, 1)',

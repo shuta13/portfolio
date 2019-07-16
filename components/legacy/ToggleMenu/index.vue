@@ -19,13 +19,13 @@ export default {
   components: {
     MenuModal
   },
-  data() {
+  data () {
     return {
       appear: false
     }
   },
   methods: {
-    clicked() {
+    clicked () {
       this.appear = !this.appear
     }
   }

@@ -15,13 +15,13 @@ export default {
   components: {
     NotFound
   },
-  mounted() {
+  mounted () {
     TweenMax.to('.image', 1, {
       opacity: 1
     })
   },
   methods: {
-    updateWebmotionsWork01State() {
+    updateWebmotionsWork01State () {
       this.$store.commit('updateWebmotionsWork01State', false)
     }
   }

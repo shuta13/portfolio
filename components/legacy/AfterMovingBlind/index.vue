@@ -14,7 +14,7 @@
 import TweenMax from 'gsap'
 
 export default {
-  mounted() {
+  mounted () {
     TweenMax.to('.text-wrap', 0.4, {
       delay: 0.8,
       opacity: 0

@@ -10,11 +10,11 @@
 
 <script>
 export default {
-  mounted() {
+  mounted () {
     this.updateRouteStore()
   },
   methods: {
-    updateRouteStore() {
+    updateRouteStore () {
       const route = '/garelly/*'
       this.$store.commit('setCurrentRoute', route)
       // alert(this.$store.state.currentRoute)

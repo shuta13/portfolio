@@ -16,7 +16,7 @@ import TweenMax from 'gsap'
 
 @Component
 class AfterMovingBlind extends Vue {
-  mounted() {
+  mounted () {
     // @ts-ignore(ここ型効いてないなぜ)
     TweenMax.to('.text-wrap', 0.4, {
       delay: 0.8,
