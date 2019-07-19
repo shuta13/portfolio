@@ -19,9 +19,9 @@
             .text3-wrap
               span.text3  > Docker, Git, Laravel, Rails, MySQL, TypeScript, Three.js, GLSL, Photoshop, Figma
             .text2 ・創造的活動
-              a(href="https://www.pixiv.net/member.php?id=19834475").text3.link-pixiv  >> Pixiv(絵をかきます)
-              a(href="https://soundcloud.com/user-858183512").text3.link-soundcloud  >> Soundcloud(おうたを作ります)
-              a(href="https://did0es.me/garelly").text3.link-garelly  >> Garelly(CreativeなCoding)
+              a(href="https://www.pixiv.net/member.php?id=19834475")(target="_blank").text3.link-pixiv  >> Pixiv(絵をかきます)
+              a(href="https://soundcloud.com/user-858183512")(target="_blank").text3.link-soundcloud  >> Soundcloud(おうたを作ります)
+              a(href="https://did0es.me/garelly")(target="_blank").text3.link-garelly  >> Garelly(CreativeなCoding)
             .text2 ・活動
               span.text3 CyberAgent Architecture Challenge (2019)
               span.text3 CyberAgent 学生版ヒダッカソン-API編- (2019)

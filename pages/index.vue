@@ -5,11 +5,11 @@
       span.title did0es portfolio
       .content
         .item-wrap
-          a(href="https://twitter.com/did0es")
+          a(href="https://twitter.com/did0es")(target="_blank")
             img.item(src="~/assets/images/twitter-square-brands.svg")
-          a(href="https://github.com/shuta13")
+          a(href="https://github.com/shuta13")(target="_blank")
             img.item(src="~/assets/images/github-square-brands.svg")
-          a(href="https://www.facebook.com/profile.php?id=100028982675881")
+          a(href="https://www.facebook.com/profile.php?id=100028982675881")(target="_blank")
             img.item(src="~/assets/images/facebook-square-brands.svg")
           .button-wrap
             .link-wrap(@click="updateRouteStore")(@mouseover="hoveredGarellyButton")(@mouseleave="leftGarellyButton")
@@ -55,7 +55,8 @@ class Top extends Vue {
   updateRouteStore () {
     const route = '/'
     this.$store.commit('setCurrentRoute', route)
-    this.$router.push('/garelly')
+    const getRoute = this.$router.resolve({ path: '/garelly' })
+    window.open(getRoute.href, '_blank')
   }
   bgMotion () {
     TweenMax.to('.bg-image', 0.4, {
