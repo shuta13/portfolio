@@ -19,7 +19,8 @@ export const state = () => ({
   work16State: false,
   webmotionsWork01State: false,
   webmotionsWork02State: false,
-  webmotionsWork03State: false
+  webmotionsWork03State: false,
+  webmotionsWork04State: false
 })
 
 export const mutations = {
@@ -85,5 +86,8 @@ export const mutations = {
   },
   updateWebmotionsWork03State (state, flag) {
     state.webmotionsWork03State = flag
+  },
+  updateWebmotionsWork04State (state, flag) {
+    state.webmotionsWork04State = flag
   }
 }
