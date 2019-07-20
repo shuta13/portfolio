@@ -5,12 +5,15 @@
       span.title did0es portfolio
       .content
         .item-wrap
-          a(href="https://twitter.com/did0es")(target="_blank")
-            img.item(src="~/assets/images/twitter-square-brands.svg")
-          a(href="https://github.com/shuta13")(target="_blank")
-            img.item(src="~/assets/images/github-square-brands.svg")
-          a(href="https://www.facebook.com/profile.php?id=100028982675881")(target="_blank")
-            img.item(src="~/assets/images/facebook-square-brands.svg")
+          .item
+            a(href="https://twitter.com/did0es")(target="_blank")
+              img.icon(src="~/assets/images/twitter-square-brands.svg")
+          .item
+            a(href="https://github.com/shuta13")(target="_blank")
+              img.icon(src="~/assets/images/github-square-brands.svg")
+          .item
+            a(href="https://www.facebook.com/profile.php?id=100028982675881")(target="_blank")
+              img.icon(src="~/assets/images/facebook-square-brands.svg")
           .button-wrap
             .link-wrap(@click="updateRouteStore")(@mouseover="hoveredGarellyButton")(@mouseleave="leftGarellyButton")
               .link
@@ -185,19 +188,40 @@ a {
   .item {
     // background-color: #000;
     @media screen and (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-left: $item-margin;
       margin-right: $item-margin;
-      width: 2rem;
-      height: 2rem;
+      // width: 2rem;
+      // height: 2rem;
     }
     margin-left: $item-margin;
     margin-right: $item-margin;
     width: 4vw;
-    height: 8vh;
-    transition: width .4s;
-    transition: height .4s;
+    height: 10vh;
+    // transition: width .2s;
+    // transition: height .2s;
   }
   .item:hover {
+    // width: 4rem;
+    // height: 4rem;
+    // @media screen and (max-width: 768px) {
+    //   width: 1.8rem;
+    //   height: 1.8rem;
+    // }
+  }
+  .icon {
+    @media screen and (max-width: 768px) {
+      width: 2rem;
+      height: 2rem;
+    }
+    width: 4vw;
+    height: 8vh;
+    transition: width .2s;
+    transition: height .2s;
+  }
+  .icon:hover {
     width: 4rem;
     height: 4rem;
     @media screen and (max-width: 768px) {
