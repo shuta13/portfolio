@@ -203,14 +203,6 @@ a {
     // transition: width .2s;
     // transition: height .2s;
   }
-  .item:hover {
-    // width: 4rem;
-    // height: 4rem;
-    // @media screen and (max-width: 768px) {
-    //   width: 1.8rem;
-    //   height: 1.8rem;
-    // }
-  }
   .icon {
     @media screen and (max-width: 768px) {
       width: 2rem;
