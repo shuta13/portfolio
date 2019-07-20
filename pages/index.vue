@@ -200,6 +200,10 @@ a {
   .item:hover {
     width: 4rem;
     height: 4rem;
+    @media screen and (max-width: 768px) {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
   }
   .button-wrap {
     display: flex;
