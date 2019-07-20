@@ -55,8 +55,9 @@ class Top extends Vue {
   updateRouteStore () {
     const route = '/'
     this.$store.commit('setCurrentRoute', route)
-    const getRoute = this.$router.resolve({ path: '/garelly' })
-    window.open(getRoute.href, '_blank')
+    this.$router.push({ path: '/garelly' })
+    // const getRoute = this.$router.resolve({ path: '/garelly' })
+    // window.open(getRoute.href, '_blank')
   }
   bgMotion () {
     TweenMax.to('.bg-image', 0.4, {
@@ -193,6 +194,12 @@ a {
     margin-right: $item-margin;
     width: 4vw;
     height: 8vh;
+    transition: width .4s;
+    transition: height .4s;
+  }
+  .item:hover {
+    width: 4rem;
+    height: 4rem;
   }
   .button-wrap {
     display: flex;

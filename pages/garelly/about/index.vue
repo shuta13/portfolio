@@ -19,9 +19,10 @@
             .text3-wrap
               span.text3  > Docker, Git, Laravel, Rails, MySQL, TypeScript, Three.js, GLSL, Photoshop, Figma
             .text2 ・創造的活動
-              a(href="https://www.pixiv.net/member.php?id=19834475")(target="_blank").text3.link-pixiv  >> Pixiv(絵をかきます)
-              a(href="https://soundcloud.com/user-858183512")(target="_blank").text3.link-soundcloud  >> Soundcloud(おうたを作ります)
-              a(href="https://did0es.me/garelly")(target="_blank").text3.link-garelly  >> Garelly(CreativeなCoding)
+            .link
+              a(href="https://www.pixiv.net/member.php?id=19834475")(target="_blank").link-pixiv >> Pixiv(絵をかきます)
+              a(href="https://soundcloud.com/user-858183512")(target="_blank").link-soundcloud >> Soundcloud(おうたを作ります)
+              a(href="https://did0es.me/garelly")(target="_blank").link-garelly >> Garelly(CreativeなCoding)
             .text2 ・活動
               span.text3 CyberAgent Architecture Challenge (2019)
               span.text3 CyberAgent 学生版ヒダッカソン-API編- (2019)
@@ -113,7 +114,7 @@ a {
   justify-content: center;
   @media screen and (max-width: 1200px) {
     margin-top: 8vh;
-    }
+  }
   margin-top: 20vh;
 }
 
@@ -218,14 +219,31 @@ a {
   @media screen and (max-width: 768px) {
     font-size: 0.8rem;
   }
-  width: 60vw;
-  font-size: 1.1vw;
+  // iPhone5世代以前のためのメディアクエリ
+  @media screen and (max-height: 640px) {
+    font-size: 0.4rem;
+  }
   @media screen and (max-width: 768px) {
     line-height: 1.8vh;
+  }
+  width: 60vw;
+  font-size: 1.1vw;
+}
+
+.link {
+  @media screen and (max-width: 768px) {
+    font-size: 0.8rem;
   }
   // iPhone5世代以前のためのメディアクエリ
   @media screen and (max-height: 640px) {
     font-size: 0.4rem;
+  }
+  font-size: 1.1vw;
+  display: flex;
+  flex-wrap: wrap;
+  width: 24vw;
+  @media screen and (max-width: 768px) {
+    width: 42vw;
   }
 }
 
@@ -245,14 +263,29 @@ a {
 
 .link-pixiv {
   color: rgb(2, 80, 250);
+  transition: color .2s;
+}
+
+.link-pixiv:hover {
+  color: rgb(4, 160, 250);
 }
 
 .link-soundcloud {
-  color: rgb(240,69,3);
+  color: rgb(240, 69, 3);
+  transition: color .2s;
+}
+
+.link-soundcloud:hover {
+  color: rgb(240, 138, 6);
 }
 
 .link-garelly {
   color: rgb(40, 40, 40);
+  transition: color .2s;
+}
+
+.link-garelly:hover {
+  color: rgb(120, 120, 120);
 }
 
 .items-activity {
