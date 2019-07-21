@@ -188,6 +188,9 @@ a {
   height: 8vh;
   width: 42vw;
   z-index: 99;
+  @media screen and (max-height: 640px) {
+    margin-bottom: 4vh;
+  }
   margin-bottom: 2vh;
 }
 
@@ -204,6 +207,12 @@ a {
   }
   width: 42vw;
   z-index: 99;
+  @media screen and (max-width: 768px) {
+    margin-bottom: 1vh;
+  }
+  @media screen and (max-height: 640px) {
+    margin-bottom: 4vh;
+  }
   margin-bottom: 4vh;
 }
 
@@ -240,7 +249,7 @@ a {
     font-size: .6rem;
   }
   @media screen and (max-height: 640px) {
-    font-size: .4rem;
+    font-size: 0.4rem;
   }
   font-size: 1vw;
 }
