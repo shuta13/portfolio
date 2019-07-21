@@ -2,24 +2,34 @@
   .container
     .main
       background-motion.bg-motion(v-if="bgMotionShow")
-      span.title did0es portfolio
-      .content
-        .item-wrap
-          .item
-            a(href="https://twitter.com/did0es")(target="_blank")
-              img.icon(src="~/assets/images/twitter-square-brands.svg")
-          .item
-            a(href="https://github.com/shuta13")(target="_blank")
-              img.icon(src="~/assets/images/github-square-brands.svg")
-          .item
-            a(href="https://www.facebook.com/profile.php?id=100028982675881")(target="_blank")
-              img.icon(src="~/assets/images/facebook-square-brands.svg")
-          .button-wrap
-            .link-wrap(@click="updateRouteStore")(@mouseover="hoveredGarellyButton")(@mouseleave="leftGarellyButton")
-              .link
-              span.garelly GARELLY
-      transition(name="animation")
-        animation-modal.animation-modal(v-if="appear")
+      .main-content
+        span.title did0es portfolio
+        .description-wrap
+          .description
+            .question Q. ここは何?
+              p.answer > @did0esのポートフォリオサイトです
+              p.answer > 以下のリンクから現在の活動を確認することが出来ます
+          .description-en
+            .question Q. What is this site?
+              p.answer > This site is made by @didoes
+              p.answer > You can find @did0es's activity through the four links
+        .sub-content
+          .item-wrap
+            .item
+              a(href="https://twitter.com/did0es")(target="_blank")
+                img.icon(src="~/assets/images/twitter-square-brands.svg")
+            .item
+              a(href="https://github.com/shuta13")(target="_blank")
+                img.icon(src="~/assets/images/github-square-brands.svg")
+            .item
+              a(href="https://www.facebook.com/profile.php?id=100028982675881")(target="_blank")
+                img.icon(src="~/assets/images/facebook-square-brands.svg")
+            .button-wrap
+              .link-wrap(@click="updateRouteStore")(@mouseover="hoveredGarellyButton")(@mouseleave="leftGarellyButton")
+                .link
+                span.garelly GARELLY
+        transition(name="animation")
+          animation-modal.animation-modal(v-if="appear")
 </template>
 
 <script lang="ts">
@@ -149,6 +159,16 @@ a {
   width: 100vw;
 }
 
+.main-content {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 80vw;
+}
+
 .title {
   // background-color: aquamarine;
   @media screen and (max-width: 768px) {
@@ -157,6 +177,7 @@ a {
   @media screen and (max-height: 640px) {
     font-size: 1.8rem;
   }
+  font-size: 4vw;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -164,14 +185,60 @@ a {
   white-space: nowrap;
   color: #fff;
   font-family: 'Cutive Mono';
-  font-size: 4vw;
   height: 8vh;
   width: 42vw;
+  z-index: 99;
   margin-bottom: 2vh;
+}
+
+.description-wrap {
+  // background-color: red;
+  margin-bottom: 2vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  height: 8vh;
+  width: 42vw;
   z-index: 99;
 }
 
-.content {
+.description {
+  width: 36vw;
+  font-family: 'Sawarabi Gothic';
+  text-align: left;
+}
+
+.description-en {
+  font-family: 'Cutive Mono';
+  text-align: left;
+}
+
+.question {
+  @media screen and (max-width: 768px) {
+    font-size: .74rem;
+  }
+  @media screen and (max-height: 640px) {
+    font-size: .72rem;
+  }
+  font-size: 1.3vw;
+}
+
+.answer {
+  @media screen and (max-width: 768px) {
+    font-size: .6rem;
+  }
+  @media screen and (max-height: 640px) {
+    font-size: .4rem;
+  }
+  font-size: 1vw;
+}
+
+.sub-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80vw;
 }
 
@@ -214,8 +281,8 @@ a {
     transition: height .2s;
   }
   .icon:hover {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5vw;
+    height: 7vh;
     @media screen and (max-width: 768px) {
       width: 1.8rem;
       height: 1.8rem;
@@ -333,12 +400,6 @@ a {
 
 .animation-enter, .animation-leave-to {
   opacity: .4;
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .text-wrap {
