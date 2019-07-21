@@ -11,7 +11,7 @@
               p.answer > 以下のリンクから現在の活動を確認することが出来ます
           .description-en
             .question Q. What is this site?
-              p.answer > This site is made by @didoes
+              p.answer > This site is made by @didoes as a portfolio
               p.answer > You can find @did0es's activity through the four links
         .sub-content
           .item-wrap
@@ -188,32 +188,24 @@ a {
   height: 8vh;
   width: 42vw;
   z-index: 99;
-  @media screen and (max-height: 640px) {
-    margin-bottom: 4vh;
-  }
-  margin-bottom: 2vh;
 }
 
 .description-wrap {
-  // background-color: red;
+  background-color: rgba(0, 0, 0, .4);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   color: #fff;
-  height: 8vh;
+  @media screen and (max-height: 640px) {
+    height: 18vh;
+  }
+  height: 14vh;
   @media screen and (max-width: 768px) {
-    width: 80vw;
+    width: 90vw;
   }
   width: 42vw;
   z-index: 99;
-  @media screen and (max-width: 768px) {
-    margin-bottom: 1vh;
-  }
-  @media screen and (max-height: 640px) {
-    margin-bottom: 4vh;
-  }
-  margin-bottom: 4vh;
 }
 
 .description, .description-en {
@@ -224,6 +216,8 @@ a {
   text-align: left;
   margin-right: 1vw;
   margin-left: 1vw;
+  border-left: solid 1px;
+  padding-left: 0.4rem;
 }
 
 .description {
