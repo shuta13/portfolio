@@ -11,7 +11,7 @@
               p.answer > 以下のリンクから現在の活動を確認することが出来ます
           .description-en
             .question Q. What is this site?
-              p.answer > This site is made by @didoes as a portfolio
+              p.answer > This site is made by @did0es as a portfolio
               p.answer > You can find @did0es's activity through the four links
         .sub-content
           .item-wrap
