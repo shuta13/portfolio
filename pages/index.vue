@@ -193,7 +193,6 @@ a {
 
 .description-wrap {
   // background-color: red;
-  margin-bottom: 2vh;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -202,17 +201,22 @@ a {
   height: 8vh;
   width: 42vw;
   z-index: 99;
+  margin-bottom: 4vh;
+}
+
+.description, .description-en {
+  width: 32vw;
+  text-align: left;
+  margin-right: 1vw;
+  margin-left: 1vw;
 }
 
 .description {
-  width: 36vw;
   font-family: 'Sawarabi Gothic';
-  text-align: left;
 }
 
 .description-en {
   font-family: 'Cutive Mono';
-  text-align: left;
 }
 
 .question {
