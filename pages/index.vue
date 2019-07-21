@@ -199,12 +199,18 @@ a {
   align-items: center;
   color: #fff;
   height: 8vh;
+  @media screen and (max-width: 768px) {
+    width: 80vw;
+  }
   width: 42vw;
   z-index: 99;
   margin-bottom: 4vh;
 }
 
 .description, .description-en {
+  @media screen and (max-width: 768px) {
+    width: 60vw;
+  }
   width: 32vw;
   text-align: left;
   margin-right: 1vw;
