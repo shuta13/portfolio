@@ -6,10 +6,12 @@
         span.title did0es portfolio
         .description-wrap
           .description
+            .rect
             .question Q. ここは何?
               p.answer > @did0esのポートフォリオサイトです
               p.answer > 以下のリンクから現在の活動を確認することが出来ます
           .description-en
+            .rect
             .question Q. What is this site?
               p.answer > This site is made by @did0es as a portfolio
               p.answer > You can find @did0es's activity through the four links
@@ -48,19 +50,17 @@ class Top extends Vue {
   appear = true;
   in = false;
   bgMotionShow = true;
-  mounted () {
+  sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
+  async mounted () {
     this.bgMotion()
-    TweenMax.to('.text', 0.4, {
-      delay: 1,
-      opacity: 0
-    })
-    TweenMax.to('.animation-modal', 1.4, {
-      delay: 1.8,
-      ease: Power4.easeOut,
-      left: '100vw',
-      opacity: 0
-    })
+    this.textAnimation()
     this.bgMotionShowMutate()
+    await this.sleep(1800)
+    this.overText()
+    await this.sleep(720)
+    this.changeRectColor()
+    await this.sleep(240)
+    this.leftText()
   }
   toDisappear () {
     this.appear = !this.appear
@@ -79,8 +79,58 @@ class Top extends Vue {
       repeat: -1
     })
   }
+  textAnimation () {
+    TweenMax.to('.text', 0.4, {
+      delay: 1,
+      opacity: 0
+    })
+    TweenMax.to('.animation-modal', 1.4, {
+      delay: 1.8,
+      ease: Power4.easeOut,
+      left: '100vw',
+      opacity: 0
+    })
+  }
   bgMotionShowMutate () {
     if (window.innerWidth < 1300) { this.bgMotionShow = !this.bgMotionShow }
+  }
+  overText () {
+    TweenMax.to('.rect', 0, {
+      ease: Power4.easeInOut,
+      transform: 'translate(-102%, 0)'
+    })
+    TweenMax.to('.rect', 0.8, {
+      ease: Power4.easeInOut,
+      transform: 'translate(-2%, 0)',
+      martix: '(1, 0, 0, 1, 0, 0)'
+    })
+  }
+  async changeRectColor () {
+    TweenMax.to('.rect', 0, {
+      backgroundColor: 'rgba(0, 0, 0, 1)'
+    })
+    await this.sleep(50)
+    TweenMax.to('.rect', 0, {
+      backgroundColor: 'rgba(255, 255, 255, 0.4)'
+    })
+    await this.sleep(100)
+    TweenMax.to('.rect', 0, {
+      backgroundColor: 'rgba(0, 0, 0, 1)'
+    })
+    await this.sleep(100)
+    TweenMax.to('.rect', 0.2, {
+      backgroundColor: 'rgba(255, 255, 255, 0.8)'
+    })
+  }
+  leftText () {
+    TweenMax.to('.rect', 0.8, {
+      ease: Power4.easeInOut,
+      transform: 'translate(104%, 0)'
+    })
+    TweenMax.to(['.question', '.answer'], 0.8, {
+      ease: Power4.easeInOut,
+      color: 'rgba(255, 255, 255, 1)'
+    })
   }
   hoveredGarellyButton () {
     if (window.innerWidth > 768) {
@@ -196,7 +246,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: #fff;
+  color: rgba(0, 0, 0, .4);
   @media screen and (max-height: 640px) {
     height: 18vh;
   }
@@ -210,27 +260,46 @@ a {
 
 .description, .description-en {
   @media screen and (max-width: 768px) {
-    width: 60vw;
+    width: 28vw;
+    height: 12vw;
   }
-  width: 32vw;
+  width: 20vw;
+  height: 7vw;
   text-align: left;
-  margin-right: 1vw;
-  margin-left: 1vw;
-  border-left: solid 1px;
+  border-left: solid 1px #fff;
   padding-left: 0.4rem;
+  overflow: hidden;
+  position: absolute;
+}
+
+.rect {
+  border-radius: 2px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  transform: translate(-102%, 0);
 }
 
 .description {
   font-family: 'Sawarabi Gothic';
+  @media screen and (max-width: 768px) {
+    margin-left: -18vw;
+  }
+  margin-left: -10vw;
 }
 
 .description-en {
   font-family: 'Cutive Mono';
+  @media screen and (max-width: 768px) {
+    margin-left: 18vw;
+  }
+  margin-left: 10vw;
 }
 
 .question {
   @media screen and (max-width: 768px) {
-    font-size: .74rem;
+    font-size: 2vw;
   }
   @media screen and (max-height: 640px) {
     font-size: .72rem;
@@ -240,7 +309,7 @@ a {
 
 .answer {
   @media screen and (max-width: 768px) {
-    font-size: .6rem;
+    font-size: 0.5vw;
   }
   @media screen and (max-height: 640px) {
     font-size: 0.4rem;

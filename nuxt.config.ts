@@ -25,7 +25,7 @@ const config: NuxtConfiguration = {
       { hid: 'og:title', property: 'og:title', content: 'did0es portfolio' },
       { rel: 'icon', type: 'image/x-icon', href: 'https://s.gravatar.com/avatar/5297a6f1a0d91b1ef43b75b2915a0628?s=80' },
       { hid: 'og:image', property: 'og:image', content: 'https://did0es.me/thumbnail.png' }
-    ],
+    ]
   },
   /*
   ** Customize the progress-bar color
