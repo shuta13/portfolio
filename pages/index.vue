@@ -101,7 +101,7 @@ class Top extends Vue {
     })
     TweenMax.to('.rect', 0.8, {
       ease: Power4.easeInOut,
-      transform: 'translate(-2%, 0)',
+      transform: 'translate(-6%, 0)',
       martix: '(1, 0, 0, 1, 0, 0)'
     })
   }
@@ -125,7 +125,7 @@ class Top extends Vue {
   leftText () {
     TweenMax.to('.rect', 0.8, {
       ease: Power4.easeInOut,
-      transform: 'translate(104%, 0)'
+      transform: 'translate(106%, 0)'
     })
     TweenMax.to(['.question', '.answer'], 0.8, {
       ease: Power4.easeInOut,
