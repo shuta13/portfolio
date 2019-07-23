@@ -59,7 +59,7 @@ class Top extends Vue {
     this.overText()
     await this.sleep(720)
     this.changeRectColor()
-    await this.sleep(240)
+    await this.sleep(120)
     this.leftText()
   }
   toDisappear () {
@@ -104,22 +104,27 @@ class Top extends Vue {
       transform: 'translate(-6%, 0)',
       martix: '(1, 0, 0, 1, 0, 0)'
     })
-  }
-  async changeRectColor () {
-    TweenMax.to('.rect', 0, {
-      backgroundColor: 'rgba(0, 0, 0, 1)'
-    })
-    await this.sleep(50)
-    TweenMax.to('.rect', 0, {
-      backgroundColor: 'rgba(255, 255, 255, 0.4)'
-    })
-    await this.sleep(100)
-    TweenMax.to('.rect', 0, {
-      backgroundColor: 'rgba(0, 0, 0, 1)'
-    })
-    await this.sleep(100)
     TweenMax.to('.rect', 0.2, {
       backgroundColor: 'rgba(255, 255, 255, 0.8)'
+    })
+  }
+  async changeRectColor () {
+    this.toBlack()
+    await this.sleep(50)
+    this.toWhite()
+    await this.sleep(100)
+    this.toBlack()
+    await this.sleep(100)
+    this.toWhite()
+  }
+  toBlack () {
+    TweenMax.to('.rect', 0, {
+      backgroundColor: 'rgba(0, 0, 0, 1)'
+    })
+  }
+  toWhite () {
+    TweenMax.to('.rect', 0, {
+      backgroundColor: 'rgba(255, 255, 255, 0.4)'
     })
   }
   leftText () {
