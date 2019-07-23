@@ -15,19 +15,17 @@ const config: NuxtConfiguration = {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Wire+One&display=swap' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap' }
-    ]
-  },
-  meta: {
-    ogImage: 'https://s.gravatar.com/avatar/5297a6f1a0d91b1ef43b75b2915a0628?s=80',
-    twitterSite: '@did0es'
-    // { charset: 'utf-8' },
-    // { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    // { hid: 'og:site_name', property: 'og:site_name', content: 'portfolio' },
-    // { hid: 'og:type', property: 'og:type', content: 'website' },
-    // { hid: 'og:url', property: 'og:url', content: 'https://did0es.me' },
-    // { hid: 'og:title', property: 'og:title', content: 'did0es portfolio' },
-    // { rel: 'icon', type: 'image/x-icon', href: 'https://s.gravatar.com/avatar/5297a6f1a0d91b1ef43b75b2915a0628?s=80' },
-    // { hid: 'og:image', property: 'og:image', content: 'https://did0es.me/thumbnail.png' }
+    ],
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'portfolio' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://did0es.me' },
+      { hid: 'og:title', property: 'og:title', content: 'did0es portfolio' },
+      { rel: 'icon', type: 'image/x-icon', href: 'https://s.gravatar.com/avatar/5297a6f1a0d91b1ef43b75b2915a0628?s=80' },
+      { hid: 'og:image', property: 'og:image', content: 'https://did0es.me/thumbnail.png' }
+    ],
   },
   /*
   ** Customize the progress-bar color
