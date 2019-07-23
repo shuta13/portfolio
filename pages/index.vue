@@ -314,7 +314,7 @@ a {
 
 .answer {
   @media screen and (max-width: 768px) {
-    font-size: 1.8vw;
+    font-size: 1.2vw;
   }
   @media screen and (max-height: 640px) {
     font-size: 0.4rem;
