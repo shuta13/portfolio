@@ -304,7 +304,7 @@ a {
 
 .question {
   @media screen and (max-width: 768px) {
-    font-size: 2.4vw;
+    font-size: 2.2vw;
   }
   @media screen and (max-height: 640px) {
     font-size: .72rem;
@@ -314,7 +314,7 @@ a {
 
 .answer {
   @media screen and (max-width: 768px) {
-    font-size: 1.2vw;
+    font-size: 1.4vw;
   }
   @media screen and (max-height: 640px) {
     font-size: 0.4rem;
