@@ -282,7 +282,7 @@ a {
   background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
   height: 100%;
-  transform: translate(-102%, 0);
+  transform: translate(-104%, 0);
 }
 
 .description {
