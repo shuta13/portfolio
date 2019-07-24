@@ -74,7 +74,7 @@ class Top extends Vue {
   }
   bgMotion () {
     TweenMax.to('.bg-image', 0.4, {
-      backgroundPosition: '-100vw 0vw',
+      backgroundPosition: '-104vw 0vw',
       ease: Linear.easeNone,
       repeat: -1
     })
@@ -97,7 +97,7 @@ class Top extends Vue {
   overText () {
     TweenMax.to('.rect', 0, {
       ease: Power4.easeInOut,
-      transform: 'translate(-102%, 0)'
+      transform: 'translate(-106%, 0)'
     })
     TweenMax.to('.rect', 0.8, {
       ease: Power4.easeInOut,
@@ -105,17 +105,16 @@ class Top extends Vue {
       martix: '(1, 0, 0, 1, 0, 0)'
     })
     TweenMax.to('.rect', 0.2, {
-      backgroundColor: 'rgba(255, 255, 255, 0.8)'
+      backgroundColor: 'rgba(255, 255, 255, 1)'
     })
   }
   async changeRectColor () {
-    this.toBlack()
-    await this.sleep(50)
-    this.toWhite()
-    await this.sleep(100)
-    this.toBlack()
-    await this.sleep(100)
-    this.toWhite()
+    for (let i = 0; i < 10; i++) {
+      this.toBlack()
+      await this.sleep(20)
+      this.toWhite()
+      await this.sleep(80)
+    }
   }
   toBlack () {
     TweenMax.to('.rect', 0, {
@@ -304,7 +303,7 @@ a {
 
 .question {
   @media screen and (max-width: 768px) {
-    font-size: 2.2vw;
+    font-size: 2.1vw;
   }
   @media screen and (max-height: 640px) {
     font-size: .72rem;
