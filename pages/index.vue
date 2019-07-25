@@ -19,13 +19,13 @@
           .item-wrap
             .item
               a(href="https://twitter.com/did0es")(target="_blank")
-                img.icon(src="~/assets/images/twitter-square-brands.svg")
+                FontAwesomeIcon.icon(:icon="twitter")
             .item
               a(href="https://github.com/shuta13")(target="_blank")
-                img.icon(src="~/assets/images/github-square-brands.svg")
+                FontAwesomeIcon.icon(:icon="github")
             .item
               a(href="https://www.facebook.com/profile.php?id=100028982675881")(target="_blank")
-                img.icon(src="~/assets/images/facebook-square-brands.svg")
+                FontAwesomeIcon.icon(:icon="facebook")
             .button-wrap
               .link-wrap(@click="updateRouteStore")(@mouseover="hoveredGarellyButton")(@mouseleave="leftGarellyButton")
                 .link
@@ -35,22 +35,34 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import { Component, Provide, Vue } from 'nuxt-property-decorator'
+import {
+  faTwitterSquare,
+  faGithubSquare,
+  faFacebookSquare
+} from '@fortawesome/free-brands-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { TweenMax, Linear, Power4 } from 'gsap'
 import AnimationModal from '~/components/AnimationModal.vue'
 import BackgroundMotion from '~/components/BackgroundMotion/BackgroundMotion.vue'
 
 @Component({
   components: {
+    FontAwesomeIcon,
     AnimationModal,
     BackgroundMotion
   }
 })
 class Top extends Vue {
+  @Provide()
   appear = true;
   in = false;
   bgMotionShow = true;
+  twitter = faTwitterSquare;
+  github = faGithubSquare;
+  facebook = faFacebookSquare;
   sleep = msec => new Promise(resolve => setTimeout(resolve, msec));
+
   async mounted () {
     this.bgMotion()
     this.textAnimation()
@@ -365,6 +377,8 @@ a {
     height: 8vh;
     transition: width .2s;
     transition: height .2s;
+    color: #fff;
+    z-index: 99;
   }
   .icon:hover {
     width: 3.5vw;
