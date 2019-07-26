@@ -259,8 +259,6 @@ a {
 .description-wrap {
   background-color: rgba(0, 0, 0, .4);
   display: flex;
-  // flex-direction: row;
-  // justify-content: center;
   align-items: center;
   color: rgba(0, 0, 0, .4);
   @media screen and (max-height: 640px) {
