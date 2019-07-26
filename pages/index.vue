@@ -297,7 +297,7 @@ a {
 .description {
   font-family: 'Sawarabi Gothic';
   @media screen and (max-width: 768px) {
-    margin-left: -18vw;
+    margin-left: 10vw;
   }
   // margin-left: -10vw;
 }
@@ -305,7 +305,7 @@ a {
 .description-en {
   font-family: 'Cutive Mono';
   @media screen and (max-width: 768px) {
-    margin-left: 18vw;
+    margin-left: 42vw;
   }
   margin-left: 20vw;
 }
