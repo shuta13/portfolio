@@ -259,8 +259,8 @@ a {
 .description-wrap {
   background-color: rgba(0, 0, 0, .4);
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  // flex-direction: row;
+  // justify-content: center;
   align-items: center;
   color: rgba(0, 0, 0, .4);
   @media screen and (max-height: 640px) {
@@ -274,6 +274,14 @@ a {
   z-index: 99;
 }
 
+.rect {
+  border-radius: 2px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 100%;
+  transform: translate(-106%, 0);
+}
 .description, .description-en {
   @media screen and (max-width: 768px) {
     width: 28vw;
@@ -288,21 +296,12 @@ a {
   position: absolute;
 }
 
-.rect {
-  border-radius: 2px;
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.8);
-  width: 100%;
-  height: 100%;
-  transform: translate(-106%, 0);
-}
-
 .description {
   font-family: 'Sawarabi Gothic';
   @media screen and (max-width: 768px) {
     margin-left: -18vw;
   }
-  margin-left: -10vw;
+  // margin-left: -10vw;
 }
 
 .description-en {
@@ -310,7 +309,7 @@ a {
   @media screen and (max-width: 768px) {
     margin-left: 18vw;
   }
-  margin-left: 10vw;
+  margin-left: 20vw;
 }
 
 .question {
