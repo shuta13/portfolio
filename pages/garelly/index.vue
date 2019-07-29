@@ -115,6 +115,16 @@ export default {
       this.routeFlag = false
     }
   },
+  head() {
+    return {
+      title: 'garelly',
+      meta: [
+        { hid: 'description', property: 'description', content: 'garelly' },
+        { hid: 'og:description', property: 'og:description', content: 'garelly' },
+        { hid: 'og:title', property: 'og:title', content: 'garelly' }
+      ]
+    }
+  },
   methods: {
     moveBlind() {
       TweenMax.to('.moving-blind', 1.6, {
