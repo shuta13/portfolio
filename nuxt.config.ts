@@ -18,7 +18,6 @@ const config: NuxtConfiguration = {
     ],
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', property: 'description', content: 'portfolio' },
       { hid: 'og:description', property: 'og:description', content: 'portfolio' },
       { hid: 'og:site_name', property: 'og:site_name', content: 'portfolio' },
