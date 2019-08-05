@@ -348,6 +348,7 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  z-index: 99;
   .item {
     // background-color: #000;
     @media screen and (max-width: 768px) {
