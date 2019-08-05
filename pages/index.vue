@@ -269,6 +269,7 @@ a {
     width: 90vw;
   }
   width: 42vw;
+  padding-left: 1.4vw;
   z-index: 99;
 }
 
