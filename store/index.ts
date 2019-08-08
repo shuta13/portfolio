@@ -1,3 +1,6 @@
+import { Mutations } from './types'
+import { State, IMutations } from './indexType'
+
 export const state = () => ({
   garellyTopCount: 0,
   webmotionsCount: 0,
@@ -23,7 +26,7 @@ export const state = () => ({
   webmotionsWork04State: false
 })
 
-export const mutations = {
+export const mutations: Mutations<State, IMutations> = {
   incrementTopPageCount (state, count) {
     state.garellyTopCount = count
   },
