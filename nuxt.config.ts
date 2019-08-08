@@ -2,6 +2,7 @@ import NuxtConfiguration from '@nuxt/config'
 
 const config: NuxtConfiguration = {
   mode: 'universal',
+  srcDir: 'src/',
   /*
   ** Headers of the page
   */

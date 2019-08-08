@@ -1,5 +1,5 @@
 import { Mutations } from './types'
-import { State, IMutations } from './indexType'
+import { State, IMutations } from '../types/indexType'
 
 export const state = () => ({
   garellyTopCount: 0,
