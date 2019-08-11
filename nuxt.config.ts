@@ -47,6 +47,7 @@ const config: NuxtConfiguration = {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/v-lazy-image'
   ],
   /*
   ** Nuxt.js modules
