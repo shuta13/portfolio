@@ -55,11 +55,14 @@ html {
 
 /* v-lazy-imageの共通style */
 .v-lazy-image {
+  opacity: 0;
   filter: blur(2px);
-  transition: filter 0.8s;
+  transition: opacity 0.4s;
+  transition: filter 1.2s;
 }
 
 .v-lazy-image-loaded {
+  opacity: 1;
   filter: blur(0);
 }
 </style>
