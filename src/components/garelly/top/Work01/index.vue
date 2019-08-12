@@ -2,7 +2,6 @@
   .container
     .image-wrap
       .content(@click="updateWork01State")
-        //- .image(:style="{ 'background-image': 'url(/top/work01.png)' }")
         v-lazy-image.image(src="https://did0es.me/top/work01.png")
         .bottom-wrap
           .back(@click="updateWork01State") back
@@ -64,15 +63,6 @@ a {
   background: no-repeat;
   background-position: center center;
   opacity: 0;
-}
-
-.v-lazy-image {
-  filter: blur(2px);
-  transition: filter 0.8s;
-}
-
-.v-lazy-image-loaded {
-  filter: blur(0);
 }
 
 .bottom-wrap {

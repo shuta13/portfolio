@@ -52,4 +52,14 @@ html {
   color: #fff;
   background-color: #35495e;
 }
+
+/* v-lazy-imageの共通style */
+.v-lazy-image {
+  filter: blur(2px);
+  transition: filter 0.8s;
+}
+
+.v-lazy-image-loaded {
+  filter: blur(0);
+}
 </style>
