@@ -2,9 +2,9 @@
   .container
     .image-wrap
       .content(@click="updateWork12State")
-        .image(:style="{ 'background-image': 'url(/top/work12.png)' }")
-        .bottom-wrap
-          .back(@click="updateWork12State") back
+        v-lazy-image.image(src="https://did0es.me/top/work12.png")
+        //- .bottom-wrap
+        //-   .back(@click="updateWork12State") back
 </template>
 
 <script>

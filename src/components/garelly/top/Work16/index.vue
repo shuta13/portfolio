@@ -3,7 +3,7 @@
     .image-wrap(@click="updateWork16State")
       .content
         .image-wrap
-          .image(:style="{ 'background-image': 'url(/top/work16.png)' }")
+          v-lazy-image.image(src="https://did0es.me/top/work16.png")
         .bottom-wrap
           .back(@click="updateWork16State") back
 </template>
@@ -57,8 +57,9 @@ a {
 .image {
   position: absolute;
   z-index: 1;
-  width: 100vw;
-  height: 100vh;
+  min-width: 340px;
+  width: 80vw;
+  height: auto;
   @media screen and (max-width: 768px) {
     height: vh;
   }

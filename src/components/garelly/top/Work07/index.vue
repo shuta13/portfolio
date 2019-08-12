@@ -2,9 +2,9 @@
   .container
     .image-wrap
       .content(@click="updateWork07State")
-        .image(:style="{ 'background-image': 'url(/top/work07.png)' }")
-        .bottom-wrap
-          .back(@click="updateWork07State") back
+        v-lazy-image.image(src="https://did0es.me/top/work07.png")
+        //- .bottom-wrap
+        //-   .back(@click="updateWork07State") back
 </template>
 
 <script>
@@ -49,15 +49,16 @@ a {
   height: 100vh;
   display: flex;
   justify-content: center;
-  // align-items: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .image {
   position: absolute;
   z-index: 1;
-  width: 100vw;
-  height: 100vh;
+  min-width: 320px;
+  width: 50vw;
+  height: auto;
   object-fit: cover;
   overflow: hidden;
   background: no-repeat;

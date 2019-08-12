@@ -49,9 +49,9 @@
         .image(:style="{ 'background-image': 'url(/top/thumnails/work11-thumbnail.jpg)' }")(@click="updateWork11State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work12.jpg)' }").centering(@click="updateWork12State")
         .image(:style="{ 'background-image': 'url(/top/thumnails/work13.jpg)' }").centering(@click="updateWork13State")
-        .image(:style="{ 'background-image': 'url(/top/thumnails/work14.jpg)' }").centering(@click="updateWork14State").onlyPC
-        .image(:style="{ 'background-image': 'url(/top/thumnails/work15.jpg)' }").centering(@click="updateWork15State").onlyPC
-        .image(:style="{ 'background-image': 'url(/top/thumnails/work16.jpg)' }").centering(@click="updateWork16State").onlyPC
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work14.jpg)' }").centering(@click="updateWork14State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work15.jpg)' }").centering(@click="updateWork15State")
+        .image(:style="{ 'background-image': 'url(/top/thumnails/work16.jpg)' }").centering(@click="updateWork16State")
 </template>
 
 <script>
@@ -271,12 +271,6 @@ export default {
 
 .works-modal-enter, .works-modal-leave-to {
   opacity: 0;
-}
-
-.onlyPC {
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
 }
 
 // .v-lazy-image {
