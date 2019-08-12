@@ -266,7 +266,7 @@ export default {
 }
 
 .works-modal-enter-active, .works-modal-leave-active {
-  transition: opacity .6s;
+  transition: opacity .4s;
 }
 
 .works-modal-enter, .works-modal-leave-to {

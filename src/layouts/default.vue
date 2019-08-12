@@ -56,13 +56,13 @@ html {
 /* v-lazy-imageの共通style */
 .v-lazy-image {
   opacity: 0;
-  filter: blur(2px);
-  transition: opacity 0.4s;
-  transition: filter 1.2s;
+  /* filter: blur(2px); */
+  transition: opacity 0.2s;
+  /* transition: filter 1.2s; */
 }
 
 .v-lazy-image-loaded {
   opacity: 1;
-  filter: blur(0);
+  /* filter: blur(0); */
 }
 </style>
