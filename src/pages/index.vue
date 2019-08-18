@@ -200,7 +200,7 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url('~assets/images/bg.png') no-repeat 50% 50%;
+  background: url('~assets/images/bg_2.png') no-repeat 50% 50%;
   overflow: hidden;
   @media screen and (max-width: 768px) {
     object-fit: cover;

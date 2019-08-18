@@ -53,7 +53,7 @@ const config: NuxtConfiguration = {
   ** Nuxt.js modules
   */
   env: {
-    bgImageUrl: process.env.BG_IMAGE_URL || 'http://localhost:3000/bg.png'
+    bgImageUrl: process.env.BG_IMAGE_URL || 'http://localhost:3000/bg_2.png'
   },
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
