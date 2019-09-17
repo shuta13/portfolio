@@ -4,8 +4,8 @@
       .content
         .image-wrap
           v-lazy-image.image(src="https://did0es.me/top/work16.png")
-        .bottom-wrap
-          .back(@click="updateWork16State") back
+        //- .bottom-wrap
+        //-   .back(@click="updateWork16State") back
 </template>
 
 <script>

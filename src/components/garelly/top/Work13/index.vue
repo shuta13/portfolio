@@ -3,8 +3,8 @@
     .image-wrap(@click="updateWork13State")
       .content
         glitch-cubes
-        .bottom-wrap
-          .back(@click="updateWork13State") back
+        //- .bottom-wrap
+        //-   .back(@click="updateWork13State") back
 </template>
 
 <script>
