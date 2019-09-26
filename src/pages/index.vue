@@ -271,6 +271,9 @@ a {
   width: 42vw;
   padding-left: 1.4vw;
   z-index: 99;
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .rect {
