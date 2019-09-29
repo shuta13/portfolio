@@ -7,7 +7,7 @@
         .text-wrap
           .welcome-text(:style="{ 'font-family': 'Major Mono Display, monospace' }") to
         .text-wrap
-          .welcome-text(:style="{ 'font-family': 'Major Mono Display, monospace' }") Garelly
+          .welcome-text(:style="{ 'font-family': 'Major Mono Display, monospace' }") GaRelly
 </template>
 
 <script lang="ts">
