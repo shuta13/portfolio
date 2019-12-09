@@ -5,7 +5,6 @@
         .item-wrap
           nuxt-link(to="/garelly") top
           nuxt-link(to="/garelly/webmotions") web-motions
-          nuxt-link(to="/garelly/about") about
 </template>
 
 <script>
