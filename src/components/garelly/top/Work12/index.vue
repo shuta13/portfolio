@@ -2,7 +2,7 @@
   .container
     .image-wrap
       .content(@click="updateWork12State")
-        v-lazy-image.image(src="https://did0es.me/top/work12.png")
+        v-lazy-image.image(src="https://did0es.netlify.com/top/work12.png")
         //- .bottom-wrap
         //-   .back(@click="updateWork12State") back
 </template>

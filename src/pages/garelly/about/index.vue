@@ -22,7 +22,7 @@
             .link
               a(href="https://www.pixiv.net/member.php?id=19834475")(target="_blank").link-pixiv >> Pixiv(絵をかきます)
               a(href="https://soundcloud.com/user-858183512")(target="_blank").link-soundcloud >> Soundcloud(おうたを作ります)
-              a(href="https://did0es.me/garelly")(target="_blank").link-garelly >> Garelly(CreativeなCoding・その他作品)
+              a(href="https://did0es.netlify.com/garelly")(target="_blank").link-garelly >> Garelly(CreativeなCoding・その他作品)
             .text2 ・活動
               p.text3 CyberAgent Architecture Challenge (2019)
               p.text3 CyberAgent 学生版ヒダッカソン-API編- (2019)

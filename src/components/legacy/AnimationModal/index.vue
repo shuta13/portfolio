@@ -2,7 +2,7 @@
   .container
     .content
       .text-wrap
-        .text.bg-image(:style="{ 'background-image': 'url(https://did0es.me/top/work05.png);' }") LOADING...
+        .text.bg-image(:style="{ 'background-image': 'url(https://did0es.netlify.com/top/work05.png);' }") LOADING...
 </template>
 
 <script>
@@ -75,7 +75,7 @@ _::-webkit-full-page-media, _:future, :root .bg-image {
 .bg-image {
   width: 100vw;
   height: 100vh;
-  background-image: url(https://did0es.me/loading/work05.jpg);
+  background-image: url(https://did0es.netlify.com/loading/work05.jpg);
   @media screen and (max-width: 768px) {
     color: rgb(0, 0, 0);
   }
